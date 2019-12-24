@@ -10,7 +10,7 @@ public class SomeMethods {
             String localip=ia.getHostAddress();
             return localip;
         } catch (Exception e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
         return null;
