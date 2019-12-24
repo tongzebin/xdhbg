@@ -3,7 +3,7 @@ package cn.xdh;
 import java.net.InetAddress;
 
 public class SomeMethods {
-    //获取ip地址
+    //获取ip地址4
     public static String getIp4(){
         InetAddress ia=null;
         try {

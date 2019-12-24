@@ -11,7 +11,6 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentDao studentdao;
 
-    @Override
     public Student selectByPhoneAndPassword(String phone, String password){
         Student student = studentdao.selectByPhoneAndPassword(phone,password);
         return student;
