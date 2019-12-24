@@ -3,6 +3,7 @@ package cn.xdh;
 import java.net.InetAddress;
 
 public class SomeMethods {
+    //获取ip地址4
     public static String getIp4(){
         InetAddress ia=null;
         try {
@@ -15,7 +16,7 @@ public class SomeMethods {
         }
         return null;
     }
-    // 11
+    // 获取当前时间戳
     public static Long getCurrentTime(){
         Long startTs = System.currentTimeMillis()/1000;
         return startTs;
