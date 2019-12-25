@@ -2,7 +2,10 @@ package cn.xdh.service;
 
 import cn.xdh.entity.Student;
 
-public interface StudentService {
-    public Student selectByPhoneAndPassword(String phone, String password);
+import java.util.List;
 
+public interface StudentService {
+    List<Student> selectAllNameAndId();
+
+    List<Student> selectIdAndNameByName(String username);
 }

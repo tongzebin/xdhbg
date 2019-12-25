@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xdh.dao.StudentDao">
-	
-	<select id="selectByPhoneAndPassword" resultType="cn.xdh.entity.Student">
-		select * from student where phone = #{phone} and password = #{password}
-	</select>
-	
 
-	
+    <select id="selectAllNameAndId" resultType="cn.xdh.entity.Student">
+        select username,id from xdh_student
+    </select>
+
+    <select id="selectIdAndNameByName" resultType="cn.xdh.entity.Student">
+        select id,username from xdh_student where username = #{username}
+    </select>
+
+
+
 
 
 </mapper>
