@@ -13,18 +13,14 @@ public class Works implements Serializable {
     private int student_id;
     private String name;
     private String url;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private int add_time;
-
-    public Works(int id, int student_id, String name, String url, int add_time) {
-        this.id = id;
-        this.student_id = student_id;
-        this.name = name;
-        this.url = url;
-        this.add_time = add_time;
-    }
+    private String time;
 
     public Works() {
     }
+
+
 
     public int getId() {
         return id;
@@ -58,7 +54,6 @@ public class Works implements Serializable {
         this.url = url;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public int getAdd_time() {
         return add_time;
     }
@@ -67,14 +62,20 @@ public class Works implements Serializable {
         this.add_time = add_time;
     }
 
-    @Override
-    public String toString() {
-        return "Works{" +
-                "id=" + id +
-                ", student_id=" + student_id +
-                ", name='" + name + '\'' +
-                ", url='" + url + '\'' +
-                ", add_time=" + add_time +
-                '}';
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Works(int id, int student_id, String name, String url, int add_time, String time) {
+        this.id = id;
+        this.student_id = student_id;
+        this.name = name;
+        this.url = url;
+        this.add_time = add_time;
+        this.time = time;
     }
 }

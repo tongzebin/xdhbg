@@ -13,7 +13,7 @@ public interface WorksService {
      * @return
      */
 
-    public  List<Works> selectById(int id);
-
-    public  List<Works> selectAll();
+    List<Works> selectById(int id);
+    List<Works> selectAll();
+    Integer deleteById(int id);
 }

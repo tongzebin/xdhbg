@@ -11,6 +11,9 @@
     <select id="selectAll" resultType="cn.xdh.entity.Works">
         select * from xdh_works
     </select>
+    <select id="deleteById" resultType="cn.xdh.entity.Works">
+        delete from xdh_works where id = #{id}
+    </select>
 
 
 

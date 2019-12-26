@@ -1,21 +1,19 @@
 package cn.xdh.dao;
 
-import cn.xdh.entity.Works;
+import cn.xdh.entity.Exeperience;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 
 /**
  * @author TZB
  */
 @Repository
-public interface WorksDao {
+public interface ExeperienceDao {
 
-    List<Works> selectById(int id);
+    List<Exeperience> selectAll();
 
-    List<Works> selectAll();
+    List<Exeperience> selectByStudent_id(int id);
 
     Integer deleteById(int id);
-
 }

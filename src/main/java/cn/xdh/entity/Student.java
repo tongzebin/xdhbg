@@ -56,34 +56,6 @@ public class Student implements Serializable {
 
 
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", mobile='" + mobile + '\'' +
-                ", password='" + password + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", join_study_time=" + join_study_time +
-                ", graduate_time=" + graduate_time +
-                ", graduate_school='" + graduate_school + '\'' +
-                ", province_id=" + province_id +
-                ", city_id=" + city_id +
-                ", area_id=" + area_id +
-                ", address='" + address + '\'' +
-                ", class_id=" + class_id +
-                ", progress='" + progress + '\'' +
-                ", is_graduate=" + is_graduate +
-                ", company='" + company + '\'' +
-                ", salary=" + salary +
-                ", aim_province_id=" + aim_province_id +
-                ", aim_city_id=" + aim_city_id +
-                ", aim_area_id=" + aim_area_id +
-                ", aim_address='" + aim_address + '\'' +
-                ", stage_id=" + stage_id +
-                '}';
-    }
-
     public int getId() {
         return id;
     }
