@@ -3,12 +3,60 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xdh.dao.StudentDao">
 	
-	<select id="selectByPhoneAndPassword" resultType="cn.xdh.entity.Student">
-		select * from student where phone = #{phone} and password = #{password}
+	<select id="selectByMobileAndPassword" resultType="cn.xdh.entity.Student">
+		select * from xdh_student where mobile = #{mobile} and password = #{password}
 	</select>
-	
 
-	
+	<select id="getAllStudentByGraduate" resultType="cn.xdh.entity.Student">
+		select *
+		from xdh_student
+		where is_graduate = #{is_graduate,jdbcType=TINYINT}
+		order by join_study_time;
+	</select>
 
+	<select id="selectStudentByMobile" resultType="cn.xdh.entity.Student">
+		select *
+		from xdh_student
+		where mobile = #{mobile,jdbcType=VARCHAR}
+	</select>
+
+	<select id="selectStudentById" resultType="cn.xdh.entity.Student">
+		select *
+		from xdh_student
+		where id = #{id}
+	</select>
+
+	<select id="selectStudentLikeUsername" resultType="cn.xdh.entity.Student">
+		SELECT *
+		FROM  xdh_student
+		WHERE  username
+		like CONCAT('%',#{username},'%')
+	</select>
+
+	<select id="selectProvince" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE level = 1
+	</select>
+
+	<select id="selectCityByUpId" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE upid = #{upid}
+	</select>
+
+	<insert id="addStudent" parameterType="cn.xdh.entity.Student">
+		insert into xdh_student
+		(username, password, mobile, join_study_time,is_graduate,stage_id,sex)
+    	values
+    	(#{username},#{password},#{mobile},#{join_study_time},#{is_graduate},#{stage_id},#{sex})
+	</insert>
+
+	<delete id="deleteStudent" parameterType="int">
+		delete from xdh_student where id = #{id}
+	</delete>
 
 </mapper>
+
+
+

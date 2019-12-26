@@ -1,5 +1,6 @@
 package cn.xdh.web;
 
+import cn.xdh.service.StudentService;
 import cn.xdh.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class BasicController {
     @Autowired
-    private StudentServiceImpl studentservice;
+    StudentService studentService;
 
     @GetMapping(value = "")
     public ModelAndView index() {
@@ -20,8 +21,7 @@ public class BasicController {
     }
 
     @PostMapping(value = "login.do")
-    public ModelAndView login() {
-        ModelAndView mav = new ModelAndView();
+    public ModelAndView login(ModelAndView mav) {
         mav.setViewName("student/index");
         return mav;
     }
