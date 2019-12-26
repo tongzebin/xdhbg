@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script src="/assets/js/works.js"></script>
+    <style>
+        #list {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--<span th:text="${works}"></span>-->
+
+<a href="works">作品列表</a>
+<a href="exeperiences">心得列表</a>
+<table border="1" cellpadding="0" align="center" th:cellpadding="5" th:cellspacing="0" id="list">
+    <caption>
+        <h1 style="color: red" th:text="${pd}"></h1>
+        <form method="get" action="/teacher/work" id="form">
+
+            <input type="text" name="username" id="searchInput" th:value="${backfill}"></form>
+            <!--<input type="button" value="搜索" onclick="javascript:return inputTest()">-->
+        <span class="am-input-group-btn">
+            <button style="height:38px;" class=" tpl-table-list-field am-btn-success am-btn-default am-btn am-icon-search" onclick="javascript:return inputTest()" ></button>
+          </span>
+        <!--<script>
+            var regex=/^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$/;
+            function inputTest() {
+                regex.test($("#searchInput").val())?$("#form").submit():alert("输入有误");
+                return false;
+            }
+            $(document).keypress(function(event){
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13'){
+                    regex.test($("#searchInput").val())?$("#form").submit():alert("输入有误");
+                    return false;
+                }
+            });
+        </script>-->
+        <a th:href="works">显示全部</a>
+
+        <h1>学生作品列表</h1>
+    </caption>
+    <tr>
+        <td><input type="checkbox">全选</td>
+        <td>学生id</td>
+        <td>姓名</td>
+        <td>作品名</td>
+        <td>作品地址</td>
+        <td>添加时间</td>
+        <td>操作</td>
+    </tr>
+
+    <tr th:each="work : ${works}">
+        <td>
+            <input type="checkbox" name="id[]" value="" id="id[]" th:value="${work.id}"/>
+        </td>
+        <td th:text="${work.student_id}"></td>
+        <td th:each="name : ${names}" th:if="${work.student_id}==${name.id}">[[${name.username}]]</td>
+        <td th:text="${work.name}"></td>
+        <td><a th:href="${work.url}">作品地址[[${work.url}]]</a></td>
+<!--        <td th:text="${#dates.format(work.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
+        <td th:text="${work.time}"></td>
+        <td><a th:href="@{work/}+${work.id}" onclick="javascript:return del()">删除</a></td>
+    </tr>
+
+
+</table>
+
+</body>
+</html>

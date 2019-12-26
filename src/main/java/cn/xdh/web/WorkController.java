@@ -1,5 +1,4 @@
 package cn.xdh.web;
-import	java.security.acl.Group;
 
 import cn.xdh.entity.Student;
 import cn.xdh.entity.Works;
@@ -53,7 +52,6 @@ public class WorkController {
     @GetMapping("/teacher/work")
     public String workByName(@RequestParam(value = "username")String username,Model model){
         //数据回填
-
         model.addAttribute("backfill",username);
         List<Student> studentList = studentServiceimpl.selectIdAndNameByName(username);
         System.out.println(studentList);

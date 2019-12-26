@@ -1,4 +1,4 @@
-var regex=/^[\u4E00-\u9FA5A-Za-z]{1,20}$/;
+var regex=/^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$/;
 function inputTest() {
     regex.test($("#searchInput").val())?$("#form").submit():alert("输入有误");
     return false;
@@ -10,8 +10,6 @@ $(document).keypress(function(event){
         return false;
     }
 });
-
-
 
 function del() {
     var msg = "确定要删除吗?";

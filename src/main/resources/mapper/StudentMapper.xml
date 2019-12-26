@@ -8,7 +8,7 @@
     </select>
 
     <select id="selectIdAndNameByName" resultType="cn.xdh.entity.Student">
-        select id,username from xdh_student where username = #{username}
+        select id,username from xdh_student where username like CONCAT('%',#{username},'%')
     </select>
 
 

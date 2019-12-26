@@ -1913,7 +1913,7 @@
 	
 			// In rtl text layout, some browsers (most, but not all) will place the
 			// scrollbar on the left, rather than the right.
-			browser.bScrollbarLeft = Math.round( inner.offset().left ) !== 1;
+			browser.bScrollbarLeft = Math.round( inner.offset().bar ) !== 1;
 	
 			// IE8- don't provide height and width for getBoundingClientRect
 			browser.bBounding = n[0].getBoundingClientRect().width ? true : false;
