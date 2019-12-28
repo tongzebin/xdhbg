@@ -1,7 +1,6 @@
 package cn.xdh.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 
@@ -13,9 +12,8 @@ public class Works implements Serializable {
     private int student_id;
     private String name;
     private String url;
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private int add_time;
-    private String time;
+    private long add_time;
+
 
     public Works() {
     }
@@ -54,21 +52,15 @@ public class Works implements Serializable {
         this.url = url;
     }
 
-    public int getAdd_time() {
+    public long getAdd_time() {
         return add_time;
     }
 
-    public void setAdd_time(int add_time) {
+    public void setAdd_time(long add_time) {
         this.add_time = add_time;
     }
 
-    public String getTime() {
-        return time;
-    }
 
-    public void setTime(String time) {
-        this.time = time;
-    }
 
     public Works(int id, int student_id, String name, String url, int add_time, String time) {
         this.id = id;
@@ -76,6 +68,5 @@ public class Works implements Serializable {
         this.name = name;
         this.url = url;
         this.add_time = add_time;
-        this.time = time;
     }
 }

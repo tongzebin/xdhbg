@@ -21,6 +21,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery.min.js"></script>
     <script th:src="@{/assets/js/works.js}"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
 </head>
 
@@ -74,7 +75,7 @@
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
 <!--                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>-->
-                                                <a href="teacher/works">显示所有</a>
+                                                <a href="teacher/works?pageNum=1&username=">显示所有</a>
                                             </div>
                                         </div>
                                     </div>
@@ -103,6 +104,7 @@
                                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
                                     <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
                                         <form method="get" action="/teacher/work" id="form">
+                                            <input type="hidden" name="pageNum" value="1">
                                             <input type="text" name="username" class="am-form-field" id="searchInput" th:value="${backfill}">
                                         </form>
                                         <span class="am-input-group-btn">
@@ -132,8 +134,7 @@
                                             <td th:each="name : ${names}" th:if="${work.student_id}==${name.id}">[[${name.username}]]</td>
                                             <td th:text="${work.name}"></td>
                                             <td><a th:href="${work.url}">作品地址[[${work.url}]]</a></td>
-                                            <!--        <td th:text="${#dates.format(work.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
-                                            <td th:text="${work.time}"></td>
+                                            <td th:text="${#dates.format(work.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>
                                             <td><a th:href="@{teacher/work/}+${work.id}" onclick="javascript:return del()">删除</a></td>
                                         </tr>
 
@@ -145,23 +146,79 @@
 
 
 
+<!--                                <span th:text="${generalPage}" id="dqPage"></span>-->
+<!--                                <span th:text="${currentPage}" id="pageCount"></span>-->
+<!--                                <span th:if="$({currentPage>1})" th:text="${currentPage}+11"></span>-->
 
 
 
-                                <div class="am-u-lg-12 am-cf">
+
+
+                                <div style="position: absolute;left: 0px;top: 400px;" class="am-u-lg-12 am-cf">
 
                                     <div class="am-fr">
                                         <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
+                                            <!-- 首页 -->
+                                            <li th:if="${currentPage == 1}">
+                                                <a href="javascript:;">首页</a>
+                                            </li>
+
+                                            <li th:if="(${currentPage > 1})">
+                                                <a th:href="@{/teacher/workpage(pageNum=1,username=${backfill})}">首页</a>
+                                            </li>
+
+
+                                            <li th:if="${currentPage == 1}">
+                                                <a href="javascript:;">«</a>
+                                            </li>
+                                            <li th:if="${currentPage > 1}">
+                                                <a th:href="@{/teacher/workpage(pageNum=${currentPage - 1},username=${backfill})}">«</a>
+                                            </li>
+
+
+                                            <th:block th:if="${generalPage>0 && generalPage<= 4}" th:each="i : ${#numbers.sequence(1,generalPage)}">
+                                                <li th:if="${currentPage == i}" class="am-active"><span th:text="${i}"></span></li>
+                                                <li th:if="${currentPage != i}"><a th:href="@{/teacher/workpage(pageNum=${i},username=${backfill})}" th:text="${i}"></a></li>
+                                            </th:block>
+
+                                            <th:block th:if="${generalPage > 4}">
+                                                <th:block th:if="${(currentPage - (2/2)) < 3}" th:each="i : ${#numbers.sequence(1,2 + 2 )}">
+                                                    <li th:if="${currentPage == i}" class="am-active"><span th:text="${i}"></span></li>
+                                                    <li th:if="${currentPage != i}"><a th:href="@{/teacher/workpage(pageNum=${i},username=${backfill})}" th:text="${i}"></a></li>
+                                                </th:block>
+
+
+                                                <li th:if="${(currentPage - (2/2)) >= 3}"><a>...</a></li>
+
+                                                <th:block th:if="${((currentPage - (2/2))>=3) && (currentPage < (generalPage - 3))}"
+                                                          th:each="i : ${#numbers.sequence(currentPage - 1,currentPage+2)}">
+                                                    <li th:if="${currentPage == i}" class="am-active"><span th:text="${i}"></span></li>
+                                                    <li th:if="${currentPage != i}"><a th:href="@{/teacher/workpage(pageNum=${i},username=${backfill})}" th:text="${i}"></a></li>
+                                                </th:block>
+
+
+                                                <li th:if="${currentPage < (generalPage - 3)}"><a>...</a></li>
+                                                <th:block th:if="${currentPage >= (generalPage - 3)}" th:each="i : ${#numbers.sequence(generalPage - 3,generalPage)}">
+                                                    <li th:if="${currentPage == i}" class="am-active"><span th:text="${i}"></span></li>
+                                                    <li th:if="${currentPage != i}"><a th:href="@{/teacher/workpage(pageNum=${i},username=${backfill})}" th:text="${i}"></a></li>
+                                                </th:block>
+                                            </th:block>
+
+
+                                            <li th:if="${currentPage >= generalPage}"><a href="javascript:;">»</a> </li>
+                                            <li th:if="${currentPage < generalPage}"><a th:href="@{/teacher/workpage(pageNum=${currentPage}+1,username=${backfill})}">»</a> </li>
+
+
+                                            <li th:if="${generalPage>0 && currentPage >= generalPage}"><a href="javascript:;">末页</a></li>
+                                            <li th:if="${currentPage < generalPage}"><a th:href="@{/teacher/workpage(pageNum=${generalPage},username=${backfill})}">末页</a> </li>
+
+
+
                                         </ul>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>

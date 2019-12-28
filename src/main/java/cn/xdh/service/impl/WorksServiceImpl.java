@@ -25,7 +25,6 @@ public class WorksServiceImpl implements WorksService {
     public List<Works> selectAll() {
         return worksDao.selectAll();
     }
-
     @Override
     public Integer deleteById(int id) {
         return worksDao.deleteById(id);

@@ -45,13 +45,13 @@
             </a>
             <ul class="sidebar-nav sidebar-nav-sub">
                 <li class="sidebar-nav-link">
-                    <a href="/teacher/exeperiences">
+                    <a href="/teacher/exeperiences?pageNum=1">
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 学生心得
                     </a>
                 </li>
 
                 <li class="sidebar-nav-link">
-                    <a href="/teacher/works">
+                    <a href="/teacher/works?pageNum=1">
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 学生作品
                     </a>
                 </li>
@@ -103,6 +103,7 @@
         <!-- 搜索 -->
         <div style="margin: 0 auto" class="am-fl tpl-header-search">
             <h1 style="color: red;margin:10px 0" th:text="${pd}"></h1>
+            <h1 style="color: red;margin:10px 0" th:text="${url}"></h1>
             <!--<form class="tpl-header-search-form" action="javascript:;">
                 <button class="tpl-header-search-btn am-icon-search"></button>
                 <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">

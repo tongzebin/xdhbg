@@ -7,18 +7,16 @@ public class Exeperience {
     private int id;
     private int student_id;
     private String content;
-    private int add_time;
-    private String Time;
+    private long add_time;
 
-    @Override
-    public String toString() {
-        return "Exeperience{" +
-                "id=" + id +
-                ", student_id=" + student_id +
-                ", content='" + content + '\'' +
-                ", add_time=" + add_time +
-                ", Time='" + Time + '\'' +
-                '}';
+    public Exeperience(int id, int student_id, String content, long add_time) {
+        this.id = id;
+        this.student_id = student_id;
+        this.content = content;
+        this.add_time = add_time;
+    }
+
+    public Exeperience() {
     }
 
     public int getId() {
@@ -45,30 +43,21 @@ public class Exeperience {
         this.content = content;
     }
 
-    public int getAdd_time() {
+    public long getAdd_time() {
         return add_time;
     }
 
-    public void setAdd_time(int add_time) {
+    public void setAdd_time(long add_time) {
         this.add_time = add_time;
     }
 
-    public String getTime() {
-        return Time;
-    }
-
-    public void setTime(String time) {
-        Time = time;
-    }
-
-    public Exeperience() {
-    }
-
-    public Exeperience(int id, int student_id, String content, int add_time, String time) {
-        this.id = id;
-        this.student_id = student_id;
-        this.content = content;
-        this.add_time = add_time;
-        Time = time;
+    @Override
+    public String toString() {
+        return "Exeperience{" +
+                "id=" + id +
+                ", student_id=" + student_id +
+                ", content='" + content + '\'' +
+                ", add_time=" + add_time +
+                '}';
     }
 }
