@@ -4,30 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e39992f2-748e-4423-b841-647d35428301" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Works.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Works.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/WorksServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/WorksServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/util/MyDate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/works.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/works11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Exeperience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Exeperience.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Works.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Works.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/WorksServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/WorksServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/util/MyDate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/ExeperienceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/ExeperienceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/WorkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/WorkController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" afterDir="false" />
-    </list>
+    <list default="true" id="e39992f2-748e-4423-b841-647d35428301" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/works.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="327">
-              <caret line="113" column="38" lean-forward="true" selection-end-line="236" selection-end-column="7" />
+              <caret line="113" column="38" selection-end-line="236" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -130,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="106" column="58" lean-forward="true" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
+            <state relative-caret-position="174">
+              <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
-              <caret line="101" column="41" lean-forward="true" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
               <folding>
                 <element signature="e#448#449#0" expanded="true" />
                 <element signature="e#473#474#0" expanded="true" />
@@ -622,7 +599,7 @@
       <workItem from="1577320148460" duration="43832000" />
       <workItem from="1577409556854" duration="2832000" />
       <workItem from="1577412597095" duration="37111000" />
-      <workItem from="1577496003937" duration="8071000" />
+      <workItem from="1577496003937" duration="8323000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1577167566140</created>
@@ -652,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577376407660</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加数据字段前提交(功能全部生效)">
+      <created>1577504273632</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577504273632</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -682,11 +666,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169697000" />
+    <option name="totallyTimeSpent" value="169949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -695,7 +678,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" weight="0.17473525" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.17473525" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.35016835" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.05050505" />
@@ -805,7 +788,8 @@
     <MESSAGE value="教师端学生作品显示与查询1.0" />
     <MESSAGE value="教师端学生作品与心得1.0(分页未加)" />
     <MESSAGE value="使用前端模板" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用前端模板" />
+    <MESSAGE value="添加数据字段前提交(功能全部生效)" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加数据字段前提交(功能全部生效)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="181" key="Vcs.Push.Dialog.v2" />
@@ -1135,7 +1119,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/works.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
-          <caret line="113" column="38" lean-forward="true" selection-end-line="236" selection-end-column="7" />
+          <caret line="113" column="38" selection-end-line="236" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1145,7 +1129,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding>
             <element signature="e#448#449#0" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
@@ -1170,7 +1154,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
-          <caret line="101" column="41" lean-forward="true" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1203,8 +1187,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="106" column="58" lean-forward="true" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
+        <state relative-caret-position="174">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
