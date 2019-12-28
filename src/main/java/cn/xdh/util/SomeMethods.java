@@ -1,5 +1,9 @@
 package cn.xdh.util;
 
+import cn.xdh.entity.TeacherLog;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 
 public class SomeMethods {
@@ -15,9 +19,34 @@ public class SomeMethods {
         }
         return null;
     }
-    public static Long getCurrentTime(){
-        Long startTs = System.currentTimeMillis()/1000;
+    public static long getCurrentTime(){
+        long startTs = System.currentTimeMillis()/1000;
         return startTs;
+    }
+    public static void getCookieValue(HttpServletRequest request, TeacherLog teacherLog,String action){
+        //将老师操作放到日志中
+        Cookie[] cookies = request.getCookies();
+        //获得日志中需要的数据
+        String teacherId = "teacherId";
+        String name = "name";
+        long add_time = SomeMethods.getCurrentTime();
+        String teacherIp = "teacherIp";
+        //将日志数据添加到日志实体类中
+        teacherLog.setAction(action);
+        teacherLog.setAdd_time(add_time);
+        for(Cookie cookie:cookies){
+            if (cookie.getName().equals(name)){
+                teacherLog.setTeacher_name(cookie.getValue());
+            }
+            if (cookie.getName().equals(teacherId)){
+                //将字符串形式的id转换成int类型
+                int teacher_id = Integer.parseInt(cookie.getValue());
+                teacherLog.setTeacher_id(teacher_id);
+            }
+            if (cookie.getName().equals(teacherIp)){
+                teacherLog.setAdd_ip(cookie.getValue());
+            }
+        }
     }
 
 }

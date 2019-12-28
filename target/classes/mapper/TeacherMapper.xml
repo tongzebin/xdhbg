@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xdh.dao.TeacherDao">
+
+	<insert id="addTeacherLog" parameterType="cn.xdh.entity.TeacherLog">
+		insert into xdh_teacher_log
+		(teacher_id, teacher_name, action, add_time,add_ip)
+    	values
+    	(#{teacher_id},#{teacher_name},#{action},#{add_time},#{add_ip})
+	</insert>
+
+	<select id="selectTeacherLog" resultType="cn.xdh.entity.TeacherLog">
+		select * from xdh_teacher_log
+	</select>
+
+</mapper>
+
+
+

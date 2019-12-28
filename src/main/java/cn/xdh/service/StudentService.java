@@ -3,14 +3,14 @@ package cn.xdh.service;
 import cn.xdh.entity.City;
 import cn.xdh.entity.Student;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 
 public interface StudentService {
 
     Student selectByMobileAndPassword(String mobile, String password);
 
-    int addStudentService(Student student);
+    int addStudentService(Student student, HttpServletRequest request);
 
     List<Student> getAllStudentByGraduate(Integer graduate);
 
@@ -20,9 +20,13 @@ public interface StudentService {
 
     Student getStudentById(int id);
 
-    void deleteStudent(int id);
+    void deleteStudent(int id, HttpServletRequest request);
 
     List<City> getProvince();
 
     List<City> getCityByUpId(int upId);
+
+    List<City> getAreaByUpId(int upId);
+
+    void updateStudent(Student student,HttpServletRequest request);
 }

@@ -26,4 +26,8 @@ public interface StudentDao {
     List<City> selectProvince();
 
     List<City> selectCityByUpId(int upId);
+
+    List<City> selectAreaByUpId(int upId);
+
+    void updateStudent(Student student);
 }

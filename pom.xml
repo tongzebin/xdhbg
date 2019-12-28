@@ -7,6 +7,9 @@
     <groupId>cn.xdl</groupId>
     <artifactId>xdhbg</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -20,6 +23,11 @@
         </plugins>
     </build>
     <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-compiler-plugin</artifactId>-->
+<!--            <version>3.8.1</version>-->
+<!--        </dependency>-->
         <!-->spring boot web启动<-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -90,6 +98,12 @@
             <artifactId>lesscss-engine</artifactId>
             <version>1.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.borjaglez</groupId>
+            <artifactId>springify-repository</artifactId>
+            <version>0.3.2</version>
+        </dependency>
+
 
     </dependencies>
 

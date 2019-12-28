@@ -45,6 +45,12 @@
 		WHERE upid = #{upid}
 	</select>
 
+	<select id="selectAreaByUpId" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE upid = #{upid}
+	</select>
+
 	<insert id="addStudent" parameterType="cn.xdh.entity.Student">
 		insert into xdh_student
 		(username, password, mobile, join_study_time,is_graduate,stage_id,sex)
@@ -55,6 +61,17 @@
 	<delete id="deleteStudent" parameterType="int">
 		delete from xdh_student where id = #{id}
 	</delete>
+
+	<update id="updateStudent" parameterType="cn.xdh.entity.Student">
+		update xdh_student set
+		is_graduate = #{is_graduate},
+		company = #{company},
+		salary = #{salary,jdbcType=DECIMAL},
+		aim_province_id = #{aim_province_id},
+		aim_city_id = #{aim_city_id},
+		aim_area_id = #{aim_area_id}
+		where id = #{id}
+	</update>
 
 </mapper>
 

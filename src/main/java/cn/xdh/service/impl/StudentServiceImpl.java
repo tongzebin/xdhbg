@@ -1,20 +1,30 @@
 package cn.xdh.service.impl;
 
 import cn.xdh.dao.StudentDao;
+import cn.xdh.dao.TeacherDao;
 import cn.xdh.entity.City;
 import cn.xdh.entity.Student;
+import cn.xdh.entity.TeacherLog;
 import cn.xdh.service.StudentService;
+import cn.xdh.util.SomeMethods;
 import cn.xdh.util.VerifyPhone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentDao studentDao;
+    @Autowired
+    private TeacherDao teacherDao;
+    @Autowired
+    TeacherLog teacherLog;
+
+
 
     @Override
     public Student selectByMobileAndPassword(String mobile, String password){
@@ -23,10 +33,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public int addStudentService(Student student) {
-        if (student.getUsername().trim().isEmpty() || student.getMobile().trim().isEmpty()){
-            return 0;
-        }
+    public int addStudentService(Student student, HttpServletRequest request) {
         //获取要增加的学生的手机号
         String mobile = student.getMobile();
         //验证手机号是否正确
@@ -34,7 +41,7 @@ public class StudentServiceImpl implements StudentService {
         if (!flag){
             return 1;
         }
-        //查询该学生是否已存在,存在则返回0,不存在则继续添加
+        //查询该学生是否已存在,存在则返回2,不存在则继续添加
         Student student1 = studentDao.selectStudentByMobile(mobile);
         if (student1!=null){
             return 2;
@@ -50,6 +57,12 @@ public class StudentServiceImpl implements StudentService {
         //密码password 默认是 123
         student.setPassword("123");
 
+        //获取cookie中的老师信息
+        String action = "添加学生"+student.getUsername();
+        SomeMethods.getCookieValue(request,teacherLog,action);
+        //将日志实体类添加到日志表中
+        teacherDao.addTeacherLog(teacherLog);
+        //添加学生的操作
         studentDao.addStudent(student);
         return 3;
     }
@@ -78,7 +91,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void deleteStudent(int id) {
+    public void deleteStudent(int id, HttpServletRequest request) {
+        Student student = studentDao.selectStudentById(id);
+        //获取cookie中的老师信息
+        String action = "删除"+student.getUsername();
+        SomeMethods.getCookieValue(request,teacherLog,action);
+        //将日志实体类添加到日志表中
+        teacherDao.addTeacherLog(teacherLog);
+        //删除学生
         studentDao.deleteStudent(id);
     }
 
@@ -90,5 +110,21 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<City> getCityByUpId(int upId) {
         return studentDao.selectCityByUpId(upId);
+    }
+
+    @Override
+    public List<City> getAreaByUpId(int upId) {
+        return studentDao.selectAreaByUpId(upId);
+    }
+
+    @Override
+    public void updateStudent(Student student,HttpServletRequest request) {
+        //获取cookie中的老师信息
+        String action = "修改学生"+student.getUsername();
+        SomeMethods.getCookieValue(request,teacherLog,action);
+        //将日志实体类添加到日志表中
+        teacherDao.addTeacherLog(teacherLog);
+        //修改学生
+        studentDao.updateStudent(student);
     }
 }
