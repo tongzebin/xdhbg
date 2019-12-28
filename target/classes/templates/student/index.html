@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:text-decoration="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
@@ -10,38 +10,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="assets/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <script src="assets/js/echarts.min.js"></script>
-    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
-    <link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="/assets/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/assets/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script src="/assets/js/jquery.min.js"  th:src="@{/webjars/jquery/3.3.1/jquery.min.js}" ></script>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body data-type="index">
-    <script src="assets/js/theme.js"></script>
+    style
+    <script src="/assets/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 头部 -->
         <header>
             <!-- logo -->
             <div class="am-fl tpl-header-logo">
-                <a href="javascript:;"><img src="assets/img/logo.png" alt=""></a>
+                <a href="javascript:;"><img src="/assets/img/logo.png" alt=""></a>
             </div>
             <!-- 右侧内容 -->
             <div class="tpl-header-fluid">
                 <!-- 侧边切换 -->
-                <div class="am-fl tpl-header-switch-button am-icon-list">
-                    <span></span>
+
+
+<!--                把导航栏的小图标 改成页面名称  原首页栏删除-->
+
+                <div class=" tpl-header-switch-button ">
+                    <span class="am-icon-home page-header-heading-icon"></span> 首页
                 </div>
                 <!-- 其它功能-->
                 <div class="am-fr tpl-header-navbar">
                     <ul>
                         <!-- 欢迎语 -->
                         <li class="am-text-sm tpl-header-navbar-welcome">
-                            <a href="javascript:;">欢迎你, <span>Amaze UI</span> </a>
+                            <a href="javascript:;">欢迎你, <span >Amaze UI</span> </a>
                         </li>
                         <!-- 退出 -->
                         <li class="am-text-sm">
@@ -74,7 +80,7 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <img src="assets/img/user04.png" alt="">
+                        <img src="/assets/img/user04.png" alt="">
                     </div>
                     <span class="user-panel-logged-in-text">
                         <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
@@ -103,7 +109,7 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="form.html">
+                    <a href="#" th:href="@{/msg}">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单
                     </a>
                 </li>
@@ -155,255 +161,202 @@
 
         <!-- 内容区域 -->
         <div class="tpl-content-wrapper">
-            <div class="container-fluid am-cf">
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 部件首页 <small>Amaze UI</small></div>
-                        <p class="page-header-description">Amaze UI 含近 20 个 CSS 组件、20 余 JS 组件，更有多个包含不同主题的 Web 组件。</p>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title  am-cf"> <h2>公告栏</h2> </div>
                     </div>
-                    <div class="am-u-lg-3 tpl-index-settings-button">
-                        <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置</button>
+                    <div class="widget-body  am-fr">
+                        <div class="am-u-sm-12">
+                            <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
+                                <thead>
+                                <tr>
+                                    <th>通知内容</th>
+                                    <th>发布时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="msg:${msgs}">
+                                        <td th:text="${msg.notice}"></td>
+                                        <td th:text="${#dates.format(msg.getDateTime(),'yyyy-MM-dd HH:mm:ss')}"></td>
+
+<!--                                        <td th:text="${#dates.format(msg.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+<!--                        <div class="am-u-lg-12 am-cf">-->
+<!--                            <div class="am-fr">-->
+<!--                                <ul class="am-pagination tpl-pagination">-->
+<!--                                    &lt;!&ndash; 首页 &ndash;&gt;-->
+<!--                                    <li th:if="${current == 1}">-->
+<!--                                        <a href="#">首页</a>-->
+<!--                                    </li>-->
+<!--                                    <li th:if="${current > 1}">-->
+<!--                                        <a th:href="@{/admin.adminlog(page=1,type=${type},lookname=${lookname})}">首页</a>-->
+<!--                                    </li>-->
+
+<!--                                    &lt;!&ndash; 上一页 &ndash;&gt;-->
+<!--                                    <li th:if="${current == 1}">-->
+<!--                                        <a href="#">«</a>-->
+<!--                                    </li>-->
+<!--                                    <li th:if="${current > 1}">-->
+<!--                                        <a th:href="@{/admin.adminlog(page=${current - 1},type=${type},lookname=${lookname})}">«</a>-->
+<!--                                    </li>-->
+
+<!--                                    &lt;!&ndash; 最大按钮数6,浮动按钮数3 &ndash;&gt;-->
+<!--                                    <th:block th:if="${total>0 && total<= 4}" th:each="i : ${#numbers.sequence(1,total)}">-->
+<!--                                        <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
+<!--                                        <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
+<!--                                    </th:block>-->
+
+<!--                                    <th:block th:if="${total > 4}">-->
+<!--                                        <th:block th:if="${(current - (2/2)) < 3}" th:each="i : ${#numbers.sequence(1,2 + 2 )}">-->
+<!--                                            <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
+<!--                                            <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
+<!--                                        </th:block>-->
+<!--                                        &lt;!&ndash; ... &ndash;&gt;-->
+<!--                                        <li th:if="${(current - (2/2)) >= 3}"><a>...</a></li>-->
+
+<!--                                        <th:block th:if="${((current - (2/2))>=3) && (current < (total - 3))}"-->
+<!--                                                  th:each="i : ${#numbers.sequence(current - 1,current+2)}">-->
+<!--                                            <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
+<!--                                            <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
+<!--                                        </th:block>-->
+
+<!--                                        &lt;!&ndash; ... &ndash;&gt;-->
+<!--                                        <li th:if="${current < (total - 3)}"><a>...</a></li>-->
+<!--                                        <th:block th:if="${current >= (total - 3)}" th:each="i : ${#numbers.sequence(total - 3,total)}">-->
+<!--                                            <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
+<!--                                            <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
+<!--                                        </th:block>-->
+<!--                                    </th:block>-->
+
+<!--                                    &lt;!&ndash; 下一页 &ndash;&gt;-->
+<!--                                    <li th:if="${current >= total}"><a href="#">»</a> </li>-->
+<!--                                    <li th:if="${current < total}"><a th:href="@{/admin.adminlog(page=${current+1},type=${type},lookname=${lookname})}">»</a></li>-->
+
+<!--                                    &lt;!&ndash; 最后一页 &ndash;&gt;-->
+<!--                                    <li th:if="${total>1 && current == total}"><a href="#">末页</a></li>-->
+<!--                                    <li th:if="${total>1 && current != total}"><a th:href="@{/admin.adminlog(page=${total},type=${type},lookname=${lookname})}">末页</a></li>-->
+
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                    </div>
+
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12"  >
+                <div class="widget-head am-cf">
+                    <div class="widget-title  am-cf"> <h2 style="color: #FFFFFF">兄弟会培养内容</h2> </div>
+                </div>
+                <div class="accordion" id="accordionExample" style="background: #4b5357; ">
+                <div class="card" style="background: #4b5357" >
+                    <div class="card-header" id="headingOne"                     >
+                        <h2 class="mb-0" >
+                            <button class="btn am-btn-default " type="button"  text-decoration="none" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h2 style="color: #FFFFFF">阶段一 : 基础逻辑训练</h2>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body" style="background: #5d6468" >
+                            <h3 style="color: #FFFFFF">简介：<br><br>
+                                理解操作系统原理，熟悉常 见操作开发工具使用，培养 编程思想，建立编程信心。<br><br>成果：<br><br>理解编程逻辑，为后面做准备。
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="background: #4b5357">
+                    <div class="card-header" id="headingTwo" >
+                        <h2 class="mb-0">
+                            <button class="btn collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h2 style="color: #FFFFFF">阶段二 : 前端组件训练</h2>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample"  >
+                        <div class="card-body" style="background: #5d6468"  >
+                            <h3 style="color: #FFFFFF">简介：<br><br>
+                                理解组件化开发思想，熟练使用主流的前端框架和技能。握好前端知识是我们学习任何一门语言的开始。<br><br>
+                                成果：<br><br>
+                                独立完成前端页面开发。</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="background: #4b5357">
+                    <div class="card-header" id="headingThree" >
+                        <h2 class="mb-0">
+                            <button class="btn  collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h2 style="color: #FFFFFF">阶段三 : 强化编程训练</h2>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body" style="background: #5d6468"  >
+                            <h3 style="color: #FFFFFF">简介：<br><br>
+                                自选两门编程语言（Java/Python/PHP）强化，掌握开发规范设计模式，使用主流框架进行开发，使用容器（Docker）技术完成后端环境部署/迭代/持续集成（云计算）。
+                                <br><br>
+                                成果：<br><br>
+                                独立完成项目、模块、组件、插件开发。</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card" style="background: #4b5357">
+                        <div class="card-header" id="headingFour" >
+                            <h2 class="mb-0">
+                                <button class="btn  collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h2 style="color: #FFFFFF">阶段四 : 结合开源社区生态 完成项目开发训练</h2>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body" style="background: #5d6468"  >
+                                <h3 style="color: #FFFFFF">简介：<br><br>
+                                    掌握大数据与科学计算、常用框架工具及开发技巧，能独立搭建生产级别本地云环境，完成中等规模的企业级项目。
+                                    <br><br>
+                                    成果：
+                                    <br><br>
+                                    独立设计完成项目开发。</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="background: #4b5357">
+                    <div class="card-header" id="headingFive" >
+                        <h2 class="mb-0">
+                            <button class="btn  collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <h2 style="color: #FFFFFF">阶段五 : 国内常见第三方生态使用，带领小型团队</h2>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                        <div class="card-body" style="background: #5d6468"  >
+                            <h3 style="color: #FFFFFF">简介：<br><br>
+                                学习前沿开发生态及人工智能应用技术，具备领导5-7人团队协同开发能力。
+                                <br><br>
+                                成果：
+                                <br><br>
+                                善用国内优秀的基础设施与第三方支持快速完成互联网项目交付。</h3>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row-content am-cf">
-                <div class="row  am-cf">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
-                        <div class="widget am-cf">
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">月度财务收支计划</div>
-                                <div class="widget-function am-fr">
-                                    <a href="javascript:;" class="am-icon-cog"></a>
-                                </div>
-                            </div>
-                            <div class="widget-body am-fr">
-                                <div class="am-fl">
-                                    <div class="widget-fluctuation-period-text">
-                                        ￥61746.45
-                                        <button class="widget-fluctuation-tpl-btn">
-                        <i class="am-icon-calendar"></i>
-                        更多月份
-                      </button>
-                                    </div>
-                                </div>
-                                <div class="am-fr am-cf">
-                                    <div class="widget-fluctuation-description-amount text-success" am-cf>
-                                        +￥30420.56
-
-                                    </div>
-                                    <div class="widget-fluctuation-description-text am-text-right">
-                                        8月份收入
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                        <div class="widget widget-primary am-cf">
-                            <div class="widget-statistic-header">
-                                本季度利润
-                            </div>
-                            <div class="widget-statistic-body">
-                                <div class="widget-statistic-value">
-                                    ￥27,294
-                                </div>
-                                <div class="widget-statistic-description">
-                                    本季度比去年多收入 <strong>2593元</strong> 人民币
-                                </div>
-                                <span class="widget-statistic-icon am-icon-credit-card-alt"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                        <div class="widget widget-purple am-cf">
-                            <div class="widget-statistic-header">
-                                本季度利润
-                            </div>
-                            <div class="widget-statistic-body">
-                                <div class="widget-statistic-value">
-                                    ￥27,294
-                                </div>
-                                <div class="widget-statistic-description">
-                                    本季度比去年多收入 <strong>2593元</strong> 人民币
-                                </div>
-                                <span class="widget-statistic-icon am-icon-support"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row am-cf">
-                    <div class="am-u-sm-12 am-u-md-8">
-                        <div class="widget am-cf">
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">月度财务收支计划</div>
-                                <div class="widget-function am-fr">
-                                    <a href="javascript:;" class="am-icon-cog"></a>
-                                </div>
-                            </div>
-                            <div class="widget-body-md widget-body tpl-amendment-echarts am-fr" id="tpl-echarts">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="am-u-sm-12 am-u-md-4">
-                        <div class="widget am-cf">
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">专用服务器负载</div>
-                                <div class="widget-function am-fr">
-                                    <a href="javascript:;" class="am-icon-cog"></a>
-                                </div>
-                            </div>
-                            <div class="widget-body widget-body-md am-fr">
-
-                                <div class="am-progress-title">CPU Load <span class="am-fr am-progress-title-more">28% / 100%</span></div>
-                                <div class="am-progress">
-                                    <div class="am-progress-bar" style="width: 15%"></div>
-                                </div>
-                                <div class="am-progress-title">CPU Load <span class="am-fr am-progress-title-more">28% / 100%</span></div>
-                                <div class="am-progress">
-                                    <div class="am-progress-bar  am-progress-bar-warning" style="width: 75%"></div>
-                                </div>
-                                <div class="am-progress-title">CPU Load <span class="am-fr am-progress-title-more">28% / 100%</span></div>
-                                <div class="am-progress">
-                                    <div class="am-progress-bar am-progress-bar-danger" style="width: 35%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row am-cf">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-4 widget-margin-bottom-lg ">
-                        <div class="tpl-user-card am-text-center widget-body-lg">
-                            <div class="tpl-user-card-title">
-                                禁言小张
-                            </div>
-                            <div class="achievement-subheading">
-                                月度最佳员工
-                            </div>
-                            <img class="achievement-image" src="assets/img/user07.png" alt="">
-                            <div class="achievement-description">
-                                禁言小张在
-                                <strong>30天内</strong> 禁言了
-                                <strong>200多</strong>人。
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-8 widget-margin-bottom-lg">
-
-                        <div class="widget am-cf widget-body-lg">
-
-                            <div class="widget-body  am-fr">
-                                <div class="am-scrollable-horizontal ">
-                                    <table width="100%" class="am-table am-table-compact am-text-nowrap tpl-table-black " id="example-r">
-                                        <thead>
-                                            <tr>
-                                                <th>文章标题</th>
-                                                <th>作者</th>
-                                                <th>时间</th>
-                                                <th>操作</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="gradeX">
-                                                <td>新加坡大数据初创公司 Latize 获 150 万美元风险融资</td>
-                                                <td>张鹏飞</td>
-                                                <td>2016-09-26</td>
-                                                <td>
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>自拍的“政治角色”：观众背对希拉里自拍合影表示“支持”</td>
-                                                <td>天纵之人</td>
-                                                <td>2016-09-26</td>
-                                                <td>
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="gradeX">
-                                                <td>关于创新管理，我想和你当面聊聊。</td>
-                                                <td>王宽师</td>
-                                                <td>2016-09-26</td>
-                                                <td>
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>究竟是趋势带动投资，还是投资引领趋势？</td>
-                                                <td>着迷</td>
-                                                <td>2016-09-26</td>
-                                                <td>
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>Docker领域再添一员，网易云发布“蜂巢”，加入云计算之争</td>
-                                                <td>醉里挑灯看键</td>
-                                                <td>2016-09-26</td>
-                                                <td>
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <!-- more data -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    </div>
-    <script src="assets/js/amazeui.min.js"></script>
-    <script src="assets/js/amazeui.datatables.min.js"></script>
-    <script src="assets/js/dataTables.responsive.min.js"></script>
-    <script src="assets/js/app.js"></script>
+
+    <script src="/assets/js/amazeui.min.js"></script>
+    <script src="/assets/js/amazeui.datatables.min.js"></script>
+    <script src="/assets/js/dataTables.responsive.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 

@@ -8,7 +8,15 @@
 	</select>
 	
 
-	
+	<!-- 查询数据库中公告信息-->
+	<select id="getNotices" resultType="cn.xdh.entity.Notice">
+		select * from xdh_notice ORDER BY add_time DESC
+	</select>
 
 
+
+	<!-- 查询数据库中学生信息-->
+	<select id="getDatas" resultType="cn.xdh.entity.Student">
+		SELECT * FROM xdh_student WHERE id = #{id}
+	</select>
 </mapper>
