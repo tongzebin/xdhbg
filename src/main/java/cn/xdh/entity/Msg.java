@@ -1,5 +1,8 @@
 package cn.xdh.entity;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Msg {
     private String msg;
 

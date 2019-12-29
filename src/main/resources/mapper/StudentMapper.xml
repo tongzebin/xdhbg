@@ -53,9 +53,9 @@
 
 	<insert id="addStudent" parameterType="cn.xdh.entity.Student">
 		insert into xdh_student
-		(username, password, mobile, join_study_time,is_graduate,stage_id,sex)
+		(username, password, mobile, join_study_time,is_graduate,stage_id,sex,class_id)
     	values
-    	(#{username},#{password},#{mobile},#{join_study_time},#{is_graduate},#{stage_id},#{sex})
+    	(#{username},#{password},#{mobile},#{join_study_time},#{is_graduate},#{stage_id},#{sex},#{class_id})
 	</insert>
 
 	<delete id="deleteStudent" parameterType="int">

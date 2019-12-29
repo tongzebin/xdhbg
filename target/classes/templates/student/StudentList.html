@@ -101,7 +101,7 @@
                                     <tbody id="rows">
                                     <tr class="gradeX" th:id="tr+${studentList.id}" th:each="studentList:${studentList}">
                                         <td th:text="${studentList.username}"></td>
-                                        <td th:text="${studentList.sex}==0?'女':'男'"></td>
+                                        <td th:text="${studentList.sex}==1?'男':'女'"></td>
                                         <td th:text="${studentList.age}"></td>
                                         <td th:text="${studentList.mobile}"></td>
                                         <td th:text="${studentList.class_id}"></td>

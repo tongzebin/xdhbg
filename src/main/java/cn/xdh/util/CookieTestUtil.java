@@ -20,9 +20,9 @@ public class CookieTestUtil {
         Cookie teacherId = new Cookie("teacherId", teacher_id+"");
         Cookie teacherIp = new Cookie("teacherIp", add_ip);
 //        设置cookie存在时间
-        name.setMaxAge(60 * 60 * 24);
-        teacherId.setMaxAge(60 * 60 * 24);
-        teacherIp.setMaxAge(60 * 60 * 24);
+        name.setMaxAge(60 * 60 * 24*365);
+        teacherId.setMaxAge(60 * 60 * 24*365);
+        teacherIp.setMaxAge(60 * 60 * 24*365);
 //        设置cookie存在路径
         name.setPath("/");
         teacherId.setPath("/");

@@ -10,9 +10,9 @@ public class Student implements Serializable {
 
     private int birthday;
     //入学时间
-    private int join_study_time;
+    private long join_study_time;
     //毕业时间
-    private int graduate_time;
+    private long graduate_time;
     private String graduate_school;
     private int province_id;
     private int city_id;
@@ -37,15 +37,6 @@ public class Student implements Serializable {
     private int age;
 
     private int stage_id;
-
-    public Student() {
-    }
-
-    public Student(String username, String mobile,int sex) {
-        this.username = username;
-        this.mobile = mobile;
-        this.sex = sex;
-    }
 
     public int getId() {
         return id;
@@ -87,19 +78,19 @@ public class Student implements Serializable {
         this.birthday = birthday;
     }
 
-    public int getJoin_study_time() {
+    public long getJoin_study_time() {
         return join_study_time;
     }
 
-    public void setJoin_study_time(int join_study_time) {
+    public void setJoin_study_time(long join_study_time) {
         this.join_study_time = join_study_time;
     }
 
-    public int getGraduate_time() {
+    public long getGraduate_time() {
         return graduate_time;
     }
 
-    public void setGraduate_time(int graduate_time) {
+    public void setGraduate_time(long graduate_time) {
         this.graduate_time = graduate_time;
     }
 

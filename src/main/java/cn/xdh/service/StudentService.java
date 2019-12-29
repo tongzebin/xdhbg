@@ -1,7 +1,9 @@
 package cn.xdh.service;
 
 import cn.xdh.entity.City;
+import cn.xdh.entity.Msg;
 import cn.xdh.entity.Student;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -29,4 +31,6 @@ public interface StudentService {
     List<City> getAreaByUpId(int upId);
 
     void updateStudent(Student student,HttpServletRequest request);
+
+    Msg batchAddStudent(HttpServletRequest request, String suffixName, MultipartFile excelFile);
 }

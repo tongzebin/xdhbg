@@ -11,7 +11,7 @@
 	</insert>
 
 	<select id="selectTeacherLog" resultType="cn.xdh.entity.TeacherLog">
-		select * from xdh_teacher_log
+		select * from xdh_teacher_log order by add_time desc
 	</select>
 
 </mapper>

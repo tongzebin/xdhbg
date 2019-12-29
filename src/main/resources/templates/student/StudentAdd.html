@@ -9,136 +9,178 @@
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="icon" type="image/png" href="/assets/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/assets/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
     <script src="/assets/js/echarts.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/assets/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="/assets/css/amazeui.datatables.min.css"/>
     <link rel="stylesheet" href="/assets/css/app.css">
     <script src="/assets/js/jquery.min.js"></script>
+    <script th:src="@{/webjars/jquery-form/3.51/jquery.form.js} "></script>
     <script th:src="@{/webjars/bootstrap/3.4.1/js/bootstrap.js}"></script>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.css}">
 </head>
 
 <body data-type="widgets">
-    <script src="/assets/js/theme.js"></script>
-    <div class="am-g tpl-g">
-        <!-- 学生管理顶部 -->
-        <div th:replace="commons/public::ViewTop"></div>
-        <!-- 风格切换 -->
-        <div class="tpl-skiner">
-            <div class="tpl-skiner-toggle am-icon-cog">
+<script src="/assets/js/theme.js"></script>
+<div class="am-g tpl-g">
+    <!-- 学生管理顶部 -->
+    <div th:replace="commons/public::ViewTop"></div>
+    <!-- 风格切换 -->
+    <div class="tpl-skiner">
+        <div class="tpl-skiner-toggle am-icon-cog">
+        </div>
+        <div class="tpl-skiner-content">
+            <div class="tpl-skiner-content-title">
+                选择主题
             </div>
-            <div class="tpl-skiner-content">
-                <div class="tpl-skiner-content-title">
-                    选择主题
-                </div>
-                <div class="tpl-skiner-content-bar">
-                    <span class="skiner-color skiner-white" data-color="theme-white"></span>
-                    <span class="skiner-color skiner-black" data-color="theme-black"></span>
+            <div class="tpl-skiner-content-bar">
+                <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                <span class="skiner-color skiner-black" data-color="theme-black"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边导航栏 -->
+    <div th:replace="commons/public::SideSelect"></div>
+
+    <!-- 内容区域 -->
+    <div class="tpl-content-wrapper">
+
+        <div class="container-fluid am-cf">
+            <div class="row">
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 新增学员
+                    </div>
+                    <p class="page-header-description">请填写必要的信息</p>
                 </div>
             </div>
         </div>
-        <!-- 侧边导航栏 -->
-        <div th:replace="commons/public::SideSelect"></div>
 
-        <!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
+        <div class="row-content am-cf">
+            <div class="row">
 
-            <div class="container-fluid am-cf">
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 新增学员 </div>
-                        <p class="page-header-description">请填写必要的信息</p>
-                    </div>
-                </div>
-            </div>
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                    <div class="widget am-cf">
+                        <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">添加表单</div>
+                            <div class="widget-function am-fr">
+                                <a href="javascript:;" class="am-icon-cog"></a>
+                            </div>
+                        </div>
+                        <div class="widget-body am-fr">
 
-            <div class="row-content am-cf">
-                <div class="row">
+                            <form class="am-form tpl-form-border-form tpl-form-border-br" autocomplete="off">
 
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                        <div class="widget am-cf">
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">添加表单</div>
-                                <div class="widget-function am-fr">
-                                    <a href="javascript:;" class="am-icon-cog"></a>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">姓名 <span class="tpl-form-line-small-title">name</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input id="username" type="text" placeholder="请输入学员姓名" name="username">
+                                        <small>此为必填项</small>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="widget-body am-fr">
 
-                                <form class="am-form tpl-form-border-form tpl-form-border-br" autocomplete="off">
-
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">姓名 <span class="tpl-form-line-small-title">name</span></label>
-                                        <div class="am-u-sm-9">
-                                            <input id="username" type="text" placeholder="请输入学员姓名" name="username">
-                                            <small>此为必填项</small>
-                                        </div>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">性别 <span class="tpl-form-line-small-title">sex</span></label>
+                                    <div class="am-u-sm-9">
+                                        <select id="sex" name="sex" data-am-selected style="display: none;">
+                                            <option value="1" selected>男</option>
+                                            <option value="0">女</option>
+                                        </select>
                                     </div>
+                                </div>
 
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">性别 <span class="tpl-form-line-small-title">sex</span></label>
-                                        <div class="am-u-sm-9">
-                                            <select id="sex" name="sex" data-am-selected style="display: none;">
-                                                  <option value="1" selected>男</option>
-                                                  <option value="0">女</option>
-                                            </select>
-                                        </div>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">电话号码 <span class="tpl-form-line-small-title">phone</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input id="mobile" type="text" placeholder="请填写学员电话号码" name="mobile">
+                                        <small>此为必填项</small>
                                     </div>
+                                </div>
 
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">电话号码 <span class="tpl-form-line-small-title">phone</span></label>
-                                        <div class="am-u-sm-9">
-                                            <input id="mobile" type="text" placeholder="请填写学员电话号码" name="mobile">
-                                            <small>此为必填项</small>
-                                        </div>
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success"
+                                                id="submit">提交
+                                        </button>
+                                        <button id="SubmitExcelFile" type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success">
+                                            <i class="am-icon-cloud-upload"></i>批量导入
+                                        </button>
                                     </div>
+                                </div>
+                            </form>
 
-                                    <div class="am-form-group">
-                                        <div class="am-u-sm-9 am-u-sm-push-3">
-                                            <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success" id="submit">提交</button>
-                                            <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">批量导入</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+<!--                            文件上传-->
+
+        <form method="post" style="display: none" th:attr="url=@{/student/add/batch/}" enctype="multipart/form-data" id="ExcelForm" >
+            <input id="filepath" name="ExcelFile" type="file" size="30" value=""  style="font-size:14px" />
+        </form>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
-    </div>
-    <script src="/assets/js/amazeui.min.js"></script>
-    <script src="/assets/js/amazeui.datatables.min.js"></script>
-    <script src="/assets/js/dataTables.responsive.min.js"></script>
-    <script src="/assets/js/app.js"></script>
-    <script>
-        $("#submit").click(function () {
-            var name = $("#username").val().trim();
-            var sex = $("#sex").val();
-            var mobile = $("#mobile").val().trim();
-            if (name=="" || mobile==""){
-                alert("添加失败,姓名或手机号不能为空");
-            }else{
-                $.post("/student/add",
+</div>
+</div>
+<script src="/assets/js/amazeui.min.js"></script>
+
+<script src="/assets/js/amazeui.datatables.min.js"></script>
+<script src="/assets/js/dataTables.responsive.min.js"></script>
+<script src="/assets/js/app.js"></script>
+<script>
+    $("#submit").click(function () {
+        var name = $("#username").val().trim();
+        var sex = $("#sex").val();
+        var mobile = $("#mobile").val().trim();
+        if (name == "" || mobile == "") {
+            alert("添加失败,姓名或手机号不能为空");
+        } else {
+            $.post("/student/add",
                 {
-                    username:name,
-                    sex:sex,
-                    mobile:mobile
+                    username: name,
+                    sex: sex,
+                    mobile: mobile
                 },
                 function (data) {
                     alert(data.msg);
                 });
-            }
-            $("#username").val("");
-            $("#mobile").val("");
-        });
-    </script>
+        }
+        $("#username").val("");
+        $("#mobile").val("");
+    });
+</script>
+<script>
+
+    $("#SubmitExcelFile").click(function () {
+        $("#filepath").trigger("click");
+    })
+</script>
+<script>
+    $("#filepath").change(function (){
+        var fileName= $("#filepath").val();
+        var suffixName = fileName.substr(fileName.indexOf("."));
+        var option = {
+			url : $("#ExcelForm").attr("url")+suffixName,
+			type : 'POST',
+			dataType : "json",
+			clearForm: true,
+			success : function(data) {
+                alert(data.msg);
+			}
+		};
+        if (fileName==""){
+            alert("请上传Excel文件");
+        }
+        if (suffixName == ".xls" || suffixName == ".xlsx"){
+            $("#ExcelForm").ajaxSubmit(option);
+        }else{
+            alert("请上传Excel文件");
+        }
+    });
+</script>
 
 </body>
 
