@@ -81,12 +81,12 @@
                                     </tr>
                                     </thead>
                                     <tbody id="rows">
-                                    <tr class="gradeX" th:each="teacherLog:${teacherLogList}">
-                                        <td th:text="${teacherLog.teacher_id}"></td>
-                                        <td th:text="${teacherLog.teacher_name}"></td>
-                                        <td th:text="${teacherLog.action}"></td>
-                                        <td th:text="${#dates.format(teacherLog.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>
-                                        <td th:text="${teacherLog.add_ip}"></td>
+                                    <tr class="gradeX" th:each="teacherLogs:${teacherLogs}">
+                                        <td th:text="${teacherLogs.teacher_id}"></td>
+                                        <td th:text="${teacherLogs.teacher_name}"></td>
+                                        <td th:text="${teacherLogs.action}"></td>
+                                        <td th:text="${#dates.format(teacherLogs.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                                        <td th:text="${teacherLogs.add_ip}"></td>
                                     </tr>
                                     <!-- more data -->
                                     </tbody>
@@ -97,13 +97,10 @@
                                 <div class="am-fr">
                                     <div class="am-fr">
                                         <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
+                                            <li><a th:href="@{/teacher/Log/1}">«</a></li>
+                                            <li th:each="page:${totalPageList}"><a
+                                                    th:href="@{/teacher/Log/}+${page}" th:text="${page}"></a></li>
+                                            <li><a th:href="@{/teacher/Log/}+${totalPage}">»</a></li>
                                         </ul>
                                     </div>
                                 </div>

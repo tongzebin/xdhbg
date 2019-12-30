@@ -50,7 +50,7 @@
                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                     <div class="widget am-cf">
                         <div class="widget-head am-cf">
-                            <div class="widget-title  am-cf">模糊查询学生列表</div>
+                            <div class="widget-title  am-cf">学生信息:未毕业</div>
 
 
                         </div>
@@ -79,7 +79,7 @@
                                             <a href="#" id="search"
                                                class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
                                                type="button"></a>
-                                    </span>
+                                        </span>
                                 </div>
                             </div>
 
@@ -93,23 +93,30 @@
                                         <th th:text="电话号码"></th>
                                         <th th:text="班级"></th>
                                         <th th:text="阶段"></th>
-                                        <th th:text="毕业状态"></th>
+                                        <th th:text="详细住址"></th>
+                                        <th th:text="入学时间"></th>
+                                        <th th:text="毕业学校"></th>
                                         <th th:text="操作"></th>
                                     </tr>
                                     </thead>
                                     <tbody id="rows">
-                                    <tr class="gradeX" th:id="tr+${studentList.id}"
-                                        th:each="studentList:${studentList}">
-                                        <td th:text="${studentList.username}"></td>
-                                        <td th:text="${studentList.sex}==1?'男':'女'"></td>
-                                        <td th:text="${studentList.mobile}"></td>
-                                        <td th:text="${studentList.class_id}"></td>
-                                        <td th:text="${studentList.stage_id}"></td>
-                                        <td th:text="${studentList.is_graduate}==0?'未毕业':'已毕业'"></td>
-                                        <td>
+                                    <tr class="gradeX" th:id="tr+${student['id']}" th:each="student:${StudentList}">
+                                        <td th:text="${student['username']}"></td>
+                                        <td th:text="${student['sex']}==1?'男':'女'"></td>
+                                        <td th:text="${student['mobile']}"></td>
+                                        <td th:text="${student['class_name']}"></td>
+                                        <td th:if="${student['stage_id']}==1" th:text="一阶段"></td>
+                                        <td th:if="${student['stage_id']}==2" th:text="二阶段"></td>
+                                        <td th:if="${student['stage_id']}==3" th:text="三阶段"></td>
+                                        <td th:if="${student['stage_id']}==4" th:text="四阶段"></td>
+                                        <td th:if="${student['stage_id']}==5" th:text="五阶段"></td>
+                                        <td th:text="${student['address']}"></td>
+                                        <td th:text="${#dates.format(student['join_study_time']*1000, 'yyyy-MM-dd')}"></td>
+                                        <td th:text="${student['graduate_school']}"></td>
+                                        <td th:if="${!student['username'].equals('没有数据')}" >
                                             <a class="btn btn-sm btn-primary"
-                                               th:href="@{/student/edit/view/}+${studentList.id}">编辑</a>
-                                            <button th:attr="deluri=@{/student/delete/}+${studentList.id}"
+                                               th:href="@{/student/edit/view/}+${student['id']}">编辑</a>
+                                            <button th:attr="deluri=@{/student/delete/}+${student['id']}"
                                                     class="btn btn-sm btn-danger delBtn">删除
                                             </button>
                                         </td>
@@ -122,14 +129,17 @@
 
                                 <div class="am-fr">
                                     <div class="am-fr">
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
+<!--                                        正常分页-->
+                                        <ul th:if="${likeName}==0" class="am-pagination tpl-pagination">
+                                            <li><a th:href="@{/student/Undergraduate/1}">«</a></li>
+                                            <li th:each="page:${totalPageList}"><a th:href="@{/student/Undergraduate/}+${page}" th:text="${page}"></a></li>
+                                            <li><a th:href="@{/student/Undergraduate/}+${totalPage}">»</a></li>
+                                        </ul>
+<!--                                        模糊查询分页-->
+                                        <ul th:if="${likeName}==1" class="am-pagination tpl-pagination">
+                                            <li><a th:href="@{/student/like/0/1/}+${name}">«</a></li>
+                                            <li th:each="page:${totalPageList}"><a th:href="@{/student/like/0/}+${page}+'/'+${name}" th:text="${page}"></a></li>
+                                            <li><a th:href="@{/student/like/0/}+${totalPage}+'/'+${name}">»</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -155,7 +165,7 @@
         if (searchContent == "") {
             alert("请输入姓名或姓名中存在的汉字进行搜索")
         } else {
-            $("#search").attr("href", "/student/like/" + searchContent);
+            $("#search").attr("href", "/student/like/0/1/" + searchContent);
         }
 
     });
@@ -163,17 +173,22 @@
 <!--删除功能-->
 <script>
     $(".delBtn").click(function () {
-        if (confirm("确定要删除吗")) {
-            $.ajax({
+        if(confirm("确定要删除吗")) {
+           $.ajax({
                 url: $(this).attr("deluri"),
                 type: "delete",
                 dataType: "JSON",
                 success: function (id) {
-                    $("#tr" + id).remove();
+                    // $("#tr" + id).remove();
+                    location.reload();
                 }
             });
-        }
+         }
     });
+</script>
+<!--分页-->
+<script>
+
 </script>
 </body>
 

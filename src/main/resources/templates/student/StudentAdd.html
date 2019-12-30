@@ -173,8 +173,7 @@
 		};
         if (fileName==""){
             alert("请上传Excel文件");
-        }
-        if (suffixName == ".xls" || suffixName == ".xlsx"){
+        }else if (suffixName == ".xls" || suffixName == ".xlsx"){
             $("#ExcelForm").ajaxSubmit(option);
         }else{
             alert("请上传Excel文件");

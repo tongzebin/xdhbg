@@ -13,11 +13,9 @@ import cn.xdh.util.VerifyPhone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +36,37 @@ public class StudentServiceImpl implements StudentService {
     public Student selectByMobileAndPassword(String mobile, String password){
         Student student = studentDao.selectByMobileAndPassword(mobile,password);
         return student;
+    }
+
+    @Override
+    public List<Map<String, Object>> getStudentByUndergraduate() {
+        List<Map<String, Object>> undergraduateStudentList = studentDao.getStudentByUndergraduate();
+        return undergraduateStudentList;
+    }
+
+    @Override
+    public List<Map<String, Object>> getStudentByGraduate() {
+        List<Map<String, Object>> graduateStudentList = studentDao.getStudentByGraduate();
+        for (Map<String, Object> student:graduateStudentList){
+            //获取省级城市id,查询城市名,插入Map集合中
+            Integer aim_province_id = (Integer)student.get("aim_province_id");
+            String aim_province = selectCityById(aim_province_id);
+            student.put("aim_province",aim_province);
+            //获取市级城市id,查询城市名,插入Map集合中
+            Integer aim_city_id = (Integer)student.get("aim_city_id");
+            String aim_city = selectCityById(aim_city_id);
+            student.put("aim_city",aim_city);
+            //获取县级城市id,查询城市名,插入Map集合中
+            Integer aim_area_id = (Integer)student.get("aim_area_id");
+            String aim_area = selectCityById(aim_area_id);
+            student.put("aim_area",aim_area);
+        }
+        return graduateStudentList;
+    }
+
+    @Override
+    public String selectCityById(Integer id) {
+        return studentDao.selectCityById(id);
     }
 
     @Override
@@ -63,7 +92,7 @@ public class StudentServiceImpl implements StudentService {
         //阶段stage_id 默认是1,1阶段
         student.setStage_id(1);
         //密码password 默认是 123
-        student.setPassword("123");
+        student.setPassword(SomeMethods.md5("123"));
 
         //获取cookie中的老师信息
         String action = "添加学生"+student.getUsername();
@@ -86,11 +115,24 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> getStudentLikeUsername(String username) {
-        if (username.trim().isEmpty()){
-            return null;
+    public List<Map<String,Object>> getStudentLikeUsername(int is_graduate,String username) {
+        System.out.println(is_graduate);
+        List<Map<String, Object>> studentListByName =  studentDao.selectStudentLikeUsername(is_graduate,username);
+        for (Map<String, Object> student:studentListByName){
+            //获取省级城市id,查询城市名,插入Map集合中
+            Integer aim_province_id = (Integer)student.get("aim_province_id");
+            String aim_province = selectCityById(aim_province_id);
+            student.put("aim_province",aim_province);
+            //获取市级城市id,查询城市名,插入Map集合中
+            Integer aim_city_id = (Integer)student.get("aim_city_id");
+            String aim_city = selectCityById(aim_city_id);
+            student.put("aim_city",aim_city);
+            //获取县级城市id,查询城市名,插入Map集合中
+            Integer aim_area_id = (Integer)student.get("aim_area_id");
+            String aim_area = selectCityById(aim_area_id);
+            student.put("aim_area",aim_area);
         }
-        return studentDao.selectStudentLikeUsername(username);
+        return studentListByName;
     }
 
     @Override
@@ -127,6 +169,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void updateStudent(Student student,HttpServletRequest request) {
+        long newTime = SomeMethods.getCurrentTime();
+        student.setGraduate_time(newTime);
         //获取cookie中的老师信息
         String action = "修改学生"+student.getUsername();
         SomeMethods.getCookieValue(request,teacherLog,action);
@@ -142,9 +186,10 @@ public class StudentServiceImpl implements StudentService {
             try {
                 //从xml读取需要的数据
                 if (".xls".equals(suffixName)){
-                    list = ExcelToObjectUtil.readXls(excelFile);
+                    list = ExcelToObjectUtil.read(excelFile);
+                }else{
+                    list = ExcelToObjectUtil.readXlsx(excelFile);
                 }
-                list = ExcelToObjectUtil.readXlsx(excelFile);
             } catch (IOException e) {
                 e.printStackTrace();
             }

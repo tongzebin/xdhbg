@@ -7,10 +7,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 public interface StudentService {
 
     Student selectByMobileAndPassword(String mobile, String password);
+
+    List<Map<String,Object>> getStudentByUndergraduate();
+
+    List<Map<String,Object>> getStudentByGraduate();
+
+    String selectCityById(Integer id);
 
     int addStudentService(Student student, HttpServletRequest request);
 
@@ -18,7 +25,7 @@ public interface StudentService {
 
     Student getStudentByMobile(String mobile);
 
-    List<Student> getStudentLikeUsername(String username);
+    List<Map<String,Object>> getStudentLikeUsername(int is_graduate,String username);
 
     Student getStudentById(int id);
 

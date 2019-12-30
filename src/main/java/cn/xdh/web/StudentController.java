@@ -4,29 +4,81 @@ import cn.xdh.entity.City;
 import cn.xdh.entity.Msg;
 import cn.xdh.entity.Student;
 import cn.xdh.service.StudentService;
-import cn.xdh.util.ExcelToObjectUtil;
+import cn.xdh.util.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Controller
 public class StudentController {
+
     @Autowired
     StudentService studentService;
 
-    @GetMapping("/student/graduate/{graduate}")
-    public String studentList(Model model, @PathVariable Integer graduate) {
-        List<Student> studentList = studentService.getAllStudentByGraduate(graduate);
-        model.addAttribute("studentList", studentList);
-        return "student/StudentList";
+    @GetMapping("/student/Undergraduate/{page}")
+    public String UndergraduateStudentList(Model model,@PathVariable int page) {
+        List<Map<String, Object>> undergraduateStudentTotal = studentService.getStudentByUndergraduate();
+        //数据量
+        int total = undergraduateStudentTotal.size();
+        //防止数据库中没有值
+//        undergraduateStudentTotal = PageUtil.preventionNull(total,undergraduateStudentTotal);
+        if (total==0){
+            Map<String, Object> map = new HashMap<String,Object>();
+            map.put("username","没有数据");
+            map.put("join_study_time",(long)0);
+            undergraduateStudentTotal.add(map);
+            total = undergraduateStudentTotal.size();
+        }
+        //总页数
+        int totalPage = PageUtil.getTotalPage(total,PageUtil.count);
+        //校对页数正确与否
+        page=PageUtil.numberOfPage(page,totalPage);
+        //页数集合
+        List<Integer> totalPageList = PageUtil.pageUtil(page,totalPage);
+        //分好页的未毕业学生集合
+        List<Map<String,Object>> undergraduateStudentList = PageUtil.undergraduateStudentList(page,totalPage,total,undergraduateStudentTotal);
+
+        model.addAttribute("totalPage",totalPage);
+        model.addAttribute("totalPageList",totalPageList);
+        model.addAttribute("StudentList", undergraduateStudentList);
+        model.addAttribute("likeName",0);
+        return "student/UndergraduateStudentList";
+    }
+
+    @GetMapping("/student/Graduate/{page}")
+    public String GraduateStudentList(Model model,@PathVariable int page) {
+        List<Map<String, Object>> graduateStudentTotal = studentService.getStudentByGraduate();
+        //数据量
+        int total = graduateStudentTotal.size();
+        //防止数据库中没有值
+        if (total==0){
+            Map<String, Object> map = new HashMap<String,Object>();
+            map.put("username","没有数据");
+            map.put("graduate_time",(long)0);
+            graduateStudentTotal.add(map);
+            total = graduateStudentTotal.size();
+        }
+        //总页数
+        int totalPage = PageUtil.getTotalPage(total,PageUtil.count);
+        //校对页数正确与否
+        page=PageUtil.numberOfPage(page,totalPage);
+        //页数集合
+        List<Integer> totalPageList = PageUtil.pageUtil(page,totalPage);
+        //分好页的毕业学生集合
+        List<Map<String,Object>> graduateStudentList = PageUtil.graduateStudentList(page,totalPage,total,graduateStudentTotal);
+
+        model.addAttribute("totalPage",totalPage);
+        model.addAttribute("totalPageList",totalPageList);
+        model.addAttribute("StudentList", graduateStudentList);
+        model.addAttribute("likeName",0);
+        return "student/GraduateStudentList";
     }
 
     //跳转到添加学生页面
@@ -53,15 +105,45 @@ public class StudentController {
         }
         //3是添加成功
         msg.setMsg("添加成功");
-        System.out.println(msg);
         return msg;
     }
 
-    @GetMapping("/student/like/{username}")
-    public String studentList(Model model, @PathVariable String username) {
-        List<Student> studentList = studentService.getStudentLikeUsername(username);
-        model.addAttribute("studentList", studentList);
-        return "student/StudentList";
+    //毕业学员的模糊查询/student/like/0/1/
+    @GetMapping("/student/like/{is_graduate}/{page}/{username}")
+    public String undergraduateStudentList(Model model, @PathVariable String username, @PathVariable int is_graduate,@PathVariable int page) {
+        System.out.println(username);
+        System.out.println(is_graduate);
+        List<Map<String,Object>> StudentTotalByLikeName = studentService.getStudentLikeUsername(is_graduate,username);
+        //数据量
+        int total = StudentTotalByLikeName.size();
+        //防止数据库中没有值
+        if (total==0){
+            Map<String, Object> map = new HashMap<String,Object>();
+            map.put("username","没有数据");
+            map.put("graduate_time",(long)0);
+            map.put("join_study_time",(long)0);
+            StudentTotalByLikeName.add(map);
+            total = StudentTotalByLikeName.size();
+        }
+        //总页数
+        int totalPage = PageUtil.getTotalPage(total,PageUtil.count);
+        //校对页数正确与否
+        page=PageUtil.numberOfPage(page,totalPage);
+        //页数集合
+        List<Integer> totalPageList = PageUtil.pageUtil(page,totalPage);
+        //分好页的毕业学生集合
+        List<Map<String,Object>> StudentList = PageUtil.graduateStudentList(page,totalPage,total,StudentTotalByLikeName);
+
+        model.addAttribute("totalPage",totalPage);
+        model.addAttribute("totalPageList",totalPageList);
+        model.addAttribute("StudentList", StudentList);
+        model.addAttribute("likeName",1);
+        model.addAttribute("name",username);
+        if (is_graduate==0){
+            return "student/UndergraduateStudentList";
+        }else{
+            return "student/GraduateStudentList";
+        }
     }
 
     //跳转到修改学生信息页面
@@ -78,7 +160,7 @@ public class StudentController {
     @PutMapping("/student/edit/{id}")
     public String editStudent(Student student, HttpServletRequest request) {
         studentService.updateStudent(student, request);
-        return "student/StudentList";
+        return "student/UndergraduateStudentList";
     }
 
     //删除学生
@@ -93,8 +175,8 @@ public class StudentController {
     @PostMapping("/student/add/batch/{suffixName}")
     @ResponseBody
     public Msg addAllStudent(@RequestParam("ExcelFile") MultipartFile excelFile,HttpServletRequest request,@PathVariable String suffixName) throws Exception {
+        System.out.println(suffixName);
         return studentService.batchAddStudent(request,suffixName,excelFile);
     }
-
 
 }

@@ -1,58 +1,30 @@
 package cn.xdh.util;
 
 
+import cn.xdh.entity.TeacherLog;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class PageUtil {
-
-    private int start;      // 开始数据的索引
-    private int count;      // 每一页的数量
-    private int total;      // 总共的数据量
-
-    /**
-     * 提供一个构造方法
-     *
-     * @param start
-     * @param count
-     */
-    public PageUtil(int start, int count) {
-        super();
-        this.start = start;
-        this.count = count;
-    }
-
-    /**
-     * 判断是否有上一页
-     *
-     * @return
-     */
-    public boolean isHasPreviouse() {
-        if (start == 0)
-            return false;
-        return true;
-
-    }
-
-    /**
-     * 判断是否有下一页
-     *
-     * @return
-     */
-    public boolean isHasNext() {
-        if (start == getLast())
-            return false;
-        return true;
-    }
+    public static final int count = 10;
+    @Autowired
+    static Map<String, Object> map;
 
     /**
      * 计算得到总页数
      *
      * @return
      */
-    public int getTotalPage() {
+    public static int getTotalPage(int total,int count) {
         int totalPage;
-        // 假设总数是50，是能够被5整除的，那么就有10页
+        // 假设总数是50，是能够被10整除的，那么就有5页
         if (0 == total % count)
             totalPage = total / count;
-            // 假设总数是51，不能够被5整除的，那么就有11页
+            // 假设总数是51，不能够被10整除的，那么就有6页
         else
             totalPage = total / count + 1;
 
@@ -61,48 +33,101 @@ public class PageUtil {
         return totalPage;
     }
 
-    /**
-     * 计算得到尾页
-     *
-     * @return
-     */
-    public int getLast() {
-        int last;
-        // 假设总数是50，是能够被5整除的，那么最后一页的开始就是45
-        if (0 == total % count)
-            last = total - count;
-            // 假设总数是51，不能够被5整除的，那么最后一页的开始就是50
-        else
-            last = total - total % count;
-
-        last = Math.max(last, 0);
-        return last;
+    //分页器
+    public static List<Integer> pageUtil(int page,int totalPage){
+        List<Integer> totalPageList = new ArrayList<Integer>();
+        if (totalPage<=5){
+            for (int i = 1;i<=totalPage;i++){
+                totalPageList.add(i);
+            }
+        }else {
+            if (page>3 && page<totalPage-2){
+                for (int i = page-2;i<=page+2;i++){
+                    totalPageList.add(i);
+                }
+            }else if(page>=totalPage-2){
+                for (int i = totalPage-4;i<=totalPage;i++){
+                    totalPageList.add(i);
+                }
+            }else if (page<=3){
+                for (int i = 1;i<=5;i++){
+                    totalPageList.add(i);
+                }
+            }
+        }
+        return totalPageList;
     }
 
-    /* getter and setter */
-
-    public int getStart() {
-        return start;
+    //返回未毕业的分好页的学生
+    public static List<Map<String, Object>> undergraduateStudentList(int page,int totalPage,int total,List<Map<String, Object>> undergraduateStudentTotal){
+        //数据集合
+        List<Map<String, Object>> undergraduateStudentList = new ArrayList<Map<String, Object>>();
+        map = new HashMap<String, Object>();
+        //发送数据器
+        int a = total%count;
+        if(page == totalPage && a!=0){
+            for(int i=total-a;i<total;i++){
+                map = undergraduateStudentTotal.get(i);
+                undergraduateStudentList.add(map);
+            }
+        }else{
+            for(int i=(page-1)*count;i<page*count;i++){
+                map = undergraduateStudentTotal.get(i);
+                undergraduateStudentList.add(map);
+            }
+        }
+        return undergraduateStudentList;
+    }
+    //返回毕业的分好页的学生
+    public static List<Map<String, Object>> graduateStudentList(int page,int totalPage,int total,List<Map<String, Object>> graduateStudentTotal){
+        //数据集合
+        List<Map<String, Object>> graduateStudentList = new ArrayList<Map<String, Object>>();
+        map = new HashMap<String, Object>();
+        //发送数据器
+        int a = total%count;
+        if(page == totalPage && a!=0){
+            for(int i=total-a;i<total;i++){
+                map = graduateStudentTotal.get(i);
+                graduateStudentList.add(map);
+            }
+        }else{
+            for(int i=(page-1)*count;i<page*count;i++){
+                map = graduateStudentTotal.get(i);
+                graduateStudentList.add(map);
+            }
+        }
+        return graduateStudentList;
     }
 
-    public void setStart(int start) {
-        this.start = start;
+    //返回分好页的教师日志
+    public static List<TeacherLog> teacherLogList(int page,int totalPage,int total,List<TeacherLog> teacherLogs){
+        //数据集合
+        List<TeacherLog> teacherLogList = new ArrayList<TeacherLog>();
+        //发送数据器
+        int a = total%count;
+        if(page == totalPage && a!=0){
+            for(int i=total-a;i<total;i++){
+                TeacherLog teacherLog = teacherLogs.get(i);
+                teacherLogList.add(teacherLog);
+            }
+        }else{
+            for(int i=(page-1)*count;i<page*count;i++){
+                TeacherLog teacherLog = teacherLogs.get(i);
+                teacherLogList.add(teacherLog);
+            }
+        }
+        return teacherLogList;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
+    //校对页数正确与否
+    public static int numberOfPage(int page,int totalPage){
+        //校对页数正确与否
+        if (page>totalPage){
+            page=totalPage;
+        }else if (page<1){
+            page = 1;
+        }
+        return page;
     }
 }
 

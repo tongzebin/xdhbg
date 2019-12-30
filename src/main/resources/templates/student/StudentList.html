@@ -50,7 +50,7 @@
                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                     <div class="widget am-cf">
                         <div class="widget-head am-cf">
-                            <div class="widget-title  am-cf">学生信息</div>
+                            <div class="widget-title  am-cf">模糊查询学生列表</div>
 
 
                         </div>
@@ -60,9 +60,9 @@
                                 <div class="am-form-group">
                                     <div class="am-btn-toolbar">
                                         <div class="am-btn-group am-btn-group-xs">
-                                            <a th:href="@{/student/graduate/1}" type="button"
+                                            <a th:href="@{/student/Graduate/1}" type="button"
                                                class="am-btn am-btn-default am-btn-secondary">已毕业</a>
-                                            <a th:href="@{/student/graduate/0}" type="button"
+                                            <a th:href="@{/student/Undergraduate/1}" type="button"
                                                class="am-btn am-btn-default am-btn-secondary">未毕业</a>
                                             <a th:href="@{/student/add/view}" type="button"
                                                class="am-btn am-btn-default am-btn-success"><span
@@ -79,7 +79,7 @@
                                             <a href="#" id="search"
                                                class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search"
                                                type="button"></a>
-                                        </span>
+                                    </span>
                                 </div>
                             </div>
 
@@ -90,19 +90,18 @@
                                     <tr>
                                         <th th:text="姓名"></th>
                                         <th th:text="性别"></th>
-                                        <th th:text="年龄"></th>
                                         <th th:text="电话号码"></th>
                                         <th th:text="班级"></th>
-                                        <th th:text="进度"></th>
+                                        <th th:text="阶段"></th>
                                         <th th:text="毕业状态"></th>
                                         <th th:text="操作"></th>
                                     </tr>
                                     </thead>
                                     <tbody id="rows">
-                                    <tr class="gradeX" th:id="tr+${studentList.id}" th:each="studentList:${studentList}">
+                                    <tr class="gradeX" th:id="tr+${studentList.id}"
+                                        th:each="studentList:${studentList}">
                                         <td th:text="${studentList.username}"></td>
                                         <td th:text="${studentList.sex}==1?'男':'女'"></td>
-                                        <td th:text="${studentList.age}"></td>
                                         <td th:text="${studentList.mobile}"></td>
                                         <td th:text="${studentList.class_id}"></td>
                                         <td th:text="${studentList.stage_id}"></td>
@@ -164,8 +163,8 @@
 <!--删除功能-->
 <script>
     $(".delBtn").click(function () {
-        if(confirm("确定要删除吗")) {
-           $.ajax({
+        if (confirm("确定要删除吗")) {
+            $.ajax({
                 url: $(this).attr("deluri"),
                 type: "delete",
                 dataType: "JSON",
@@ -173,7 +172,7 @@
                     $("#tr" + id).remove();
                 }
             });
-         }
+        }
     });
 </script>
 </body>
