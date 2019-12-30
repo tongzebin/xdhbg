@@ -5,19 +5,19 @@ public class Teacher {
     private String name;
     private String mobile;
     private String password;
-    private int addtime;
-    private String addip;
+    private int add_time;
+    private String add_ip;
 
     public Teacher() {
     }
 
-    public Teacher(int id, String name, String mobile, String password, int addtime, String addip) {
+    public Teacher(int id, String name, String mobile, String password, int add_time, String add_ip) {
         this.id = id;
         this.name = name;
         this.mobile = mobile;
         this.password = password;
-        this.addtime = addtime;
-        this.addip = addip;
+        this.add_time = add_time;
+        this.add_ip = add_ip;
     }
 
     public int getId() {
@@ -52,19 +52,19 @@ public class Teacher {
         this.password = password;
     }
 
-    public int getAddtime() {
-        return addtime;
+    public int getAdd_time() {
+        return add_time;
     }
 
-    public void setAddtime(int addtime) {
-        this.addtime = addtime;
+    public void setAdd_time(int add_time) {
+        this.add_time = add_time;
     }
 
-    public String getAddip() {
-        return addip;
+    public String getAdd_ip() {
+        return add_ip;
     }
 
-    public void setAddip(String addip) {
-        this.addip = addip;
+    public void setAdd_ip(String add_ip) {
+        this.add_ip = add_ip;
     }
 }

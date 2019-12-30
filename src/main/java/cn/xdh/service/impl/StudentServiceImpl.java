@@ -11,8 +11,18 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentDao studentdao;
 
-    public Student selectByPhoneAndPassword(String phone, String password){
-        Student student = studentdao.selectByPhoneAndPassword(phone,password);
+    //根据手机号和密码获取学生
+    @Override
+    public Student selectByPhoneAndPassword(String mobile, String password){
+        Student student = studentdao.selectByPhoneAndPassword(mobile,password);
         return student;
     }
+
+    //获取所有学生数量
+    @Override
+    public int selectAllNumber(){
+        int number = studentdao.selectAllNumber();
+        return number;
+    }
+
 }

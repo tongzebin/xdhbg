@@ -6,5 +6,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentDao {
-    public Student selectByPhoneAndPassword(@Param("phone")String phone,@Param("password")String password);
+    //根据手机号和密码获取学生
+    public Student selectByPhoneAndPassword(@Param("mobile")String mobile,@Param("password")String password);
+
+    //获取所有学生数量
+    public int selectAllNumber();
+
+
+
 }

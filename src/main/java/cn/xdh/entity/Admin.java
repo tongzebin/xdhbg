@@ -7,20 +7,20 @@ public class Admin {
     private String password;
     //状态,0为激活,1为未激活
     private int state;
-    private int addtime;
-    private String addip;
+    private int add_time;
+    private String add_ip;
 
     public Admin() {
     }
 
-    public Admin(int id, String mobile, String username, String password, int state, int addtime, String addip) {
+    public Admin(int id, String mobile, String username, String password, int state, int add_time, String add_ip) {
         this.id = id;
         this.mobile = mobile;
         this.username = username;
         this.password = password;
         this.state = state;
-        this.addtime = addtime;
-        this.addip = addip;
+        this.add_time = add_time;
+        this.add_ip = add_ip;
     }
 
     public int getId() {
@@ -63,19 +63,19 @@ public class Admin {
         this.state = state;
     }
 
-    public int getAddtime() {
-        return addtime;
+    public int getAdd_time() {
+        return add_time;
     }
 
-    public void setAddtime(int addtime) {
-        this.addtime = addtime;
+    public void setAdd_time(int add_time) {
+        this.add_time = add_time;
     }
 
-    public String getAddip() {
-        return addip;
+    public String getAdd_ip() {
+        return add_ip;
     }
 
-    public void setAddip(String addip) {
-        this.addip = addip;
+    public void setAdd_ip(String add_ip) {
+        this.add_ip = add_ip;
     }
 }

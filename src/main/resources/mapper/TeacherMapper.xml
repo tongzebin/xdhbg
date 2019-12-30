@@ -2,13 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xdh.dao.TeacherDao">
-	
+	<!-->根据手机号和密码查找教师<-->
 	<select id="selectByPhoneAndPassword" resultType="cn.xdh.entity.Teacher">
 		select * from xdh_teacher where mobile = #{mobile} and password = #{password}
 	</select>
-	
 
-	
+	<!-->根据所有学生数量<-->
+	<select id="selectAllNumber" resultType="Integer">
+		select count(*) from xdh_teacher
+	</select>
 
 
 </mapper>
