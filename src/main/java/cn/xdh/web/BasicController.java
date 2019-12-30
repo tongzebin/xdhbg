@@ -127,8 +127,8 @@ public class BasicController {
         String str_birth;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         long birthday =  sdf.parse(birth).getTime()/1000;
-        System.out.println(birthday);
-        System.out.println(password);
+//        System.out.println(birthday);
+//        System.out.println(password);
         studentservice.updateData(id,password,birthday,graduate_school,stage_id);
         List<Map<String, Object>> usefulData2 = studentservice.getUsefulData(id);
         System.out.println(usefulData2);
