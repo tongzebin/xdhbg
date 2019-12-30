@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e39992f2-748e-4423-b841-647d35428301" name="Default Changelist" comment="">
+    <list default="true" id="e39992f2-748e-4423-b841-647d35428301" name="Default Changelist" comment="v">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/datasedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/student/datasedit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/studentDatas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/student/studentDatas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/datasedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/student/datasedit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/studentDatas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/student/studentDatas.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/student/studentDatas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2256">
+            <state relative-caret-position="7680">
               <caret line="320" column="82" selection-start-line="320" selection-start-column="82" selection-end-line="320" selection-end-column="82" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -63,14 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/student/datasedit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3454">
-              <caret line="461" column="33" lean-forward="true" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#2;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#10;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="11064">
+              <caret line="461" column="33" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -90,11 +68,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="133" column="40" lean-forward="true" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+            <state relative-caret-position="2520">
+              <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
               <folding>
                 <element signature="docComment;method#getNotices#0;class#BasicController#0" />
-                <element signature="e#2234#2305#0" />
                 <element signature="docComment;method#getUsefulData#0;class#BasicController#0" />
                 <element signature="docComment;method#datasedit#0;class#BasicController#0" />
               </folding>
@@ -105,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="960">
               <caret line="51" column="77" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
               <folding>
                 <element signature="e#1000#1001#0" expanded="true" />
@@ -118,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
+            <state relative-caret-position="840">
               <caret line="35" column="99" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
             </state>
           </provider>
@@ -127,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="24">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -285,10 +262,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="697" />
-    <option name="y" value="52" />
+    <option name="x" value="696" />
+    <option name="y" value="51" />
     <option name="width" value="1690" />
-    <option name="height" value="838" />
+    <option name="height" value="839" />
   </component>
   <component name="ProjectId" id="1VPacRvRRgZLPcIZXULwjCdMRN4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -506,7 +483,8 @@
       <workItem from="1577512968514" duration="2710000" />
       <workItem from="1577515687449" duration="7881000" />
       <workItem from="1577531525364" duration="2637000" />
-      <workItem from="1577609961305" duration="41799000" />
+      <workItem from="1577609961305" duration="41938000" />
+      <workItem from="1577701518744" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1577515516198</created>
@@ -522,11 +500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577515738806</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v3">
+      <created>1577699041269</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577699041269</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164148000" />
+    <option name="totallyTimeSpent" value="164884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -640,7 +625,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1" />
     <MESSAGE value="v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2" />
+    <MESSAGE value="v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="181" key="Vcs.Push.Dialog.v2" />
@@ -758,13 +744,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ClassServiceImp.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/ClassService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/InfContexts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/InfContexts.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -859,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="35" column="99" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Notice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -888,43 +861,9 @@
         <state relative-caret-position="-1944" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="51" column="77" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
-          <folding>
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="133" column="40" lean-forward="true" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;method#getNotices#0;class#BasicController#0" />
-            <element signature="e#2234#2305#0" />
-            <element signature="docComment;method#getUsefulData#0;class#BasicController#0" />
-            <element signature="docComment;method#datasedit#0;class#BasicController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/student/studentDatas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2256">
+        <state relative-caret-position="7680">
           <caret line="320" column="82" selection-start-line="320" selection-start-column="82" selection-end-line="320" selection-end-column="82" />
           <folding>
             <element signature="n#style#0;n#a#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -934,13 +873,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/student/datasedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3454">
-          <caret line="461" column="33" lean-forward="true" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
+        <state relative-caret-position="11064">
+          <caret line="461" column="33" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#div#0;n#div#8;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#10;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="docComment;method#getNotices#0;class#BasicController#0" />
+            <element signature="docComment;method#getUsefulData#0;class#BasicController#0" />
+            <element signature="docComment;method#datasedit#0;class#BasicController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="51" column="77" selection-start-line="51" selection-start-column="77" selection-end-line="51" selection-end-column="77" />
+          <folding>
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="35" column="99" selection-start-line="35" selection-start-column="99" selection-end-line="35" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
