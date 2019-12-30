@@ -1,6 +1,11 @@
 package cn.xdh.entity;
 
+import cn.xdh.dao.StudentDao;
+import cn.xdh.service.StudentService;
+import org.apache.ibatis.javassist.bytecode.stackmap.TypeData;
+
 import java.io.Serializable;
+import java.util.List;
 
 public class Student implements Serializable {
     private int id;
@@ -235,6 +240,7 @@ public class Student implements Serializable {
     public void setClass_id(int class_id) {
         this.class_id = class_id;
     }
+
 
     @Override
     public String toString() {

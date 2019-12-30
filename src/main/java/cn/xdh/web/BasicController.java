@@ -5,18 +5,19 @@ import cn.xdh.entity.Notice;
 import cn.xdh.entity.Student;
 import cn.xdh.service.StudentService;
 import cn.xdh.service.impl.StudentServiceImpl;
+import javafx.scene.shape.Path;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class BasicController {
@@ -65,10 +66,8 @@ public class BasicController {
     @GetMapping(value = "/notice")
     public ModelAndView getNotices(){
         List<Notice> notices = studentservice.getNotices();
-//        model.addAttribute("msgs",notices);
         ModelAndView mav = new ModelAndView();
 //        打印notices
-//        System.out.println(notices);
         mav.addObject("msgs",notices);
         mav.setViewName("student/index");
         return mav;
@@ -79,22 +78,64 @@ public class BasicController {
      * @param id
      * @return
      */
+//    @GetMapping(value = "/list/{id}")
+//    public ModelAndView getAllDatas(@PathVariable("id") int id){
+//        Student studentDatas = studentservice.getDatas(id);
+//        System.out.println(studentDatas);
+//        ModelAndView mav = new ModelAndView();
+//        mav.addObject("dats",studentDatas);
+////        System.out.println(mav);
+//        mav.setViewName("student/studentDatas");
+//        System.out.println(id);
+//        return mav;
+//    }
+
+
+    /**
+     * 学生信息页面根据id显示信息
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/list/{id}")
-    public ModelAndView getAllDatas(@PathVariable("id") int id){
-        Student studentDatas = studentservice.getDatas(id);
-        System.out.println(studentDatas);
+    public ModelAndView getUsefulData(@PathVariable("id") int id){
+        List<Map<String, Object>> usefulDataList = studentservice.getUsefulData(id);
+//        System.out.println(usefulDataList);
         ModelAndView mav = new ModelAndView();
-        mav.addObject("dats",studentDatas);
-        System.out.println(mav);
+        mav.addObject("dats",usefulDataList);
         mav.setViewName("student/studentDatas");
-        System.out.println(id);
         return mav;
     }
 
-    /**
-     * 修改学生信息
-     */
 
+    /**
+     * 学生信息修改页面显示未修改前的信息,查出当前员工信息,在页面回显
+     * @param id
+     * @return
+     */
+    @GetMapping("/edit/{id}")
+    public ModelAndView datasedit(@PathVariable("id") int id){
+        List<Map<String, Object>> usefulDataList = studentservice.getUsefulData(id);
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("edits",usefulDataList);
+        mav.setViewName("student/datasedit");
+        return mav;
+    }
+
+
+    @PutMapping("/list/{id}")
+    public ModelAndView updataData(@PathVariable("id") int id,String password,String birth,String graduate_school,String stage_id) throws ParseException {
+        String str_birth;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        long birthday =  sdf.parse(birth).getTime()/1000;
+        System.out.println(birthday);
+        System.out.println(password);
+        studentservice.updateData(id,password,birthday,graduate_school,stage_id);
+        List<Map<String, Object>> usefulData2 = studentservice.getUsefulData(id);
+        System.out.println(usefulData2);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:student/studentDatas");
+        return mav;
+    }
 
 
 }

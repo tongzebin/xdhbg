@@ -212,12 +212,14 @@
                                 </div>
                             </div>
                             <div class="widget-body am-fr">
-                                <form class="am-form tpl-form-border-form tpl-form-border-br">
+                                <form id="editform" class="am-form tpl-form-border-form tpl-form-border-br" th:attr="editUrl=@{/list/}+${edit['id']}"  method="post" th:each="edit:${edits}">
+<!--                                    <input type="hidden" name="_method" value="put"/>-->
+<!--                                    <input type="hidden" name="id" th:value="${edit['id']}">-->
                                     <!--             用户名          -->
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label" >用户名 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库username</span>
+                                            <span th:text="${edit['username']}">显示数据库username</span>
                                             <small>&nbsp;</small>
                                         </div>
                                     </div>
@@ -225,7 +227,7 @@
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label" >登录手机号 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库mobile</span>
+                                            <span th:text="${edit['mobile']}">显示数据库mobile</span>
                                             <small>&nbsp;</small>
                                         </div>
                                     </div>
@@ -233,24 +235,24 @@
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label" >密码 : </label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" id="user-name"  placeholder="请输入您的密码  (可更改)">
+                                            <input type="password" class="tpl-form-input" id="password" th:value="${edit['password']}">
                                             <small> &nbsp;</small>
                                         </div>
                                     </div>
-                                    <!--             性别          -->
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">性别 : </label>
-                                        <div class="am-u-sm-9">
-                                            <span>显示数据库性别</span>
-                                        </div>
-                                        <small> &nbsp;</small>
-                                    </div>
+<!--                                    &lt;!&ndash;             性别          &ndash;&gt;-->
+<!--                                    <div class="am-form-group">-->
+<!--                                        <label class="am-u-sm-3 am-form-label">性别 : </label>-->
+<!--                                        <div class="am-u-sm-9">-->
+<!--                                            <span>显示数据库性别</span>-->
+<!--                                        </div>-->
+<!--                                        <small> &nbsp;</small>-->
+<!--                                    </div>-->
                                     <!--             生日          -->
 
                                     <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">生日 : </label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="am-form-field tpl-form-no-bg" placeholder="生日  (可更改)" data-am-datepicker="" >
+                                            <input id="birthday" type="text" class="am-form-field tpl-form-no-bg" th:value="${#dates.format(edit['birthday']*1000,'yyyy-MM-dd ')}" placeholder="生日  (可更改)" data-am-datepicker="" >
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -259,7 +261,7 @@
                                     <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">入学日期 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库日期</span>
+                                            <span th:text="${#dates.format(edit['join_study_time']*1000,'yyyy-MM-dd  HH:mm:ss')}">显示数据库日期</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -268,7 +270,7 @@
                                     <div class="am-form-group">
                                         <label for="user-email" class="am-u-sm-3 am-form-label">毕业日期 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库日期</span>
+                                            <span th:text="${#dates.format(edit['graduate_time']*1000,'yyyy-MM-dd  HH:mm:ss')}">显示数据库日期</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -277,7 +279,7 @@
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-3 am-form-label" >毕业院校 : </label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" id="user-name"  placeholder="请输入毕业院校  (可更改)">
+                                            <input type="text" class="tpl-form-input" id="graduate_school" th:value="${edit['graduate_school']}" placeholder="请输入毕业院校  (可更改)">
                                             <small> &nbsp;</small>
                                         </div>
                                     </div>
@@ -288,7 +290,7 @@
                                         <label class="am-u-sm-3 am-form-label">所在城市 : </label>
                                         <div class="am-u-sm-9">
                                             <select id="province" name="province" data-am-selected style="display: none;">
-                                                <!--                                                循环出省级-->
+                                                <!--循环出省级-->
                                                 <option value="-1" >点击选择...</option>
                                                 <option th:value="${cityList.id}" th:each="cityList:${cityList}" th:text="${cityList.name}">省级</option>
                                             </select>
@@ -301,7 +303,7 @@
                                             <br>
                                             <!--   详细地址  -->
                                             <small> &nbsp;</small>
-                                            <input type="text" placeholder="地址详情">
+                                            <input type="text" placeholder="地址详情" th:value="${edit['address']}">
 
                                         </div>
                                         <small> &nbsp;</small>
@@ -312,7 +314,7 @@
                                     <div class="am-form-group">
                                         <label for="user-phone" class="am-u-sm-3 am-form-label">语种班级 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库班级</span>
+                                            <span th:text="${edit['class_name']}">显示数据库班级</span>
                                             </select>
                                         </div>
                                         <small> &nbsp;</small>
@@ -323,12 +325,12 @@
                                     <div class="am-form-group">
                                         <label for="user-phone" class="am-u-sm-3 am-form-label">学习进度 : </label>
                                         <div class="am-u-sm-9">
-                                            <select data-am-selected="{searchBox: 1}" style="display: none;">
-                                                <option value="a">一阶段</option>
-                                                <option value="b">二阶段</option>
-                                                <option value="o">三阶段</option>
-                                                <option value="d">四阶段</option>
-                                                <option value="s">五阶段</option>
+                                            <select id="stage_id" data-am-selected="{searchBox: 1}" style="display: none;">
+                                                <option th:value="1" th>一阶段</option>
+                                                <option th:value="2">二阶段</option>
+                                                <option th:value="3">三阶段</option>
+                                                <option th:value="4">四阶段</option>
+                                                <option th:value="5">五阶段</option>
                                             </select>
                                         </div>
                                         <small> &nbsp;</small>
@@ -338,7 +340,7 @@
                                     <div class="am-form-group">
                                         <label for="user-phone" class="am-u-sm-3 am-form-label">是否毕业 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库is_graduate</span>
+                                            <span th:text="${edit['is_graduate']}">显示数据库is_graduate</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -348,11 +350,13 @@
 
                                         <label class="am-u-sm-3 am-form-label">工作城市 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库aim_city.....</span>
+                                            <span th:text="${edit['aim_province_id']}">显示数据库aim_city.....</span>
+                                            <span th:text="${edit['aim_city_id']}"></span>
+                                            <span th:text="${edit['aim_area_id']}"></span>
                                             <br>
                                             <!--   详细地址  -->
                                             <small> &nbsp;</small>
-                                            <span>显示数据库aim_address</span>
+                                            <span th:text="${edit['aim_address']}">显示数据库aim_address</span>
 
                                         </div>
                                         <small> &nbsp;</small>
@@ -363,7 +367,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">工作单位 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据库company</span>
+                                            <span th:text="${edit['company']}">显示数据库company</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -373,14 +377,14 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">薪资 : </label>
                                         <div class="am-u-sm-9">
-                                            <span>显示数据可salary</span>
+                                            <span th:text="${edit['salary']}">显示数据可salary</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
 
                                     <div class="am-form-group">
                                         <div class="am-u-sm-9 am-u-sm-push-3">
-                                            <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                            <button type="button" id="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success" >提交</button>
                                         </div>
                                     </div>
                                 </form>
@@ -435,6 +439,30 @@
                 },
                 "JSON");
         });
+    </script>
+    <script>
+
+        $("#submit").click(function () {
+            var id = $("#id").val();
+            var password = $("#password").val();
+            var birthday = $("#birthday").val();
+            var stage_id  = $("#stage_id").val();
+            var graduate_school = $("#graduate_school").val();
+            $.ajax({
+                url:$("#editform").attr("editUrl"),
+                type:"put",
+                data:{
+                    id:id,
+                    password:password,
+                    birth:birthday,
+                    stage_id:stage_id,
+                    graduate_school:graduate_school
+                }
+            });
+            // alert("传递参数ajax");
+            window.location.href=$("#editform").attr("editUrl")
+
+        })
     </script>
 
 </body>

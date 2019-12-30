@@ -19,4 +19,21 @@
 	<select id="getDatas" resultType="cn.xdh.entity.Student">
 		SELECT * FROM xdh_student WHERE id = #{id}
 	</select>
+
+
+	<!-- 查询班级id查询班级表中的班级名 -->
+	<select id="getUsefulData" resultType="java.util.HashMap">
+			select
+			student.id,student.username,student.mobile,student.password
+			,student.birthday,student.join_study_time,student.graduate_time,
+			student.province_id,student.city_id,student.area_id,student.address
+			,class.class_name,student.progress,student.is_graduate,student.company
+			 ,student.salary,student.aim_province_id,student.aim_city_id,student.aim_area_id
+			 ,student.aim_address,student.stage_id ,student.graduate_school from xdh_student student inner join xdh_class class on student.class_id = class.id where student.id = #{id}
+	</select>
+
+	<update id="updateData" parameterType="java.util.HashMap" >
+		UPDATE XDH_STUDENT SET password=#{password},birthday=#{birthday},graduate_school=#{graduate_school},stage_id=#{stage_id} WHERE ID=#{id}
+		<!-- 属性字段名区分大小写 -->
+	</update>
 </mapper>
