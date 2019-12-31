@@ -54,11 +54,7 @@ public class ExeperienceController {
         model.addAttribute("generalPage",generalPage);
         //判断页数是否符合标准
         if(pageNum<1||generalPage<pageNum){
-            if(pageNum<1){
-                return "redirect:/teacher/exeperiences?pageNum=1";
-            }
             model.addAttribute("price",0);
-            return "redirect:/teacher/exeperiences?pageNum="+generalPage;
         }
         return "teacher/exeperience";
     }
@@ -99,12 +95,8 @@ public class ExeperienceController {
         //判断输入的值是否符合标准
         model.addAttribute("price",1);
         if(pageNum<1||generalPage<pageNum){
-            if(pageNum<1){
-                return "redirect:/teacher/exeperience?pageNum=1"+"&username="+username;
-            }
             //删除完本页最后一条时(非首页),发送的数据
             model.addAttribute("price",0);
-            return "redirect:/teacher/exeperience?pageNum="+generalPage+"&username="+username;
         }
 
         return "teacher/exeperience";

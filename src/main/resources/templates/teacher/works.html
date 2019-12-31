@@ -166,60 +166,60 @@
                                     </tbody>
                                 </table>
                             </div>
+
+
+
                             <button id="all" style="color: #000000">全选</button>
                             <button onclick="DelSelect()" style="color: #000000">批量删除</button>
 
-                            <!--  全选的jq代码  -->
-                            <script>
-                                $("#all").click(function () {
-                                    var buttonValue = document.getElementById('all').innerText;
-                                    if (buttonValue == "全选") {
-                                        $(".check").prop("checked", true);
-                                        $("#all").text("取消全选")
-                                    } else {
-                                        $(".check").prop("checked", false);
-                                        $("#all").text('全选')
-                                    }
-                                });
-
-                                function DelSelect() {
-                                    var Checkbox = false;
-                                    $("input[name='id[]']").each(function () {
-                                        if (this.checked == true) {
-                                            Checkbox = true;
-                                        }
-                                    });
-                                    if (Checkbox) {
-                                        var t = confirm("您确认要删除选中的内容吗？");
-                                        if (t == false) {
-                                            return false;
-                                        } else {
-                                            var checkedID = "";
-                                            $("input[name='id[]']").each(function () {
-                                                if (this.checked == true) {
-                                                    checkedID += this.value + ",";
-                                                }
-                                            });
-                                            //window.location.replace("/teacher/worksmulti?id=" + checkedID);
-                                            $.ajax({
-                                                url: "/teacher/worksmulti/" + checkedID,
-                                                type: "DELETE",
-                                                success: function () {
-                                                    location.reload();
-                                                }
-                                            });
-                                        }
-                                    } else {
-                                        alert("请选择您要删除的内容!");
-                                        return false;
-                                    }
-                                }
-                            </script>
-
-
-
                             <div class="am-u-lg-12 am-cf">
 
+                                <!--  全选的jq代码  -->
+                                <script>
+                                    $("#all").click(function () {
+                                        var buttonValue = document.getElementById('all').innerText;
+                                        if (buttonValue == "全选") {
+                                            $(".check").prop("checked", true);
+                                            $("#all").text("取消全选")
+                                        } else {
+                                            $(".check").prop("checked", false);
+                                            $("#all").text('全选')
+                                        }
+                                    });
+
+                                    function DelSelect() {
+                                        var Checkbox = false;
+                                        $("input[name='id[]']").each(function () {
+                                            if (this.checked == true) {
+                                                Checkbox = true;
+                                            }
+                                        });
+                                        if (Checkbox) {
+                                            var t = confirm("您确认要删除选中的内容吗？");
+                                            if (t == false) {
+                                                return false;
+                                            } else {
+                                                var checkedID = "";
+                                                $("input[name='id[]']").each(function () {
+                                                    if (this.checked == true) {
+                                                        checkedID += this.value + ",";
+                                                    }
+                                                });
+                                                //window.location.replace("/teacher/worksmulti?id=" + checkedID);
+                                                $.ajax({
+                                                    url: "/teacher/worksmulti/" + checkedID,
+                                                    type: "DELETE",
+                                                    success: function () {
+                                                        location.reload();
+                                                    }
+                                                });
+                                            }
+                                        } else {
+                                            alert("请选择您要删除的内容!");
+                                            return false;
+                                        }
+                                    }
+                                </script>
                                 <div class="am-fr">
                                     <ul class="am-pagination tpl-pagination">
                                         <!-- 首页 -->
