@@ -2,40 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f58633-2c97-4f96-a0ac-988a1982c5ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/student/GraduateStudentList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/student/UndergraduateStudentList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/xdhbg.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/student/GraduateStudentList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/student/UndergraduateStudentList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/util/ExcelToObjectUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/ExcelToObjectUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/util/PageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/PageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/util/SomeMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/SomeMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/public.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/StudentAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/student/StudentAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/StudentEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/student/StudentEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/StudentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/student/StudentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/TeacherLogList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/TeacherLogList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/util/ExcelToObjectUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/ExcelToObjectUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/util/PageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/PageUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/util/SomeMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/SomeMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/commons/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/commons/public.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/StudentAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/student/StudentAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/StudentEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/student/StudentEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/StudentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/student/StudentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/TeacherLogList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/TeacherLogList.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +186,7 @@
       <workItem from="1577533957400" duration="360000" />
       <workItem from="1577534336098" duration="781000" />
       <workItem from="1577538636132" duration="64950000" />
-      <workItem from="1577696804487" duration="8880000" />
+      <workItem from="1577696804487" duration="15295000" />
     </task>
     <task id="LOCAL-00001" summary="只差分页和批量上传">
       <created>1577519094477</created>
@@ -233,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577622809872</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完事">
+      <created>1577708394478</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577708394478</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +231,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="只差分页和批量上传" />
     <MESSAGE value="只差分页" />
-    <option name="LAST_COMMIT_MESSAGE" value="只差分页" />
+    <MESSAGE value="完事" />
+    <option name="LAST_COMMIT_MESSAGE" value="完事" />
   </component>
 </project>

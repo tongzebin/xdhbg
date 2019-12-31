@@ -111,8 +111,6 @@ public class StudentController {
     //毕业学员的模糊查询/student/like/0/1/
     @GetMapping("/student/like/{is_graduate}/{page}/{username}")
     public String undergraduateStudentList(Model model, @PathVariable String username, @PathVariable int is_graduate,@PathVariable int page) {
-        System.out.println(username);
-        System.out.println(is_graduate);
         List<Map<String,Object>> StudentTotalByLikeName = studentService.getStudentLikeUsername(is_graduate,username);
         //数据量
         int total = StudentTotalByLikeName.size();
@@ -175,7 +173,6 @@ public class StudentController {
     @PostMapping("/student/add/batch/{suffixName}")
     @ResponseBody
     public Msg addAllStudent(@RequestParam("ExcelFile") MultipartFile excelFile,HttpServletRequest request,@PathVariable String suffixName) throws Exception {
-        System.out.println(suffixName);
         return studentService.batchAddStudent(request,suffixName,excelFile);
     }
 
