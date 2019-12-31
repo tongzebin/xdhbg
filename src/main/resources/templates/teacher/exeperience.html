@@ -22,10 +22,16 @@
 <script src="/assets/js/jquery.min.js"></script>
 <script th:src="@{/assets/js/works.js}"></script>
 <script src="assets/js/jquery.min.js"></script>
-
 </head>
+<style>
+
+</style>
 
 <body data-type="widgets">
+<script>
+    //window.location.replace("/teacher/worksmulti?id=" + checkedID);
+    console.log()
+</script>
 <script src="assets/js/theme.js"></script>
 <div class="am-g tpl-g">
 
@@ -75,7 +81,9 @@
                                     <div class="am-btn-toolbar">
                                         <div class="am-btn-group am-btn-group-xs">
                                             <!--                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>-->
-                                            <a href="teacher/works?pageNum=1&username=">显示所有</a>
+                                            <a style="color: #ffffaa;" href="teacher/exeperiences?pageNum=1" id="showAll">显示所有</a>
+                                            <a style="color: #ffffaa;" id="break" th:if="${backfill}==null" th:href="@{teacher/exeperiences(pageNum=${currentPage})}">刷新</a>
+                                            <a style="color: #ffffaa;" id="break" th:if="${backfill}" th:href="@{teacher/exeperience(pageNum=${currentPage},username=${backfill})}">刷新</a>
                                         </div>
                                     </div>
                                 </div>
@@ -120,27 +128,83 @@
                                 <table  width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
                                     <thead>
                                     <tr>
-                                        <th>学生id</th>
-                                        <th>姓名</th>
-                                        <th>心得内容</th>
-                                        <th>添加时间</th>
-                                        <th>操作</th>
+                                        <th><h2>批量删除</h2></th>
+                                        <th><h2>姓名</h2></th>
+                                        <th><h2>心得内容</h2></th>
+                                        <th><h2>添加时间</h2></th>
+                                        <th><h2>操作</h2></th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr th:each="exeper : ${exeperiences}">
-                                        <td th:text="${exeper.student_id}"></td>
+                                    <tr th:if="${exeperiences.isEmpty()}">
+                                        <td align="center" colspan="5"><h1>暂无数据</h1></td>
+                                    </tr>
+                                    <tr th:if="${exeperiences}" th:each="exeper : ${exeperiences}">
+                                        <td style="text-align:left; padding-left:20px;">
+                                            <input type="checkbox" class="check" name="id[]" value="" id="id[]" th:value="${exeper.id}"/>
+                                        </td>
                                         <td th:each="name : ${names}" th:if="${exeper.student_id}==${name.id}">[[${name.username}]]</td>
                                         <td th:text="${exeper.content}"></td>
                                         <td th:text="${#dates.format(exeper.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>
-                                        <td><a th:href="@{teacher/exeperience/}+${exeper.id}" onclick="javascript:return del()">删除</a></td>
+<!--                                        <td><a th:href="@{teacher/exeperience/}+${exeper.id}" onclick="javascript:return del()">删除</a></td>-->
+                                        <td>
+                                            <button class="btn am-btn-group-sm am-btn-danger" th:value="@{/teacher/exeperience/}+${exeper.id}" onclick="delone(this.value)">删除
+                                            </button>
+                                        </td>
                                     </tr>
 
                                     <!-- more data -->
                                     </tbody>
                                 </table>
                             </div>
+                            <button id="all" style="color: #000000">全选</button>
+                            <button onclick="DelSelect()" style="color: #000000">批量删除</button>
 
+                            <script>
+                                $("#all").click(function(){
+                                    var buttonValue= document.getElementById('all').innerText;
+                                    if(buttonValue=="全选"){
+                                        $(".check").prop("checked", true);
+                                        $("#all").text("取消全选")
+                                    }else{
+                                        $(".check").prop("checked", false);
+                                        $("#all").text('全选')
+                                    }
+                                });
+                                function DelSelect() {
+                                    var Checkbox = false;
+                                    $("input[name='id[]']").each(function () {
+                                        if (this.checked == true) {
+                                            Checkbox = true;
+                                        }
+                                    });
+                                    if (Checkbox) {
+                                        var t = confirm("您确认要删除选中的内容吗？");
+                                        if (t == false) {
+                                            return false;
+                                        } else {
+                                            var checkedID = "";
+                                            $("input[name='id[]']").each(function () {
+                                                if (this.checked == true) {
+                                                    checkedID += this.value + ",";
+                                                }
+                                            });
+
+                                            $.ajax({
+                                                url:"/teacher/exeperiencesmulti/"+checkedID,
+                                                type:"DELETE",
+                                                success : function() {
+                                                    location.reload();
+                                                }
+                                            })
+                                        }
+                                        alert("删除了"+id.length)
+                                    } else {
+                                        alert("请选择您要删除的内容!");
+                                        return false;
+                                    }
+                                }
+                            </script>
 
 
 

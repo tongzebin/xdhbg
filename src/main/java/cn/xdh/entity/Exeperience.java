@@ -8,12 +8,16 @@ public class Exeperience {
     private int student_id;
     private String content;
     private long add_time;
+    private String username;
+    private String class_name;
 
-    public Exeperience(int id, int student_id, String content, long add_time) {
+    public Exeperience(int id, int student_id, String content, long add_time, String username, String class_name) {
         this.id = id;
         this.student_id = student_id;
         this.content = content;
         this.add_time = add_time;
+        this.username = username;
+        this.class_name = class_name;
     }
 
     public Exeperience() {
@@ -51,13 +55,19 @@ public class Exeperience {
         this.add_time = add_time;
     }
 
-    @Override
-    public String toString() {
-        return "Exeperience{" +
-                "id=" + id +
-                ", student_id=" + student_id +
-                ", content='" + content + '\'' +
-                ", add_time=" + add_time +
-                '}';
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getClass_name() {
+        return class_name;
+    }
+
+    public void setClass_name(String class_name) {
+        this.class_name = class_name;
     }
 }

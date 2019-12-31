@@ -10,8 +10,7 @@ import cn.xdh.util.MyPaging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +31,7 @@ public class ExeperienceController {
     @Autowired
     private StudentServiceImpl studentServiceimpl;
 
+
     /**
      * 显示所有学生作品
      *
@@ -40,18 +40,25 @@ public class ExeperienceController {
      */
     @GetMapping("/teacher/exeperiences")
     public String exeperienceAll(Model model,int pageNum) {
+        model.addAttribute("price",1);
         List<Exeperience> exeperienceList = exeperienceServiceImpl.selectAll();
         model.addAttribute("names", studentServiceimpl.selectAllNameAndId());
         model.addAttribute("exeperiences", MyPaging.paging(exeperienceList,pageNum,pageSize));
         //获取总页数
 
-        int generalPage = exeperienceList.size()/pageSize+1;
+        int page = exeperienceList.size()/pageSize;
+        int generalPage = exeperienceList.size()%pageSize==0&&page>0?page:page+1;
         //获取当前页
         GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
 
         model.addAttribute("generalPage",generalPage);
+        //判断页数是否符合标准
         if(pageNum<1||generalPage<pageNum){
-            model.addAttribute("url","不要乱动地址栏中的参数");
+            if(pageNum<1){
+                return "redirect:/teacher/exeperiences?pageNum=1";
+            }
+            model.addAttribute("price",0);
+            return "redirect:/teacher/exeperiences?pageNum="+generalPage;
         }
         return "teacher/exeperience";
     }
@@ -83,16 +90,26 @@ public class ExeperienceController {
         model.addAttribute("exeperiences", MyPaging.paging(exeperienceList,pageNum,pageSize));
         model.addAttribute("names", studentList);
         //获取总页数
-        int generalPage = exeperienceList.size()/pageSize+1;
+        int page = exeperienceList.size()/pageSize;
+        int generalPage = exeperienceList.size()%pageSize==0&&page>0?page:page+1;
+
         //获取当前页
         GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
         model.addAttribute("generalPage",generalPage);
+        //判断输入的值是否符合标准
+        model.addAttribute("price",1);
         if(pageNum<1||generalPage<pageNum){
-            model.addAttribute("url","不要乱动地址栏中的参数");
+            if(pageNum<1){
+                return "redirect:/teacher/exeperience?pageNum=1"+"&username="+username;
+            }
+            //删除完本页最后一条时(非首页),发送的数据
+            model.addAttribute("price",0);
+            return "redirect:/teacher/exeperience?pageNum="+generalPage+"&username="+username;
         }
 
         return "teacher/exeperience";
     }
+
 
     /**
      * 根据作品表id进行删除
@@ -101,10 +118,10 @@ public class ExeperienceController {
      * @param model
      * @return
      */
-    @GetMapping("/teacher/exeperience/{id}")
-    public String deleteExperienceById(@PathVariable("id") int id) {
+    @DeleteMapping("/teacher/exeperience/{id}")
+    @ResponseBody
+    public void deleteExperienceById(@PathVariable("id") int id) {
         exeperienceServiceImpl.deleteById(id);
-        return "redirect:/teacher/exeperiences?pageNum=1";
     }
 
 
@@ -117,6 +134,19 @@ public class ExeperienceController {
             exeperienceByName(page.getUsername(),page.getPageNum(),model);
         }
         return "teacher/exeperience";
+    }
+
+
+    /**
+     * 多选删除
+     */
+    @DeleteMapping("/teacher/exeperiencesmulti/{id}")
+    @ResponseBody
+    public void checkoutDel(@PathVariable("id") String id ){
+        String[] strs=id.split(",");
+        for (String s : strs){
+            deleteExperienceById(Integer.parseInt(s));
+        }
     }
 
 

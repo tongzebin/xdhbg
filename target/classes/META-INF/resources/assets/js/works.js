@@ -13,11 +13,17 @@ $(document).keypress(function(event){
 
 
 
-function del() {
-    var msg = "确定要删除吗?";
-    if (confirm(msg)==true){
-        return true;
-    }else{
-        return false;
+//作品与心得的单选删除
+function delone(value) {
+    if (confirm("确定要删除吗?")==true){
+        $.ajax({
+            url : value,
+            type :"DELETE",
+            success : function() {
+                location.reload();
+            }
+        })
     }
 }
+
+

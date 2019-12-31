@@ -26,6 +26,7 @@ public class Student implements Serializable {
     private String aim_address;
     private int stage_id;
 
+
     public Student() {
     }
 

@@ -42,16 +42,21 @@ public class WorkController {
     //PathVariable
     public String worksAll(Model model,@RequestParam("pageNum") int pageNum){
         List<Works> worksList=worksServiceimpl.selectAll();
-        int generalPage = worksList.size()/pageSize+1;
+        //获取总页数
+        int page = worksList.size()/pageSize;
+        int generalPage = worksList.size()%pageSize==0&&page>0?page:page+1;
+        GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
         model.addAttribute("generalPage",generalPage);
-        //遍历集合 格式化时间戳并添加
+
         model.addAttribute("names",studentServiceimpl.selectAllNameAndId());
         model.addAttribute("works", MyPaging.paging(worksList,pageNum,pageSize));
-        if(pageNum<1||generalPage<pageNum){
-            model.addAttribute("url","不要乱动地址栏中的参数");
+        //判断当前页是否有值
+        model.addAttribute("price",1);
+        if(generalPage<pageNum){
+            model.addAttribute("price",0);
         }
         //获取当前页
-        GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
+
         return "teacher/works";
     }
 
@@ -64,6 +69,7 @@ public class WorkController {
      */
     @GetMapping("/teacher/work")
     public String workByName(@RequestParam(value = "username")String username,Model model,int pageNum){
+
         //input数据回填
         model.addAttribute("backfill",username);
         List<Student> studentList = studentServiceimpl.selectIdAndNameByName(username);
@@ -80,13 +86,19 @@ public class WorkController {
         }
         model.addAttribute("works",MyPaging.paging(worksList,pageNum,pageSize));
         model.addAttribute("names",studentList);
-        int generalPage = worksList.size()/pageSize+1;
+        //获取总页数
+        int page = worksList.size()/pageSize;
+        int generalPage = worksList.size()%pageSize==0&&page>0?page:page+1;
         model.addAttribute("generalPage",generalPage);
-        if(pageNum<1||generalPage<pageNum){
-            model.addAttribute("url","不要乱动地址栏中的参数");
+        GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
+
+        //判断当前页是否有数据
+        model.addAttribute("price",1);
+        if(generalPage<pageNum){
+            model.addAttribute("price",0);
         }
         //获取当前页
-        GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
+
         return "teacher/works";
     }
 
@@ -96,10 +108,10 @@ public class WorkController {
      * @param model
      * @return
      */
-    @GetMapping("/teacher/work/{id}")
-    public String deleteWork(@PathVariable("id")int id){
+    @DeleteMapping("/teacher/work/{id}")
+    @ResponseBody
+    public void deleteWork(@PathVariable("id")int id){
         worksServiceimpl.deleteById(id);
-        return "redirect:/teacher/works";
     }
 
 
@@ -117,4 +129,18 @@ public class WorkController {
         return "teacher/works";
     }
 
+
+
+    /**
+     * 多选删除
+     */
+
+    @DeleteMapping("/teacher/worksmulti/{id}")
+    @ResponseBody
+    public void checkoutDel(@PathVariable("id") String id ){
+        String[] strs=id.split(",");
+        for (String s : strs){
+            deleteWork(Integer.parseInt(s));
+        }
+    }
 }
