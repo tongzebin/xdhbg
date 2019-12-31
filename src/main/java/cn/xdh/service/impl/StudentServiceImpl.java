@@ -37,16 +37,17 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> selectAllNameAndId() {
-        return studentdao.selectAllNameAndId();
-    public Student selectByMobileAndPassword(String mobile, String password){
-        Student student = studentDao.selectByMobileAndPassword(mobile,password);
-        return student;
+        return studentDao.selectAllNameAndId();
     }
 
+    public Student selectByMobileAndPassword(String mobile, String password) {
+        Student student = studentDao.selectByMobileAndPassword(mobile, password);
+        return student;
 
+    }
     @Override
     public List<Student> selectIdAndNameByName(String username) {
-        return studentdao.selectIdAndNameByName(username);
+        return studentDao.selectIdAndNameByName(username);
     }
 
 

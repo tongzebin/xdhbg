@@ -53,7 +53,7 @@ public class ExeperienceController {
 
         model.addAttribute("generalPage",generalPage);
         //判断页数是否符合标准
-        if(pageNum<1||generalPage<pageNum){
+        if(generalPage<pageNum){
             model.addAttribute("price",0);
         }
         return "teacher/exeperience";
@@ -78,7 +78,7 @@ public class ExeperienceController {
             exeperienceAll(model,1);
             return "teacher/exeperience";
         }
-        List<Exeperience> exeperienceList = new ArrayList<>();
+        List<Exeperience> exeperienceList = new ArrayList<Exeperience>();
         for (Student student : studentList) {
             //根据list集合中装的id拿取数据
             exeperienceList.addAll(exeperienceServiceImpl.selectByStudent_id(student.getId()));
@@ -94,7 +94,7 @@ public class ExeperienceController {
         model.addAttribute("generalPage",generalPage);
         //判断输入的值是否符合标准
         model.addAttribute("price",1);
-        if(pageNum<1||generalPage<pageNum){
+        if(generalPage<pageNum){
             //删除完本页最后一条时(非首页),发送的数据
             model.addAttribute("price",0);
         }

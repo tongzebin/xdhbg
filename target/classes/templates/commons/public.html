@@ -13,7 +13,8 @@
             <div class="tpl-user-panel-profile-picture">
                 <img src="/assets/img/user03.png" alt="">
             </div>
-            <span class="user-panel-logged-in-text" th:each="cookie:${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}" >
+            <span class="user-panel-logged-in-text" th:each="cookie:${#httpServletRequest.getCookies()}"
+                  th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
               ttk
           </span>
@@ -52,6 +53,20 @@
                         <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 新增学生
                     </a>
                 </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="/teacher/exeperiences?pageNum=1">
+                        <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 学生心得
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="/teacher/works?pageNum=1">
+                        <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 学生作品
+                    </a>
+                </li>
+
+
             </ul>
         </li>
     </ul>
@@ -70,13 +85,22 @@
 
                 </span>
         </div>
+        <!-- 搜索 -->
+        <div style="margin: 0 auto" class="am-fl tpl-header-search">
+            <h1 style="color: red;margin:10px 0" th:text="${pd}"></h1>
+            <!--<form class="tpl-header-search-form" action="javascript:;">
+                <button class="tpl-header-search-btn am-icon-search"></button>
+                <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
+            </form>-->
+        </div>
         <!-- 其它功能-->
         <div class="am-fr tpl-header-navbar">
             <ul>
                 <!-- 欢迎语 -->
                 <li class="am-text-sm tpl-header-navbar-welcome">
                     <a href="javascript:;">欢迎你,
-                        <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
+                        <span th:each="cookie :${#httpServletRequest.getCookies()}"
+                              th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
                         </span>
                     </a>
                 </li>

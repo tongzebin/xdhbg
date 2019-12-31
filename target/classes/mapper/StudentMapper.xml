@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xdh.dao.StudentDao">
 	
@@ -88,6 +88,17 @@
     </select>
 
 
+	<select id="selectCityByUpId" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE upid = #{upid}
+	</select>
+
+	<select id="selectAreaByUpId" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE upid = #{upid}
+	</select>
 
 
 	<select id="selectCityById" resultType="java.lang.String">
