@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
@@ -32,11 +34,22 @@ public class StudentServiceImpl implements StudentService {
 
 
 
+
     @Override
+    public List<Student> selectAllNameAndId() {
+        return studentdao.selectAllNameAndId();
     public Student selectByMobileAndPassword(String mobile, String password){
         Student student = studentDao.selectByMobileAndPassword(mobile,password);
         return student;
     }
+
+
+    @Override
+    public List<Student> selectIdAndNameByName(String username) {
+        return studentdao.selectIdAndNameByName(username);
+    }
+
+
 
     @Override
     public List<Map<String, Object>> getStudentByUndergraduate() {

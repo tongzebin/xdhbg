@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>兄弟会管理系统</title>
+    <title>Amaze UI Admin index Examples</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="/assets/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/assets/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <script src="/assets/js/echarts.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/assets/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/jquery.min.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
 
 </head>
 
@@ -26,6 +27,13 @@
     <div class="am-g tpl-g">
         <!-- 头部 -->
         <div th:replace="commons/public::ViewTop"></div>
+    <script src="assets/js/theme.js"></script>
+    <div class="am-g tpl-g">
+        <!-- 头部 -->
+        <div th:replace="common/bar::topmoban"></div>
+
+
+
         <!-- 风格切换 -->
         <div class="tpl-skiner">
             <div class="tpl-skiner-toggle am-icon-cog">
@@ -40,12 +48,23 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+        <!-- 侧边导航栏 -->
+        <!--        引入侧边栏-->
+        <div th:replace="common/bar::leftmoban"></div>
+
+
         <!-- 侧边导航栏 -->
         <div th:replace="commons/public::SideSelect"></div>
 
 
         <!-- 内容区域 -->
         <div class="tpl-content-wrapper">
+
             <div class="container-fluid am-cf">
                 <div class="row">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
@@ -56,6 +75,7 @@
                         <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置</button>
                     </div>
                 </div>
+
             </div>
 
             <div class="row-content am-cf">
@@ -167,6 +187,7 @@
                     </div>
                 </div>
 
+
                 <div class="row am-cf">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-4 widget-margin-bottom-lg ">
                         <div class="tpl-user-card am-text-center widget-body-lg">
@@ -176,6 +197,7 @@
                             <div class="achievement-subheading">
                                 月度最佳员工
                             </div>
+                            <img class="achievement-image" src="assets/img/user07.png" alt="">
                             <img class="achievement-image" src="/assets/img/user07.png" alt="">
                             <div class="achievement-description">
                                 禁言小张在

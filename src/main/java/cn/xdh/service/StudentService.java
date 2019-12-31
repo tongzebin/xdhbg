@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
+import java.util.List;
+
 public interface StudentService {
 
     Student selectByMobileAndPassword(String mobile, String password);
@@ -30,6 +32,7 @@ public interface StudentService {
     Student getStudentById(int id);
 
     void deleteStudent(int id, HttpServletRequest request);
+    List<Student> selectAllNameAndId();
 
     List<City> getProvince();
 
@@ -40,4 +43,5 @@ public interface StudentService {
     void updateStudent(Student student,HttpServletRequest request);
 
     Msg batchAddStudent(HttpServletRequest request, String suffixName, MultipartFile excelFile);
+    List<Student> selectIdAndNameByName(String username);
 }

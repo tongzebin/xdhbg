@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xdh.dao.ExeperienceDao">
+
+
+    <select id="selectByStudent_id" resultType="cn.xdh.entity.Exeperience">
+        select * from xdh_experience where student_id=#{id}
+    </select>
+
+    <select id="selectAll" resultType="cn.xdh.entity.Exeperience">
+        select * from xdh_experience
+    </select>
+
+    <select id="deleteById" resultType="cn.xdh.entity.Exeperience">
+        delete from xdh_experience where id = #{id}
+    </select>
+
+</mapper>

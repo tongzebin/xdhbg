@@ -79,17 +79,16 @@
 		WHERE level = 1
 	</select>
 
-	<select id="selectCityByUpId" resultType="cn.xdh.entity.City">
-		SELECT *
-		FROM  citys
-		WHERE upid = #{upid}
-	</select>
+    <select id="selectAllNameAndId" resultType="cn.xdh.entity.Student">
+        select username,id from xdh_student
+    </select>
 
-	<select id="selectAreaByUpId" resultType="cn.xdh.entity.City">
-		SELECT *
-		FROM  citys
-		WHERE upid = #{upid}
-	</select>
+    <select id="selectIdAndNameByName" resultType="cn.xdh.entity.Student">
+        select id,username from xdh_student where username like CONCAT('%',#{username},'%')
+    </select>
+
+
+
 
 	<select id="selectCityById" resultType="java.lang.String">
 		SELECT name

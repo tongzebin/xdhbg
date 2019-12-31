@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xdh.dao.StudentDao">
 	
@@ -79,6 +79,15 @@
 		WHERE level = 1
 	</select>
 
+    <select id="selectAllNameAndId" resultType="cn.xdh.entity.Student">
+        select username,id from xdh_student
+    </select>
+
+    <select id="selectIdAndNameByName" resultType="cn.xdh.entity.Student">
+        select id,username from xdh_student where username like CONCAT('%',#{username},'%')
+    </select>
+
+
 	<select id="selectCityByUpId" resultType="cn.xdh.entity.City">
 		SELECT *
 		FROM  citys
@@ -90,6 +99,7 @@
 		FROM  citys
 		WHERE upid = #{upid}
 	</select>
+
 
 	<select id="selectCityById" resultType="java.lang.String">
 		SELECT name
