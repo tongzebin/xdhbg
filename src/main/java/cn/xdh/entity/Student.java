@@ -1,54 +1,68 @@
 package cn.xdh.entity;
 
+import cn.xdh.dao.StudentDao;
+import cn.xdh.service.StudentService;
+import org.apache.ibatis.javassist.bytecode.stackmap.TypeData;
+
 import java.io.Serializable;
+import java.util.List;
 
 public class Student implements Serializable {
     private int id;
-    private String phone;
+    private String mobile;
     private String password;
-    private String name;
+    private String username;
     //0为女,1为男
     private int sex;
-    private int age;
+    private long birthday;
     private String address;
     //入学时间
-    private int startTime;
+    private long join_study_time;
     //毕业时间
-    private int lastTime;
-    private String school;
-    private String studyProcess;
-    private String graduateStatus;
-    private String experience;
-    private int isDel;
+    private long graduate_time;
+    private String graduate_school;
+    private int stage_id;
+    private int is_graduate;
+    private int aim_province_id;
+    private int aim_city_id;
+    private int aim_area_id;
+    private String aim_address;
     private int salary;
     private String company;
-    private String city;
+    //三级联动
+    private int province_id;
+    private int city_id;
+    private int area_id;
     //班期
-    private String classDate;
+    private int class_id;
 
     public Student() {
         super();
     }
 
-    public Student(int id, String phone, String password, String name, int sex, int age, String address, int startTime, int lastTime, String school, String studyProcess, String graduateStatus, String experience, int isDel, int salary, String company, String city, String classDate) {
+    public Student(int id, String mobile, String password, String username, int sex, long birthday, String address, long join_study_time, long graduate_time, String graduate_school, int stage_id, int is_graduate, int aim_province_id, int aim_city_id, int aim_area_id, String aim_address, int salary, String company, int province_id, int city_id, int area_id, int class_id) {
         this.id = id;
-        this.phone = phone;
+        this.mobile = mobile;
         this.password = password;
-        this.name = name;
+        this.username = username;
         this.sex = sex;
-        this.age = age;
+        this.birthday = birthday;
         this.address = address;
-        this.startTime = startTime;
-        this.lastTime = lastTime;
-        this.school = school;
-        this.studyProcess = studyProcess;
-        this.graduateStatus = graduateStatus;
-        this.experience = experience;
-        this.isDel = isDel;
+        this.join_study_time = join_study_time;
+        this.graduate_time = graduate_time;
+        this.graduate_school = graduate_school;
+        this.stage_id = stage_id;
+        this.is_graduate = is_graduate;
+        this.aim_province_id = aim_province_id;
+        this.aim_city_id = aim_city_id;
+        this.aim_area_id = aim_area_id;
+        this.aim_address = aim_address;
         this.salary = salary;
         this.company = company;
-        this.city = city;
-        this.classDate = classDate;
+        this.province_id = province_id;
+        this.city_id = city_id;
+        this.area_id = area_id;
+        this.class_id = class_id;
     }
 
     public int getId() {
@@ -59,12 +73,12 @@ public class Student implements Serializable {
         this.id = id;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getPassword() {
@@ -75,12 +89,12 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getSex() {
@@ -91,12 +105,12 @@ public class Student implements Serializable {
         this.sex = sex;
     }
 
-    public int getAge() {
-        return age;
+    public long getBirthday() {
+        return birthday;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthday(long birthday) {
+        this.birthday = birthday;
     }
 
     public String getAddress() {
@@ -107,60 +121,76 @@ public class Student implements Serializable {
         this.address = address;
     }
 
-    public int getStartTime() {
-        return startTime;
+    public long getJoin_study_time() {
+        return join_study_time;
     }
 
-    public void setStartTime(int startTime) {
-        this.startTime = startTime;
+    public void setJoin_study_time(long join_study_time) {
+        this.join_study_time = join_study_time;
     }
 
-    public int getLastTime() {
-        return lastTime;
+    public long getGraduate_time() {
+        return graduate_time;
     }
 
-    public void setLastTime(int lastTime) {
-        this.lastTime = lastTime;
+    public void setGraduate_time(long graduate_time) {
+        this.graduate_time = graduate_time;
     }
 
-    public String getSchool() {
-        return school;
+    public String getGraduate_school() {
+        return graduate_school;
     }
 
-    public void setSchool(String school) {
-        this.school = school;
+    public void setGraduate_school(String graduate_school) {
+        this.graduate_school = graduate_school;
     }
 
-    public String getStudyProcess() {
-        return studyProcess;
+    public int getStage_id() {
+        return stage_id;
     }
 
-    public void setStudyProcess(String studyProcess) {
-        this.studyProcess = studyProcess;
+    public void setStage_id(int stage_id) {
+        this.stage_id = stage_id;
     }
 
-    public String getGraduateStatus() {
-        return graduateStatus;
+    public int getIs_graduate() {
+        return is_graduate;
     }
 
-    public void setGraduateStatus(String graduateStatus) {
-        this.graduateStatus = graduateStatus;
+    public void setIs_graduate(int is_graduate) {
+        this.is_graduate = is_graduate;
     }
 
-    public String getExperience() {
-        return experience;
+    public int getAim_province_id() {
+        return aim_province_id;
     }
 
-    public void setExperience(String experience) {
-        this.experience = experience;
+    public void setAim_province_id(int aim_province_id) {
+        this.aim_province_id = aim_province_id;
     }
 
-    public int getIsDel() {
-        return isDel;
+    public int getAim_city_id() {
+        return aim_city_id;
     }
 
-    public void setIsDel(int isDel) {
-        this.isDel = isDel;
+    public void setAim_city_id(int aim_city_id) {
+        this.aim_city_id = aim_city_id;
+    }
+
+    public int getAim_area_id() {
+        return aim_area_id;
+    }
+
+    public void setAim_area_id(int aim_area_id) {
+        this.aim_area_id = aim_area_id;
+    }
+
+    public String getAim_address() {
+        return aim_address;
+    }
+
+    public void setAim_address(String aim_address) {
+        this.aim_address = aim_address;
     }
 
     public int getSalary() {
@@ -179,21 +209,65 @@ public class Student implements Serializable {
         this.company = company;
     }
 
-    public String getCity() {
-        return city;
+    public int getProvince_id() {
+        return province_id;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setProvince_id(int province_id) {
+        this.province_id = province_id;
     }
 
-    public String getClassDate() {
-        return classDate;
+    public int getCity_id() {
+        return city_id;
     }
 
-    public void setClassDate(String classDate) {
-        this.classDate = classDate;
+    public void setCity_id(int city_id) {
+        this.city_id = city_id;
+    }
+
+    public int getArea_id() {
+        return area_id;
+    }
+
+    public void setArea_id(int area_id) {
+        this.area_id = area_id;
+    }
+
+    public int getClass_id() {
+        return class_id;
+    }
+
+    public void setClass_id(int class_id) {
+        this.class_id = class_id;
     }
 
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", mobile='" + mobile + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", sex=" + sex +
+                ", birthday=" + birthday +
+                ", address='" + address + '\'' +
+                ", join_study_time=" + join_study_time +
+                ", graduate_time=" + graduate_time +
+                ", graduate_school='" + graduate_school + '\'' +
+                ", stage_id=" + stage_id +
+                ", is_graduate=" + is_graduate +
+                ", aim_province_id=" + aim_province_id +
+                ", aim_city_id=" + aim_city_id +
+                ", aim_area_id=" + aim_area_id +
+                ", aim_address='" + aim_address + '\'' +
+                ", salary=" + salary +
+                ", company='" + company + '\'' +
+                ", province_id=" + province_id +
+                ", city_id=" + city_id +
+                ", area_id=" + area_id +
+                ", class_id=" + class_id +
+                '}';
+    }
 }
+
