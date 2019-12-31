@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68e73175-95f1-4120-8e55-62c5f33e1885" name="Default Changelist" comment="hj">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/student/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/xdhbg.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/student/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="68e73175-95f1-4120-8e55-62c5f33e1885" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +145,7 @@
       <workItem from="1577416991539" duration="27204000" />
       <workItem from="1577666026060" duration="32674000" />
       <workItem from="1577710721303" duration="21624000" />
-      <workItem from="1577772272728" duration="798000" />
+      <workItem from="1577772272728" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="J测试">
       <created>1577159204296</created>
@@ -168,7 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577159204296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hj">
+      <created>1577773254899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577773254899</updated>
+    </task>
+    <task id="LOCAL-00003" summary="hj">
+      <created>1577773337519</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577773337519</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +189,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="J测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="J测试" />
+    <MESSAGE value="hj" />
+    <option name="LAST_COMMIT_MESSAGE" value="hj" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="181" key="Vcs.Push.Dialog.v2" />
