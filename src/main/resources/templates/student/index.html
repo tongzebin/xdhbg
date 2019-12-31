@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:text-decoration="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="/assets/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/assets/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <script src="assets/js/echarts.min.js"></script>
     <link rel="stylesheet" href="assets/css/amazeui.min.css" />
@@ -19,36 +19,23 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="/assets/js/echarts.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/assets/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/jquery.min.js"  th:src="@{/webjars/jquery/3.3.1/jquery.min.js}" ></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body data-type="widgets">
     <script src="assets/js/theme.js"></script>
-<body data-type="index">
-    style
-    <script src="/assets/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 头部 -->
         <header>
             <!-- logo -->
             <div class="am-fl tpl-header-logo">
-                <a href="javascript:;"><img src="/assets/img/logo.png" alt=""></a>
+                <a href="javascript:;"><img src="assets/img/logo.png" alt=""></a>
             </div>
             <!-- 右侧内容 -->
             <div class="tpl-header-fluid">
                 <!-- 侧边切换 -->
-
-
-<!--                把导航栏的小图标 改成页面名称  原首页栏删除-->
-
-                <div class=" tpl-header-switch-button ">
-                    <span class="am-icon-home page-header-heading-icon"></span> 首页
+                <div class="am-fl tpl-header-switch-button am-icon-list">
+                    <span></span>
                 </div>
                 <!-- 其它功能-->
                 <div class="am-fr tpl-header-navbar">
@@ -56,7 +43,6 @@
                         <!-- 欢迎语 -->
                         <li class="am-text-sm tpl-header-navbar-welcome">
                             <a href="javascript:;">欢迎你, <span>x老师</span> </a>
-                            <a href="javascript:;">欢迎你, <span >Amaze UI</span> </a>
                         </li>
                         <!-- 退出 -->
                         <li class="am-text-sm">
@@ -89,7 +75,7 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <img src="/assets/img/user04.png" alt="">
+                        <img src="assets/img/user04.png" alt="">
                     </div>
                     <span class="user-panel-logged-in-text">
                         <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
@@ -118,8 +104,6 @@
                 <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title active">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 公告管理
-                    <a href="#" th:href="@{/msg}">
-                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
@@ -414,203 +398,6 @@
                                 $("#ind li").eq(0).removeClass("am-disabled");
                             }
                             vm.dataShow = vm.totalPage[vm.currentPage];
-        <div class="tpl-content-wrapper">
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                <div class="widget am-cf">
-                    <div class="widget-head am-cf">
-                        <div class="widget-title  am-cf"> <h2>公告栏</h2> </div>
-                    </div>
-                    <div class="widget-body  am-fr">
-                        <div class="am-u-sm-12">
-                            <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
-                                <thead>
-                                <tr>
-                                    <th>通知内容</th>
-                                    <th>发布时间</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <tr th:each="msg:${msgs}">
-                                        <td th:text="${msg.notice}"></td>
-                                        <td th:text="${#dates.format(msg.getDateTime(),'yyyy-MM-dd HH:mm:ss')}"></td>
-
-<!--                                        <td th:text="${#dates.format(msg.add_time*1000, 'yyyy-MM-dd HH:mm:ss')}"></td>-->
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-<!--                        <div class="am-u-lg-12 am-cf">-->
-<!--                            <div class="am-fr">-->
-<!--                                <ul class="am-pagination tpl-pagination">-->
-<!--                                    &lt;!&ndash; 首页 &ndash;&gt;-->
-<!--                                    <li th:if="${current == 1}">-->
-<!--                                        <a href="#">首页</a>-->
-<!--                                    </li>-->
-<!--                                    <li th:if="${current > 1}">-->
-<!--                                        <a th:href="@{/admin.adminlog(page=1,type=${type},lookname=${lookname})}">首页</a>-->
-<!--                                    </li>-->
-
-<!--                                    &lt;!&ndash; 上一页 &ndash;&gt;-->
-<!--                                    <li th:if="${current == 1}">-->
-<!--                                        <a href="#">«</a>-->
-<!--                                    </li>-->
-<!--                                    <li th:if="${current > 1}">-->
-<!--                                        <a th:href="@{/admin.adminlog(page=${current - 1},type=${type},lookname=${lookname})}">«</a>-->
-<!--                                    </li>-->
-
-<!--                                    &lt;!&ndash; 最大按钮数6,浮动按钮数3 &ndash;&gt;-->
-<!--                                    <th:block th:if="${total>0 && total<= 4}" th:each="i : ${#numbers.sequence(1,total)}">-->
-<!--                                        <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
-<!--                                        <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
-<!--                                    </th:block>-->
-
-<!--                                    <th:block th:if="${total > 4}">-->
-<!--                                        <th:block th:if="${(current - (2/2)) < 3}" th:each="i : ${#numbers.sequence(1,2 + 2 )}">-->
-<!--                                            <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
-<!--                                            <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
-<!--                                        </th:block>-->
-<!--                                        &lt;!&ndash; ... &ndash;&gt;-->
-<!--                                        <li th:if="${(current - (2/2)) >= 3}"><a>...</a></li>-->
-
-<!--                                        <th:block th:if="${((current - (2/2))>=3) && (current < (total - 3))}"-->
-<!--                                                  th:each="i : ${#numbers.sequence(current - 1,current+2)}">-->
-<!--                                            <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
-<!--                                            <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
-<!--                                        </th:block>-->
-
-<!--                                        &lt;!&ndash; ... &ndash;&gt;-->
-<!--                                        <li th:if="${current < (total - 3)}"><a>...</a></li>-->
-<!--                                        <th:block th:if="${current >= (total - 3)}" th:each="i : ${#numbers.sequence(total - 3,total)}">-->
-<!--                                            <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>-->
-<!--                                            <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>-->
-<!--                                        </th:block>-->
-<!--                                    </th:block>-->
-
-<!--                                    &lt;!&ndash; 下一页 &ndash;&gt;-->
-<!--                                    <li th:if="${current >= total}"><a href="#">»</a> </li>-->
-<!--                                    <li th:if="${current < total}"><a th:href="@{/admin.adminlog(page=${current+1},type=${type},lookname=${lookname})}">»</a></li>-->
-
-<!--                                    &lt;!&ndash; 最后一页 &ndash;&gt;-->
-<!--                                    <li th:if="${total>1 && current == total}"><a href="#">末页</a></li>-->
-<!--                                    <li th:if="${total>1 && current != total}"><a th:href="@{/admin.adminlog(page=${total},type=${type},lookname=${lookname})}">末页</a></li>-->
-
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-                    </div>
-
-            </div>
-            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12"  >
-                <div class="widget-head am-cf">
-                    <div class="widget-title  am-cf"> <h2 style="color: #FFFFFF">兄弟会培养内容</h2> </div>
-                </div>
-                <div class="accordion" id="accordionExample" style="background: #4b5357; ">
-                <div class="card" style="background: #4b5357" >
-                    <div class="card-header" id="headingOne"                     >
-                        <h2 class="mb-0" >
-                            <button class="btn am-btn-default " type="button"  text-decoration="none" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h2 style="color: #FFFFFF">阶段一 : 基础逻辑训练</h2>
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body" style="background: #5d6468" >
-                            <h3 style="color: #FFFFFF">简介：<br><br>
-                                理解操作系统原理，熟悉常 见操作开发工具使用，培养 编程思想，建立编程信心。<br><br>成果：<br><br>理解编程逻辑，为后面做准备。
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="background: #4b5357">
-                    <div class="card-header" id="headingTwo" >
-                        <h2 class="mb-0">
-                            <button class="btn collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <h2 style="color: #FFFFFF">阶段二 : 前端组件训练</h2>
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample"  >
-                        <div class="card-body" style="background: #5d6468"  >
-                            <h3 style="color: #FFFFFF">简介：<br><br>
-                                理解组件化开发思想，熟练使用主流的前端框架和技能。握好前端知识是我们学习任何一门语言的开始。<br><br>
-                                成果：<br><br>
-                                独立完成前端页面开发。</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="background: #4b5357">
-                    <div class="card-header" id="headingThree" >
-                        <h2 class="mb-0">
-                            <button class="btn  collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <h2 style="color: #FFFFFF">阶段三 : 强化编程训练</h2>
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body" style="background: #5d6468"  >
-                            <h3 style="color: #FFFFFF">简介：<br><br>
-                                自选两门编程语言（Java/Python/PHP）强化，掌握开发规范设计模式，使用主流框架进行开发，使用容器（Docker）技术完成后端环境部署/迭代/持续集成（云计算）。
-                                <br><br>
-                                成果：<br><br>
-                                独立完成项目、模块、组件、插件开发。</h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card" style="background: #4b5357">
-                        <div class="card-header" id="headingFour" >
-                            <h2 class="mb-0">
-                                <button class="btn  collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <h2 style="color: #FFFFFF">阶段四 : 结合开源社区生态 完成项目开发训练</h2>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                            <div class="card-body" style="background: #5d6468"  >
-                                <h3 style="color: #FFFFFF">简介：<br><br>
-                                    掌握大数据与科学计算、常用框架工具及开发技巧，能独立搭建生产级别本地云环境，完成中等规模的企业级项目。
-                                    <br><br>
-                                    成果：
-                                    <br><br>
-                                    独立设计完成项目开发。</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="background: #4b5357">
-                    <div class="card-header" id="headingFive" >
-                        <h2 class="mb-0">
-                            <button class="btn  collapsed am-btn-default" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <h2 style="color: #FFFFFF">阶段五 : 国内常见第三方生态使用，带领小型团队</h2>
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                        <div class="card-body" style="background: #5d6468"  >
-                            <h3 style="color: #FFFFFF">简介：<br><br>
-                                学习前沿开发生态及人工智能应用技术，具备领导5-7人团队协同开发能力。
-                                <br><br>
-                                成果：
-                                <br><br>
-                                善用国内优秀的基础设施与第三方支持快速完成互联网项目交付。</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script src="/assets/js/amazeui.min.js"></script>
-    <script src="/assets/js/amazeui.datatables.min.js"></script>
-    <script src="/assets/js/dataTables.responsive.min.js"></script>
-    <script src="/assets/js/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
                             $("#ind li").eq(vm.currentPage+1).addClass("am-active")

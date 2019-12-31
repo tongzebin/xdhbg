@@ -10,6 +10,5 @@ import org.springframework.context.ApplicationContext;
 public class RunBoot {
     public static void main(String[] args) {
         ApplicationContext ac = SpringApplication.run(RunBoot.class, args);
-
     }
 }
