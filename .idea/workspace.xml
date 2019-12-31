@@ -2,14 +2,132 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f58633-2c97-4f96-a0ac-988a1982c5ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.datatables.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.print.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.print.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/app-icon72x72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/app-icon72x72@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-chrome.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-chrome.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-firefox.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-firefox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-ie.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-ie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-opera.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-opera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-safari.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-safari.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/adminPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/adminPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/blogPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/blogPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landing.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landingPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landingPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/loginPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/loginPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/sidebarPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/sidebarPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/startup-640x1096.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/startup-640x1096.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/a5.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/a5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logoa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logob.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user01.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user02.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user03.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user04.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user05.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user06.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user07.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/dataTables.responsive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/dataTables.responsive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/StudentList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/datasedit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/student/studentDatas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Class.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Notice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.datatables.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.print.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.print.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/app-icon72x72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/app-icon72x72@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-chrome.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-chrome.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-firefox.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-firefox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-ie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-ie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-opera.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-opera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-safari.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-safari.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/adminPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/adminPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/blogPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/blogPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landing.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landingPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landingPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/loginPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/loginPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/sidebarPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/sidebarPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/startup-640x1096.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/startup-640x1096.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/a5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/a5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logoa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logob.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user01.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user02.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user03.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user04.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user05.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user06.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user07.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/dataTables.responsive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/dataTables.responsive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/xdhbg.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/xdhbg.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/SomeMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Notice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdhbg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xdhbg.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,20 +162,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="xdh_class: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="xdh_student: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -74,6 +178,11 @@
       <list>
         <option value="ttk" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -105,6 +214,7 @@
   <component name="ProjectId" id="1VVjYeIFqfUwQmFp65AkIO7gWYn" />
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -119,7 +229,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.112676054" />
     <property name="project.structure.side.proportion" value="0.42992625" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -197,7 +307,7 @@
       <workItem from="1577533957400" duration="360000" />
       <workItem from="1577534336098" duration="781000" />
       <workItem from="1577538636132" duration="64950000" />
-      <workItem from="1577696804487" duration="17314000" />
+      <workItem from="1577696804487" duration="20089000" />
     </task>
     <task id="LOCAL-00001" summary="只差分页和批量上传">
       <created>1577519094477</created>
@@ -234,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577755706257</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完事">
+      <created>1577757223855</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577757223855</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +360,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -252,11 +394,18 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="只差分页和批量上传" />
     <MESSAGE value="只差分页" />
     <MESSAGE value="完事" />
-    <option name="LAST_COMMIT_MESSAGE" value="完事" />
+    <MESSAGE value="Merge branches 'tengtiankai' and 'zhengyupeng' of github.com:raoweijiapng/xdhbg into tengtiankai&#10;&#10; Conflicts:&#10;&#9;.idea/.gitignore&#10;&#9;.idea/compiler.xml&#10;&#9;.idea/encodings.xml&#10;&#9;.idea/vcs.xml&#10;&#9;.idea/workspace.xml&#10;&#9;out/production/main/static/assets/css/admin.css&#10;&#9;out/production/main/static/assets/css/amazeui.datatables.min.css&#10;&#9;out/production/main/static/assets/css/amazeui.min.css&#10;&#9;out/production/main/static/assets/css/app.css&#10;&#9;out/production/main/static/assets/css/app.less&#10;&#9;out/production/main/static/assets/css/fullcalendar.min.css&#10;&#9;out/production/main/static/assets/css/fullcalendar.print.css&#10;&#9;out/production/main/static/assets/fonts/FontAwesome.otf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;out/production/main/static/assets/i/app-icon72x72@2x.png&#10;&#9;out/production/main/static/assets/i/examples/admin-chrome.png&#10;&#9;out/production/main/static/assets/i/examples/admin-firefox.png&#10;&#9;out/production/main/static/assets/i/examples/admin-ie.png&#10;&#9;out/production/main/static/assets/i/examples/admin-opera.png&#10;&#9;out/production/main/static/assets/i/examples/admin-safari.png&#10;&#9;out/production/main/static/assets/i/examples/adminPage.png&#10;&#9;out/production/main/static/assets/i/examples/blogPage.png&#10;&#9;out/production/main/static/assets/i/examples/landing.png&#10;&#9;out/production/main/static/assets/i/examples/landingPage.png&#10;&#9;out/production/main/static/assets/i/examples/loginPage.png&#10;&#9;out/production/main/static/assets/i/examples/sidebarPage.png&#10;&#9;out/production/main/static/assets/i/favicon.png&#10;&#9;out/production/main/static/assets/i/startup-640x1096.png&#10;&#9;out/production/main/static/assets/img/a5.png&#10;&#9;out/production/main/static/assets/img/k.jpg&#10;&#9;out/production/main/static/assets/img/logo.png&#10;&#9;out/production/main/static/assets/img/logoa.png&#10;&#9;out/production/main/static/assets/img/logob.png&#10;&#9;out/production/main/static/assets/img/user01.png&#10;&#9;out/production/main/static/assets/img/user02.png&#10;&#9;out/production/main/static/assets/img/user03.png&#10;&#9;out/production/main/static/assets/img/user04.png&#10;&#9;out/production/main/static/assets/img/user05.png&#10;&#9;out/production/main/static/assets/img/user06.png&#10;&#9;out/production/main/static/assets/img/user07.png&#10;&#9;out/production/main/static/assets/js/amazeui.datatables.min.js&#10;&#9;out/production/main/static/assets/js/amazeui.min.js&#10;&#9;out/production/main/static/assets/js/app.js&#10;&#9;out/production/main/static/assets/js/dataTables.responsive.min.js&#10;&#9;out/production/main/static/assets/js/echarts.min.js&#10;&#9;out/production/main/static/assets/js/fullcalendar.min.js&#10;&#9;out/production/main/static/assets/js/jquery.min.js&#10;&#9;out/production/main/static/assets/js/moment.js&#10;&#9;out/production/main/static/assets/js/theme.js&#10;&#9;pom.xml&#10;&#9;src/main/java/cn/xdh/RunBoot.java&#10;&#9;src/main/java/cn/xdh/dao/StudentDao.java&#10;&#9;src/main/java/cn/xdh/entity/Student.java&#10;&#9;src/main/java/cn/xdh/service/StudentService.java&#10;&#9;src/main/java/cn/xdh/service/impl/StudentServiceImpl.java&#10;&#9;src/main/java/cn/xdh/web/BasicController.java&#10;&#9;src/main/resources/application.properties&#10;&#9;src/main/resources/mapper/StudentMapper.xml&#10;&#9;src/main/resources/static/assets/css/admin.css&#10;&#9;src/main/resources/static/assets/css/amazeui.datatables.min.css&#10;&#9;src/main/resources/static/assets/css/amazeui.min.css&#10;&#9;src/main/resources/static/assets/css/app.css&#10;&#9;src/main/resources/static/assets/css/app.less&#10;&#9;src/main/resources/static/assets/css/fullcalendar.min.css&#10;&#9;src/main/resources/static/assets/css/fullcalendar.print.css&#10;&#9;src/main/resources/static/assets/fonts/FontAwesome.otf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;src/main/resources/static/assets/i/app-icon72x72@2x.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-chrome.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-firefox.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-ie.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-opera.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-safari.png&#10;&#9;src/main/resources/static/assets/i/examples/adminPage.png&#10;&#9;src/main/resources/static/assets/i/examples/blogPage.png&#10;&#9;src/main/resources/static/assets/i/examples/landing.png&#10;&#9;src/main/resources/static/assets/i/examples/landingPage.png&#10;&#9;src/main/resources/static/assets/i/examples/loginPage.png&#10;&#9;src/main/resources/static/assets/i/examples/sidebarPage.png&#10;&#9;src/main/resources/static/assets/i/favicon.png&#10;&#9;src/main/resources/static/assets/i/startup-640x1096.png&#10;&#9;src/main/resources/static/assets/img/a5.png&#10;&#9;src/main/resources/static/assets/img/k.jpg&#10;&#9;src/main/resources/static/assets/img/logo.png&#10;&#9;src/main/resources/static/assets/img/logoa.png&#10;&#9;src/main/resources/static/assets/img/logob.png&#10;&#9;src/main/resources/static/assets/img/user01.png&#10;&#9;src/main/resources/static/assets/img/user02.png&#10;&#9;src/main/resources/static/assets/img/user03.png&#10;&#9;src/main/resources/static/assets/img/user04.png&#10;&#9;src/main/resources/static/assets/img/user05.png&#10;&#9;src/main/resources/static/assets/img/user06.png&#10;&#9;src/main/resources/static/assets/img/user07.png&#10;&#9;src/main/resources/static/assets/js/amazeui.datatables.min.js&#10;&#9;src/main/resources/static/assets/js/amazeui.min.js&#10;&#9;src/main/resources/static/assets/js/app.js&#10;&#9;src/main/resources/static/assets/js/dataTables.responsive.min.js&#10;&#9;src/main/resources/static/assets/js/echarts.min.js&#10;&#9;src/main/resources/static/assets/js/fullcalendar.min.js&#10;&#9;src/main/resources/static/assets/js/jquery.min.js&#10;&#9;src/main/resources/static/assets/js/moment.js&#10;&#9;src/main/resources/static/assets/js/theme.js&#10;&#9;src/main/resources/templates/login.html&#10;&#9;target/classes/META-INF/xdhbg.kotlin_module&#10;&#9;target/classes/application.properties&#10;&#9;target/classes/cn/xdh/RunBoot.class&#10;&#9;target/classes/cn/xdh/dao/StudentDao.class&#10;&#9;target/classes/cn/xdh/entity/Student.class&#10;&#9;target/classes/cn/xdh/service/StudentService.class&#10;&#9;target/classes/cn/xdh/service/impl/StudentServiceImpl.class&#10;&#9;target/classes/cn/xdh/web/BasicController.class&#10;&#9;target/classes/mapper/StudentMapper.xml&#10;&#9;target/classes/templates/login.html&#10;&#9;xdhbg.iml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branches 'tengtiankai' and 'zhengyupeng' of github.com:raoweijiapng/xdhbg into tengtiankai&#10;&#10; Conflicts:&#10;&#9;.idea/.gitignore&#10;&#9;.idea/compiler.xml&#10;&#9;.idea/encodings.xml&#10;&#9;.idea/vcs.xml&#10;&#9;.idea/workspace.xml&#10;&#9;out/production/main/static/assets/css/admin.css&#10;&#9;out/production/main/static/assets/css/amazeui.datatables.min.css&#10;&#9;out/production/main/static/assets/css/amazeui.min.css&#10;&#9;out/production/main/static/assets/css/app.css&#10;&#9;out/production/main/static/assets/css/app.less&#10;&#9;out/production/main/static/assets/css/fullcalendar.min.css&#10;&#9;out/production/main/static/assets/css/fullcalendar.print.css&#10;&#9;out/production/main/static/assets/fonts/FontAwesome.otf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;out/production/main/static/assets/i/app-icon72x72@2x.png&#10;&#9;out/production/main/static/assets/i/examples/admin-chrome.png&#10;&#9;out/production/main/static/assets/i/examples/admin-firefox.png&#10;&#9;out/production/main/static/assets/i/examples/admin-ie.png&#10;&#9;out/production/main/static/assets/i/examples/admin-opera.png&#10;&#9;out/production/main/static/assets/i/examples/admin-safari.png&#10;&#9;out/production/main/static/assets/i/examples/adminPage.png&#10;&#9;out/production/main/static/assets/i/examples/blogPage.png&#10;&#9;out/production/main/static/assets/i/examples/landing.png&#10;&#9;out/production/main/static/assets/i/examples/landingPage.png&#10;&#9;out/production/main/static/assets/i/examples/loginPage.png&#10;&#9;out/production/main/static/assets/i/examples/sidebarPage.png&#10;&#9;out/production/main/static/assets/i/favicon.png&#10;&#9;out/production/main/static/assets/i/startup-640x1096.png&#10;&#9;out/production/main/static/assets/img/a5.png&#10;&#9;out/production/main/static/assets/img/k.jpg&#10;&#9;out/production/main/static/assets/img/logo.png&#10;&#9;out/production/main/static/assets/img/logoa.png&#10;&#9;out/production/main/static/assets/img/logob.png&#10;&#9;out/production/main/static/assets/img/user01.png&#10;&#9;out/production/main/static/assets/img/user02.png&#10;&#9;out/production/main/static/assets/img/user03.png&#10;&#9;out/production/main/static/assets/img/user04.png&#10;&#9;out/production/main/static/assets/img/user05.png&#10;&#9;out/production/main/static/assets/img/user06.png&#10;&#9;out/production/main/static/assets/img/user07.png&#10;&#9;out/production/main/static/assets/js/amazeui.datatables.min.js&#10;&#9;out/production/main/static/assets/js/amazeui.min.js&#10;&#9;out/production/main/static/assets/js/app.js&#10;&#9;out/production/main/static/assets/js/dataTables.responsive.min.js&#10;&#9;out/production/main/static/assets/js/echarts.min.js&#10;&#9;out/production/main/static/assets/js/fullcalendar.min.js&#10;&#9;out/production/main/static/assets/js/jquery.min.js&#10;&#9;out/production/main/static/assets/js/moment.js&#10;&#9;out/production/main/static/assets/js/theme.js&#10;&#9;pom.xml&#10;&#9;src/main/java/cn/xdh/RunBoot.java&#10;&#9;src/main/java/cn/xdh/dao/StudentDao.java&#10;&#9;src/main/java/cn/xdh/entity/Student.java&#10;&#9;src/main/java/cn/xdh/service/StudentService.java&#10;&#9;src/main/java/cn/xdh/service/impl/StudentServiceImpl.java&#10;&#9;src/main/java/cn/xdh/web/BasicController.java&#10;&#9;src/main/resources/application.properties&#10;&#9;src/main/resources/mapper/StudentMapper.xml&#10;&#9;src/main/resources/static/assets/css/admin.css&#10;&#9;src/main/resources/static/assets/css/amazeui.datatables.min.css&#10;&#9;src/main/resources/static/assets/css/amazeui.min.css&#10;&#9;src/main/resources/static/assets/css/app.css&#10;&#9;src/main/resources/static/assets/css/app.less&#10;&#9;src/main/resources/static/assets/css/fullcalendar.min.css&#10;&#9;src/main/resources/static/assets/css/fullcalendar.print.css&#10;&#9;src/main/resources/static/assets/fonts/FontAwesome.otf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;src/main/resources/static/assets/i/app-icon72x72@2x.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-chrome.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-firefox.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-ie.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-opera.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-safari.png&#10;&#9;src/main/resources/static/assets/i/examples/adminPage.png&#10;&#9;src/main/resources/static/assets/i/examples/blogPage.png&#10;&#9;src/main/resources/static/assets/i/examples/landing.png&#10;&#9;src/main/resources/static/assets/i/examples/landingPage.png&#10;&#9;src/main/resources/static/assets/i/examples/loginPage.png&#10;&#9;src/main/resources/static/assets/i/examples/sidebarPage.png&#10;&#9;src/main/resources/static/assets/i/favicon.png&#10;&#9;src/main/resources/static/assets/i/startup-640x1096.png&#10;&#9;src/main/resources/static/assets/img/a5.png&#10;&#9;src/main/resources/static/assets/img/k.jpg&#10;&#9;src/main/resources/static/assets/img/logo.png&#10;&#9;src/main/resources/static/assets/img/logoa.png&#10;&#9;src/main/resources/static/assets/img/logob.png&#10;&#9;src/main/resources/static/assets/img/user01.png&#10;&#9;src/main/resources/static/assets/img/user02.png&#10;&#9;src/main/resources/static/assets/img/user03.png&#10;&#9;src/main/resources/static/assets/img/user04.png&#10;&#9;src/main/resources/static/assets/img/user05.png&#10;&#9;src/main/resources/static/assets/img/user06.png&#10;&#9;src/main/resources/static/assets/img/user07.png&#10;&#9;src/main/resources/static/assets/js/amazeui.datatables.min.js&#10;&#9;src/main/resources/static/assets/js/amazeui.min.js&#10;&#9;src/main/resources/static/assets/js/app.js&#10;&#9;src/main/resources/static/assets/js/dataTables.responsive.min.js&#10;&#9;src/main/resources/static/assets/js/echarts.min.js&#10;&#9;src/main/resources/static/assets/js/fullcalendar.min.js&#10;&#9;src/main/resources/static/assets/js/jquery.min.js&#10;&#9;src/main/resources/static/assets/js/moment.js&#10;&#9;src/main/resources/static/assets/js/theme.js&#10;&#9;src/main/resources/templates/login.html&#10;&#9;target/classes/META-INF/xdhbg.kotlin_module&#10;&#9;target/classes/application.properties&#10;&#9;target/classes/cn/xdh/RunBoot.class&#10;&#9;target/classes/cn/xdh/dao/StudentDao.class&#10;&#9;target/classes/cn/xdh/entity/Student.class&#10;&#9;target/classes/cn/xdh/service/StudentService.class&#10;&#9;target/classes/cn/xdh/service/impl/StudentServiceImpl.class&#10;&#9;target/classes/cn/xdh/web/BasicController.class&#10;&#9;target/classes/mapper/StudentMapper.xml&#10;&#9;target/classes/templates/login.html&#10;&#9;xdhbg.iml" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
