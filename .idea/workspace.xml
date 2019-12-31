@@ -197,7 +197,7 @@
       <workItem from="1577533957400" duration="360000" />
       <workItem from="1577534336098" duration="781000" />
       <workItem from="1577538636132" duration="64950000" />
-      <workItem from="1577696804487" duration="17072000" />
+      <workItem from="1577696804487" duration="17314000" />
     </task>
     <task id="LOCAL-00001" summary="只差分页和批量上传">
       <created>1577519094477</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577753932304</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完事">
+      <created>1577755706257</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577755706257</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
