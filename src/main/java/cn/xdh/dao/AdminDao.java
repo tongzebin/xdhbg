@@ -19,5 +19,5 @@ public interface AdminDao {
     //查找最新的五个管理员日志
     public List<AdminLog> selectNewAdminLog();
 
-
+    public Admin selectByMobile(String mobile);
 }

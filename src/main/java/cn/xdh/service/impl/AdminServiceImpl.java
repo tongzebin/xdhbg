@@ -30,6 +30,12 @@ public class AdminServiceImpl implements AdminService {
         return admin;
     }
 
+    @Override
+    public Admin selectByMobile(String mobile){
+        Admin admin = admindao.selectByMobile(mobile);
+        return admin;
+    }
+
     //增加管理员日志
     @Override
     public int addAdminLog(AdminLog adminlog){

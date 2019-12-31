@@ -1,17 +1,29 @@
 package cn.xdh.entity;
 
+import javax.persistence.Column;
+import javax.persistence.*;
+
+@Entity
+@Table(name="xdh_teacher")
 public class Teacher {
-    private int id;
+    @Id
+    @Column(name="id")
+    private Integer id;
+    @Column(name="name")
     private String name;
+    @Column(name="mobile")
     private String mobile;
+    @Column(name="password")
     private String password;
-    private int add_time;
+    @Column(name="add_time")
+    private Long add_time;
+    @Column(name="add_ip")
     private String add_ip;
 
     public Teacher() {
     }
 
-    public Teacher(int id, String name, String mobile, String password, int add_time, String add_ip) {
+    public Teacher(int id, String name, String mobile, String password, Long add_time, String add_ip) {
         this.id = id;
         this.name = name;
         this.mobile = mobile;
@@ -52,11 +64,11 @@ public class Teacher {
         this.password = password;
     }
 
-    public int getAdd_time() {
+    public Long getAdd_time() {
         return add_time;
     }
 
-    public void setAdd_time(int add_time) {
+    public void setAdd_time(Long add_time) {
         this.add_time = add_time;
     }
 

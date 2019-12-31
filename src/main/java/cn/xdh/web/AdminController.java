@@ -1,30 +1,24 @@
 package cn.xdh.web;
 
 import cn.xdh.SomeMethods;
-import cn.xdh.dao.AdminLogRepository;
-import cn.xdh.entity.Admin;
-import cn.xdh.entity.AdminLog;
-import cn.xdh.entity.Student;
-import cn.xdh.entity.Teacher;
+import cn.xdh.entity.*;
 import cn.xdh.service.impl.AdminServiceImpl;
 import cn.xdh.service.impl.ClassServiceImpl;
 import cn.xdh.service.impl.StudentServiceImpl;
 import cn.xdh.service.impl.TeacherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class AdminController {
@@ -88,6 +82,180 @@ public class AdminController {
         mav.getModel().put("teacherNumber", teacherNumber);
         mav.addObject("adminLog",adminloglist);
         return mav;
+    }
+
+    //将查询到老师的数据通过list集合发送到指定页面并分页
+    @GetMapping(value = "/admin.teacher")
+    public ModelAndView selectTeacher(Model model, HttpServletRequest request,
+                                @RequestParam(name="page",required=false,defaultValue="1")int page,
+                                @RequestParam(name="type",required=false,defaultValue="all")String type,
+                                @RequestParam(name="size",required=false,defaultValue="5")int size){
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("admin/teacher");
+        String lookname = request.getParameter("lookname");
+        Page<Teacher> selectByTeacher = null;
+        //判断查找的方式，然后通过sql获取所有管理员日志
+        if (type.equals("likename")){
+            selectByTeacher = teacherservice.getAllTeacherBy(page - 1,size,lookname);
+        }else {
+            selectByTeacher = teacherservice.selectAllTeacher(page - 1, size);
+        }
+        model.addAttribute("current", selectByTeacher.getNumber() + 1);
+        model.addAttribute("total", selectByTeacher.getTotalPages());
+        model.addAttribute("selectTeacher", selectByTeacher.getContent());
+        mav.getModel().put("type", type);
+        mav.getModel().put("lookname", lookname);
+        return mav;
+    }
+
+    //通过传来的id进行删除老师操作
+    @GetMapping(value = "/admindeleteteacher/{id}")
+    @ResponseBody
+    public ModelAndView deleteByTeacher(@PathVariable("id") int id) {
+        teacherservice.deleteByTeacher(id);
+        return new ModelAndView("redirect:/admin.teacher");
+        //重定向到teacher页面
+    }
+
+    //老师增加操作的页面
+    @GetMapping("/admin.toInsertTeacher")
+    public ModelAndView toInsertTeacher(){
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("admin/addteacher");
+        return mav;
+    }
+
+    //老师增加操作提交的地址,并重定向到教师管理列表
+    @PostMapping(value = "/admin.addteacher")
+    public ModelAndView insertTeacher(Teacher teacher) {
+        teacherservice.insertByTeacher(teacher);
+        return new ModelAndView("redirect:/admin.teacher");
+    }
+
+    //通过老师的id,与查询出来的老师信息,实现老师信息的显示和修改
+    @GetMapping("/admintoUpdateTeacher")
+    public ModelAndView toUpdateTeacher(@RequestParam(name="id",required=false)int id,Model model){
+        Teacher selectByTeacher = teacherservice.selectByTeacher(id);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("admin/updateteacher");
+        mav.addObject("selectByTeacher",selectByTeacher);
+        model.addAttribute("teacherId",id);
+        return mav;
+    }
+
+    //修改老师信息
+    @PostMapping(value = "/adminupdateteacher/{id}")
+    public ModelAndView updateTeacher(Teacher teacher) {
+        teacherservice.updateByTeacher(teacher);
+        return new ModelAndView("redirect:/admin.teacher");
+    }
+
+    //将查询出来的老师和班级有关的数据发到页面
+    @GetMapping(value = "/admin.xdhclass" )
+    public ModelAndView selectTeacherClass(Model model, HttpServletRequest request,
+                                           @RequestParam(name="type",required=false,defaultValue="all")String type,
+                                     @RequestParam(name="page",required=false,defaultValue="1")int page,
+                                     @RequestParam(name="size",required=false,defaultValue="5")int size){
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("admin/xdhclass");
+        String lookname = request.getParameter("lookname");
+        //System.out.println(lookname);
+        Page<TeacherClass> selectAllXdhClass = null;
+        //判断查找的方式，然后通过sql获取所有管理员日志
+        if (type.equals("likename")){
+            selectAllXdhClass = classservice.getAllTeacherClassBy(page - 1,size,lookname);
+        }else {
+            selectAllXdhClass = classservice.selectAllXdhClass(page - 1, size);
+        }
+        model.addAttribute("current", selectAllXdhClass.getNumber()+1);
+        model.addAttribute("total", selectAllXdhClass.getTotalPages());
+        model.addAttribute("selectByXdhClass",selectAllXdhClass.getContent());
+        mav.getModel().put("type", type);
+        mav.getModel().put("lookname", lookname);
+        return mav;
+    }
+
+    //添加班级的时候要选择查询已经存在的老师
+    @GetMapping(value = "/admin.toInsertXdhClass" )
+    public ModelAndView addClassForm(Model model){
+        List<Teacher> selectByTeacher = teacherservice.selectAllTeacher();
+        model.addAttribute("selectByTeacher",selectByTeacher);
+        return new ModelAndView("admin/xdhclassform");
+    }
+
+    @PostMapping(value = "/admincheckmobile")
+    public Map<String,Object> checkmobile(HttpServletRequest request){
+        Map<String,Object> map = new HashMap<String,Object>();
+        String mobile = request.getParameter("mobile");
+        Admin admin = adminservice.selectByMobile(mobile);
+        Teacher teacher = teacherservice.selectTeacherMobile(mobile);
+        Student student = studentservice.selectByMobile(mobile);
+        if (teacher == null && student == null && admin == null){
+            map.put("msg","notexist");
+            return map;
+        }else {
+            map.put("msg","exist");
+            return map;
+        }
+    }
+
+    @PostMapping(value = "/admincheckclassname")
+    public XdhClass checkclassname(HttpServletRequest request){
+        String class_name = request.getParameter("class_name");
+        XdhClass xdhclass = classservice.selectByClassName(class_name);
+        //System.out.println(xdhclass);
+        return xdhclass;
+    }
+
+    //添加班级信息
+    @PostMapping(value = "/adminaddxdhclassform")
+    public Map<String,Object> insertXdhClass(XdhClass xdhClass){
+        Long addTime = SomeMethods.getCurrentTime();
+        xdhClass.setAdd_time(addTime);
+        int result = classservice.insertByXdhClass(xdhClass);
+        Map<String,Object> map = new HashMap<String,Object>();
+        if (result==1){
+            map.put("msg","success");
+        }else {
+            map.put("msg","failed");
+        }
+        return map;
+
+    }
+
+    //通过班级id来修改班级信息
+    @GetMapping("/admintoUpdateXdhClass/{id}")
+    public ModelAndView toUpdateXdhClass(@PathVariable int id,Model model){
+        model.addAttribute("xdhclassId",id);
+        List<Teacher> selectByTeacher = teacherservice.selectAllTeacher();
+//        System.out.println(selectByTeacher);
+        //通过查询老师班级类可以知道班级的班主任是谁
+        List<TeacherClass> teacherClasses = teacherservice.selectTeacherClass();
+//        System.out.println(teacherClasses);
+        model.addAttribute("teacherClasses",teacherClasses);
+        model.addAttribute("selectByTeacher",selectByTeacher);
+        return new ModelAndView("admin/updatexdhclass");
+    }
+
+    //修改班级信息页面
+    @PostMapping(value = "/adminupdatexdhclass/{id}")
+    public ModelAndView updateXdhClass(XdhClass xdhClass){
+//        Long addTime = SomeMethods.getCurrentTime();
+//        xdhClass.setAdd_time(addTime);
+        //System.out.println(xdhClass);
+        classservice.updateByXdhClass(xdhClass);
+        return new ModelAndView("redirect:/admin.xdhclass");
+    }
+
+    //通过id执行删除班级操作
+    @GetMapping(value = "/admindeletexdhclass/{id}")
+    @ResponseBody
+    public ModelAndView deleteByXdhClass(@PathVariable("id") int id) {
+        ModelAndView modelAndView = new ModelAndView("redirect:/admin.xdhclass");
+        int i =classservice.deleteByXdhClass(id);
+        //System.out.println(i);
+        return modelAndView;
+        //重定向到xdhclass页面
     }
 
 

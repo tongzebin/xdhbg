@@ -9,4 +9,7 @@ public interface StudentService {
     //获取所有学生数量
     public int selectAllNumber();
 
+    //根据手机号获得所有的学生
+    public Student selectByMobile(String mobile);
+
 }

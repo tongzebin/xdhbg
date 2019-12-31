@@ -83,7 +83,7 @@
                     <span th:if="${username}" th:text="${username}"></span>
                     <span th:unless="${username}" th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
                     </span>
-                </span>+
+                </span>
             </div>
         </div>
 
@@ -100,35 +100,15 @@
                 </a>
             </li>
             <li class="sidebar-nav-link">
-                <a href="form.html">
+                <a href="/admin.xdhclass">
                     <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 班级管理
                 </a>
             </li>
             <li class="sidebar-nav-link">
-                <a href="chart.html">
+                <a href="/admin.teacher">
                     <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 教师管理
                 </a>
             </li>
-            <li class="sidebar-nav-link">
-                <a href="javascript:;" class="sidebar-nav-sub-title">
-                    <i class="am-icon-table sidebar-nav-link-logo"></i> 数据列表
-                    <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
-                </a>
-                <ul class="sidebar-nav sidebar-nav-sub">
-                    <li class="sidebar-nav-link">
-                        <a href="table-list.html">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 文字列表
-                        </a>
-                    </li>
-
-                    <li class="sidebar-nav-link">
-                        <a href="table-list-img.html">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 图文列表
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
         </ul>
     </div>
     <!-- 内容区域 -->

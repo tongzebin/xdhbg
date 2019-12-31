@@ -19,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -49,11 +50,10 @@ public class BasicController {
         ImageVerifyCode ivc = new ImageVerifyCode();
         //获取验证码
         BufferedImage image = ivc.getImage();
-        //将验证码的文本存在cookie中
-        Cookie cookie = new Cookie("text",ivc.getText());
-        cookie.setMaxAge(365*24*60*60);
-        cookie.setPath("/");
-        response.addCookie(cookie);
+        //将验证码的文本存在session中
+        HttpSession session =  request.getSession();
+        //把用户名存入session
+        session.setAttribute("text",ivc.getText());
         ivc.output(image, response.getOutputStream());
     }
 
@@ -75,17 +75,13 @@ public class BasicController {
         //从cookie中获取真正的验证码
         request.setCharacterEncoding("utf-8");
         String cookie_vcode = null;
-        Cookie[] cookies = request.getCookies();
-        for (Cookie cookie : cookies) {
-            if(cookie.getName().equals("text")) {
-                cookie_vcode = cookie.getValue();
-            }
-        }
+        HttpSession session  = request.getSession();
+        cookie_vcode = (String) session.getAttribute("text");
         //判断是否为管理员,是否为教师,是否为教师
         Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
         Teacher teacher = teacherservice.selectByPhoneAndPassword(mobile,password);
         Student student = studentservice.selectByPhoneAndPassword(mobile,password);
-        if (cookie_vcode.equalsIgnoreCase(verifycode)) {
+        if (verifycode.equalsIgnoreCase(cookie_vcode)) {
             if (admin != null) {
                 //调用SomeMethods的设置cookie和session的方法
                 SomeMethods.setCookieAndSession(admin.getUsername(), password, mobile, response, request);

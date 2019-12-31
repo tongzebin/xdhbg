@@ -2,6 +2,7 @@ package cn.xdh.service;
 
 import cn.xdh.entity.Admin;
 import cn.xdh.entity.AdminLog;
+import cn.xdh.entity.Teacher;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -28,4 +29,6 @@ public interface AdminService {
     //根据所有字段模糊查找管理员日志并分页
     public Page<AdminLog> selectAllAdminLogByAll(String allname,int page, int size);
 
+    //
+    public Admin selectByMobile(String mobile);
 }

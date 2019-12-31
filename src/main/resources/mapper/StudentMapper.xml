@@ -11,7 +11,9 @@
 	<select id="selectAllNumber" resultType="Integer">
 		select count(*) from xdh_student
 	</select>
-	
 
+	<select id="selectByMobile" resultType="cn.xdh.entity.Student">
+        select * from xdh_student where mobile = #{mobile}
+    </select>
 
 </mapper>

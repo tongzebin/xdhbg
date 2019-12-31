@@ -25,4 +25,13 @@ public class StudentServiceImpl implements StudentService {
         return number;
     }
 
+    //根据手机号获得所有的学生
+    @Override
+    public Student selectByMobile(String mobile){
+        Student student = studentdao.selectByMobile(mobile);
+        return student;
+    }
+
+
+
 }

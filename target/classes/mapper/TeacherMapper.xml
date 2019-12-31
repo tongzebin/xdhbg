@@ -12,5 +12,42 @@
 		select count(*) from xdh_teacher
 	</select>
 
+	<select id="selectTeacherClass" resultType="cn.xdh.entity.TeacherClass">
+		select c.class_name ,t.name,c.add_time,c.teacher_id,c.id,c.is_graduate from xdh_teacher t ,xdh_class c where c.teacher_id = t.id
+	</select>
+
+	<select id="selectTeacherMobile" resultType="cn.xdh.entity.Teacher">
+        select * from xdh_teacher where mobile = #{mobile}
+    </select>
+
+    <select id="selectByTeacher" resultType="cn.xdh.entity.Teacher">
+        select * from xdh_teacher where id = #{id}
+    </select>
+
+    <select id="selectAllTeacher" resultType="cn.xdh.entity.Teacher">
+        select * from xdh_teacher
+    </select>
+
+	<delete id="deleteByTeacher" parameterType="int">
+        delete from xdh_teacher where id = #{id}
+    </delete>
+
+	<insert id="insertByTeacher" keyProperty="id">
+        insert into xdh_teacher (id, name, mobile, password, add_time, add_ip)
+        values (null,#{name},#{mobile},#{password},#{add_time},#{add_ip})
+    </insert>
+
+
+	<update id="updateByTeacher"  parameterType="cn.xdh.entity.Teacher">
+    UPDATE
+    xdh_teacher
+    SET
+    mobile= ${mobile},
+    password= ${password}
+    where
+    id = ${id}
+    </update>
+
+
 
 </mapper>
