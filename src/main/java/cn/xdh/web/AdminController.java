@@ -6,12 +6,14 @@ import cn.xdh.service.impl.AdminServiceImpl;
 import cn.xdh.service.impl.ClassServiceImpl;
 import cn.xdh.service.impl.StudentServiceImpl;
 import cn.xdh.service.impl.TeacherServiceImpl;
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -111,10 +113,39 @@ public class AdminController {
     //通过传来的id进行删除老师操作
     @GetMapping(value = "/admindeleteteacher/{id}")
     @ResponseBody
-    public ModelAndView deleteByTeacher(@PathVariable("id") int id) {
+    public ModelAndView deleteByTeacher(@PathVariable("id") int id,HttpServletRequest request,HttpServletResponse response) {
         teacherservice.deleteByTeacher(id);
-        return new ModelAndView("redirect:/admin.teacher");
-        //重定向到teacher页面
+        String content = "管理员删除老师";
+        String mobile = null;
+        String password = null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mobile")) {
+                    mobile = cookie.getValue();
+                } else if (cookie.getName().equals("password")) {
+                    password = cookie.getValue();
+                }
+            }
+            Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
+            AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+            adminservice.addAdminLog(adminlog);
+            //重定向到teacher页面
+            return new ModelAndView("redirect:/admin.teacher");
+        }else{
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+
     }
 
     //老师增加操作的页面
@@ -127,9 +158,37 @@ public class AdminController {
 
     //老师增加操作提交的地址,并重定向到教师管理列表
     @PostMapping(value = "/admin.addteacher")
-    public ModelAndView insertTeacher(Teacher teacher) {
+    public ModelAndView insertTeacher(Teacher teacher,HttpServletRequest request,HttpServletResponse response) {
         teacherservice.insertByTeacher(teacher);
-        return new ModelAndView("redirect:/admin.teacher");
+        String content = "管理员增加老师";
+        String mobile = null;
+        String password = null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mobile")) {
+                    mobile = cookie.getValue();
+                } else if (cookie.getName().equals("password")) {
+                    password = cookie.getValue();
+                }
+            }
+            Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
+            AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+            adminservice.addAdminLog(adminlog);
+            return new ModelAndView("redirect:/admin.teacher");
+        }else{
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
     }
 
     //通过老师的id,与查询出来的老师信息,实现老师信息的显示和修改
@@ -145,9 +204,37 @@ public class AdminController {
 
     //修改老师信息
     @PostMapping(value = "/adminupdateteacher/{id}")
-    public ModelAndView updateTeacher(Teacher teacher) {
+    public ModelAndView updateTeacher(Teacher teacher,HttpServletRequest request,HttpServletResponse response) {
         teacherservice.updateByTeacher(teacher);
-        return new ModelAndView("redirect:/admin.teacher");
+        String content = "管理员修改老师信息";
+        String mobile = null;
+        String password = null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mobile")) {
+                    mobile = cookie.getValue();
+                } else if (cookie.getName().equals("password")) {
+                    password = cookie.getValue();
+                }
+            }
+            Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
+            AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+            adminservice.addAdminLog(adminlog);
+            return new ModelAndView("redirect:/admin.teacher");
+        }else{
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
     }
 
     //将查询出来的老师和班级有关的数据发到页面
@@ -183,6 +270,7 @@ public class AdminController {
         return new ModelAndView("admin/xdhclassform");
     }
 
+    //判断数据库中是否有一样的号码
     @PostMapping(value = "/admincheckmobile")
     public Map<String,Object> checkmobile(HttpServletRequest request){
         Map<String,Object> map = new HashMap<String,Object>();
@@ -209,10 +297,37 @@ public class AdminController {
 
     //添加班级信息
     @PostMapping(value = "/adminaddxdhclassform")
-    public Map<String,Object> insertXdhClass(XdhClass xdhClass){
+    public Map<String,Object> insertXdhClass(XdhClass xdhClass,HttpServletRequest request,HttpServletResponse response){
         Long addTime = SomeMethods.getCurrentTime();
         xdhClass.setAdd_time(addTime);
         int result = classservice.insertByXdhClass(xdhClass);
+        String content = "管理员增加班级";
+        String mobile = null;
+        String password = null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mobile")) {
+                    mobile = cookie.getValue();
+                } else if (cookie.getName().equals("password")) {
+                    password = cookie.getValue();
+                }
+            }
+            Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
+            AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+            adminservice.addAdminLog(adminlog);
+        }else{
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');window.location.href='/';");
+            out.println("</script>");
+        }
         Map<String,Object> map = new HashMap<String,Object>();
         if (result==1){
             map.put("msg","success");
@@ -220,7 +335,6 @@ public class AdminController {
             map.put("msg","failed");
         }
         return map;
-
     }
 
     //通过班级id来修改班级信息
@@ -239,23 +353,80 @@ public class AdminController {
 
     //修改班级信息页面
     @PostMapping(value = "/adminupdatexdhclass/{id}")
-    public ModelAndView updateXdhClass(XdhClass xdhClass){
+    public ModelAndView updateXdhClass(XdhClass xdhClass,HttpServletRequest request,HttpServletResponse response){
 //        Long addTime = SomeMethods.getCurrentTime();
 //        xdhClass.setAdd_time(addTime);
         //System.out.println(xdhClass);
         classservice.updateByXdhClass(xdhClass);
-        return new ModelAndView("redirect:/admin.xdhclass");
+        String content = "管理员修改班级信息";
+        String mobile = null;
+        String password = null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mobile")) {
+                    mobile = cookie.getValue();
+                } else if (cookie.getName().equals("password")) {
+                    password = cookie.getValue();
+                }
+            }
+            Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
+            AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+            adminservice.addAdminLog(adminlog);
+            return new ModelAndView("redirect:/admin.xdhclass");
+        }else{
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+
     }
 
     //通过id执行删除班级操作
     @GetMapping(value = "/admindeletexdhclass/{id}")
     @ResponseBody
-    public ModelAndView deleteByXdhClass(@PathVariable("id") int id) {
+    public ModelAndView deleteByXdhClass(@PathVariable("id") int id,HttpServletRequest request,HttpServletResponse response) {
         ModelAndView modelAndView = new ModelAndView("redirect:/admin.xdhclass");
         int i =classservice.deleteByXdhClass(id);
-        //System.out.println(i);
-        return modelAndView;
-        //重定向到xdhclass页面
+        String content = "管理员删除班级";
+        String mobile = null;
+        String password = null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mobile")) {
+                    mobile = cookie.getValue();
+                } else if (cookie.getName().equals("password")) {
+                    password = cookie.getValue();
+                }
+            }
+            Admin admin = adminservice.selectByPhoneAndPassword(mobile,password);
+            AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+            adminservice.addAdminLog(adminlog);
+            return modelAndView;
+            //重定向到xdhclass页面
+        }else{
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+
     }
 
 

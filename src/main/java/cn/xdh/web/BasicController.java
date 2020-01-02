@@ -142,7 +142,7 @@ public class BasicController {
     public ModelAndView loginOut(HttpServletResponse response, HttpServletRequest request) {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("login");
-        //获得cookie里的name和password
+        //获得cookie里的mobile和password
         Cookie[] cookies = request.getCookies();
         String mobile = null;
         String password = null;

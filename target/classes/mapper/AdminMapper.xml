@@ -18,6 +18,9 @@
 		select * from xdh_admin_log order by add_time desc limit 5
 	</select>
 
+	<select id="selectByMobile" resultType="cn.xdh.entity.Admin">
+        select * from xdh_admin where mobile = #{mobile}
+    </select>
 
 
 </mapper>
