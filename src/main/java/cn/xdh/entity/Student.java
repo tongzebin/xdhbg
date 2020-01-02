@@ -7,56 +7,36 @@ public class Student implements Serializable {
     private String username;
     private String mobile;
     private String password;
-    private String birthday;
+
+    private long birthday;
     //入学时间
-    private int join_study_time;
+    private long join_study_time;
     //毕业时间
-    private int graduate_time;
+    private long graduate_time;
     private String graduate_school;
     private int province_id;
     private int city_id;
     private int area_id;
     private String address;
+
     private int class_id;
-    private String process;
-    //是否毕业,0为毕业,1为未毕业
+    private String progress;
+    //毕业状态1毕业,0未毕业
     private int is_graduate;
     private String company;
-    private double salary;
+    private Double salary;
+
     private int aim_province_id;
     private int aim_city_id;
     private int aim_area_id;
     private String aim_address;
-    //学习阶段,1为1阶段,2为2阶段...
+
+
+    //0为女,1为男,-1未知,默认-1
+    private int sex;
+    private int age;
+
     private int stage_id;
-
-    public Student() {
-    }
-
-    public Student(int id, String username, String mobile, String password, String birthday, int join_study_time, int graduate_time, String graduate_school, int province_id, int city_id, int area_id, String address, int class_id, String process, int is_graduate, String company, double salary, int aim_province_id, int aim_city_id, int aim_area_id, String aim_address, int stage_id) {
-        this.id = id;
-        this.username = username;
-        this.mobile = mobile;
-        this.password = password;
-        this.birthday = birthday;
-        this.join_study_time = join_study_time;
-        this.graduate_time = graduate_time;
-        this.graduate_school = graduate_school;
-        this.province_id = province_id;
-        this.city_id = city_id;
-        this.area_id = area_id;
-        this.address = address;
-        this.class_id = class_id;
-        this.process = process;
-        this.is_graduate = is_graduate;
-        this.company = company;
-        this.salary = salary;
-        this.aim_province_id = aim_province_id;
-        this.aim_city_id = aim_city_id;
-        this.aim_area_id = aim_area_id;
-        this.aim_address = aim_address;
-        this.stage_id = stage_id;
-    }
 
     public int getId() {
         return id;
@@ -90,59 +70,27 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-    public String getBirthday() {
+    public long getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(long birthday) {
         this.birthday = birthday;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getProcess() {
-        return process;
-    }
-
-    public void setProcess(String process) {
-        this.process = process;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public int getJoin_study_time() {
+    public long getJoin_study_time() {
         return join_study_time;
     }
 
-    public void setJoin_study_time(int join_study_time) {
+    public void setJoin_study_time(long join_study_time) {
         this.join_study_time = join_study_time;
     }
 
-    public int getGraduate_time() {
+    public long getGraduate_time() {
         return graduate_time;
     }
 
-    public void setGraduate_time(int graduate_time) {
+    public void setGraduate_time(long graduate_time) {
         this.graduate_time = graduate_time;
     }
 
@@ -178,6 +126,14 @@ public class Student implements Serializable {
         this.area_id = area_id;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public int getClass_id() {
         return class_id;
     }
@@ -186,12 +142,36 @@ public class Student implements Serializable {
         this.class_id = class_id;
     }
 
+    public String getProgress() {
+        return progress;
+    }
+
+    public void setProgress(String progress) {
+        this.progress = progress;
+    }
+
     public int getIs_graduate() {
         return is_graduate;
     }
 
     public void setIs_graduate(int is_graduate) {
         this.is_graduate = is_graduate;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 
     public int getAim_province_id() {
@@ -226,11 +206,57 @@ public class Student implements Serializable {
         this.aim_address = aim_address;
     }
 
+    public int getSex() {
+        return sex;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public int getStage_id() {
         return stage_id;
     }
 
     public void setStage_id(int stage_id) {
         this.stage_id = stage_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", password='" + password + '\'' +
+                ", birthday=" + birthday +
+                ", join_study_time=" + join_study_time +
+                ", graduate_time=" + graduate_time +
+                ", graduate_school='" + graduate_school + '\'' +
+                ", province_id=" + province_id +
+                ", city_id=" + city_id +
+                ", area_id=" + area_id +
+                ", address='" + address + '\'' +
+                ", class_id=" + class_id +
+                ", progress='" + progress + '\'' +
+                ", is_graduate='" + is_graduate + '\'' +
+                ", company='" + company + '\'' +
+                ", salary=" + salary +
+                ", aim_province_id=" + aim_province_id +
+                ", aim_city_id=" + aim_city_id +
+                ", aim_area_id=" + aim_area_id +
+                ", aim_address='" + aim_address + '\'' +
+                ", sex=" + sex +
+                ", age=" + age +
+                ", stage_id=" + stage_id +
+                '}';
     }
 }

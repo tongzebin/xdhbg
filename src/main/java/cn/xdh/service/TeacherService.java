@@ -2,6 +2,7 @@ package cn.xdh.service;
 
 import cn.xdh.entity.Teacher;
 import cn.xdh.entity.TeacherClass;
+import cn.xdh.entity.TeacherLog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -30,6 +31,13 @@ public interface TeacherService {
 
     Page<Teacher> getAllTeacherBy(int page, int size,String lookname);
 
+    //通过手机号查看教师信息
     Teacher selectTeacherMobile(String mobile);
+
+    //增加教师操作日志
+    void addTeacherLog(TeacherLog teacherLog);
+
+    //查看教师操作日志列表
+    List<TeacherLog> selectTeacherLog();
 
 }

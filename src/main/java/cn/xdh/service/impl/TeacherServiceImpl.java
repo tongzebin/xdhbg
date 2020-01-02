@@ -6,6 +6,7 @@ import cn.xdh.dao.TeacherRepository;
 import cn.xdh.entity.AdminLog;
 import cn.xdh.entity.Teacher;
 import cn.xdh.entity.TeacherClass;
+import cn.xdh.entity.TeacherLog;
 import cn.xdh.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -113,10 +114,23 @@ public class TeacherServiceImpl implements TeacherService {
         return teacherpage;
     }
 
+    //根据手机号码查看老师信息
     @Override
     public Teacher selectTeacherMobile(String mobile){
         Teacher teacher = teacherdao.selectTeacherMobile(mobile);
         return teacher;
+    }
+
+    //查看老师操作日志列表
+    @Override
+    public List<TeacherLog> selectTeacherLog() {
+        return teacherdao.selectTeacherLog();
+    }
+
+    //增加老师操作日志
+    @Override
+    public void addTeacherLog(TeacherLog teacherLog) {
+        teacherdao.addTeacherLog(teacherLog);
     }
 
 }

@@ -79,4 +79,16 @@ public class Teacher {
     public void setAdd_ip(String add_ip) {
         this.add_ip = add_ip;
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", password='" + password + '\'' +
+                ", add_time=" + add_time +
+                ", add_ip='" + add_ip + '\'' +
+                '}';
+    }
 }

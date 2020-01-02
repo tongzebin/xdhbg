@@ -1,14 +1,8 @@
 package cn.xdh.web;
 
 import cn.xdh.SomeMethods;
-import cn.xdh.entity.Admin;
-import cn.xdh.entity.AdminLog;
-import cn.xdh.entity.Student;
-import cn.xdh.entity.Teacher;
-import cn.xdh.service.impl.AdminServiceImpl;
-import cn.xdh.service.impl.ClassServiceImpl;
-import cn.xdh.service.impl.StudentServiceImpl;
-import cn.xdh.service.impl.TeacherServiceImpl;
+import cn.xdh.entity.*;
+import cn.xdh.service.impl.*;
 import cn.xdh.util.ImageVerifyCode;
 import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +32,8 @@ public class BasicController {
     private AdminServiceImpl adminservice;
     @Autowired
     private ClassServiceImpl classservice;
+    @Autowired
+    private StudentNumberServiceImpl studentNumberServiceImpl;
 
     @GetMapping("/getVerifiCode")
     public void getVerifiCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -107,10 +103,20 @@ public class BasicController {
             } else if (teacher != null) {
                 //调用SomeMethods的设置cookie和session的方法
                 SomeMethods.setCookieAndSession(teacher.getName(), password, mobile, response, request);
+                //添加教师登录的日志
+                String content = "教师登录";
+                TeacherLog teacherLog = new TeacherLog(teacher.getId(),teacher.getName(),content,SomeMethods.getCurrentTime(), SomeMethods.getIp4());
+                teacherservice.addTeacherLog(teacherLog);
                 mav.setViewName("teacher/index");
-                int studentNumber = studentservice.selectAllNumber();
+                mav.getModel().put("totalNumber", studentNumberServiceImpl.selectTotalNumber());
+                mav.getModel().put("graduNumber", studentNumberServiceImpl.selectGraduNumber());
+                mav.getModel().put("notGraduNumber", studentNumberServiceImpl.selectNotGraduNumber());
+                mav.getModel().put("stageOne", studentNumberServiceImpl.selectStageOne());
+                mav.getModel().put("stageTwo", studentNumberServiceImpl.selectStageTwo());
+                mav.getModel().put("stageThree", studentNumberServiceImpl.selectStageThree());
+                mav.getModel().put("stageFour", studentNumberServiceImpl.selectStageFour());
+                mav.getModel().put("stageFive", studentNumberServiceImpl.selectStageFive());
                 mav.getModel().put("username", teacher.getName());
-                mav.getModel().put("studentNumber", studentNumber);
                 return mav;
             } else if (student != null) {
                 //调用SomeMethods的设置cookie和session的方法

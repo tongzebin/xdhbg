@@ -16,4 +16,128 @@
         select * from xdh_student where mobile = #{mobile}
     </select>
 
+	<select id="getAllStudentByGraduate" resultType="cn.xdh.entity.Student">
+		select *
+		from xdh_student
+		where is_graduate = #{is_graduate,jdbcType=TINYINT}
+		order by join_study_time;
+	</select>
+
+	<select id="getStudentByUndergraduate" resultType="java.util.HashMap">
+		select
+			s.id,s.username,s.sex,s.mobile,c.class_name,s.stage_id,s.address,s.join_study_time,
+			s.graduate_school
+		from
+			xdh_student s
+		left join
+			xdh_class c
+		on
+			s.class_id = c.id
+		where
+			s.is_graduate = 0
+		ORDER BY
+			s.join_study_time
+		desc;
+	</select>
+
+	<select id="getStudentByGraduate" resultType="java.util.HashMap">
+		select
+			s.id,s.username,s.sex,s.mobile,c.class_name,s.company,s.salary,
+			s.graduate_time,s.aim_province_id,s.aim_city_id,s.aim_area_id
+		from
+			xdh_student s
+		left join
+			xdh_class c
+		on
+			s.class_id = c.id
+		where
+			s.is_graduate = 1
+		ORDER BY
+			s.graduate_time
+		desc;
+	</select>
+
+
+
+	<select id="selectStudentByMobile" resultType="cn.xdh.entity.Student">
+		select *
+		from xdh_student
+		where mobile = #{mobile,jdbcType=VARCHAR}
+	</select>
+
+	<select id="selectStudentById" resultType="cn.xdh.entity.Student">
+		select *
+		from xdh_student
+		where id = #{id}
+	</select>
+
+	<select id="selectStudentLikeUsername" resultType="java.util.HashMap">
+		SELECT s.id,s.username,s.sex,s.mobile,c.class_name,s.stage_id,s.address,
+		s.join_study_time,s.graduate_school,s.stage_id,s.address,s.company,s.salary,
+		s.graduate_time,s.aim_province_id,s.aim_city_id,s.aim_area_id
+		FROM  xdh_student s
+		left join xdh_class c
+		on s.class_id = c.id
+		WHERE   s.is_graduate = #{is_graduate}
+		and s.username like CONCAT('%',#{username},'%')
+	</select>
+
+	<select id="selectProvince" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE level = 1
+	</select>
+
+	<select id="selectAllNameAndId" resultType="cn.xdh.entity.Student">
+        select username,id from xdh_student
+    </select>
+
+	<select id="selectIdAndNameByName" resultType="cn.xdh.entity.Student">
+        select id,username from xdh_student where username like CONCAT('%',#{username},'%')
+    </select>
+
+
+	<select id="selectCityByUpId" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE upid = #{upid}
+	</select>
+
+	<select id="selectAreaByUpId" resultType="cn.xdh.entity.City">
+		SELECT *
+		FROM  citys
+		WHERE upid = #{upid}
+	</select>
+
+
+	<select id="selectCityById" resultType="java.lang.String">
+		SELECT name
+		FROM  citys
+		WHERE id = #{id}
+	</select>
+
+	<insert id="addStudent" parameterType="cn.xdh.entity.Student">
+		insert into xdh_student
+		(username, password, mobile, join_study_time,is_graduate,stage_id,sex,class_id)
+    	values
+    	(#{username},#{password},#{mobile},#{join_study_time},#{is_graduate},#{stage_id},#{sex},#{class_id})
+	</insert>
+
+	<delete id="deleteStudent" parameterType="int">
+		delete from xdh_student where id = #{id}
+	</delete>
+
+	<update id="updateStudent" parameterType="cn.xdh.entity.Student">
+		update xdh_student set
+		is_graduate = #{is_graduate},
+		company = #{company},
+		salary = #{salary,jdbcType=DECIMAL},
+		aim_province_id = #{aim_province_id},
+		aim_city_id = #{aim_city_id},
+		aim_area_id = #{aim_area_id},
+		graduate_time = #{graduate_time}
+		where id = #{id}
+	</update>
+
+
 </mapper>

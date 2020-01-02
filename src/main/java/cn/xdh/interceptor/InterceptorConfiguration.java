@@ -17,12 +17,14 @@ public class InterceptorConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        registry.addInterceptor(someinterceptor).addPathPatterns("/loginout");
+/*        registry.addInterceptor(someinterceptor).addPathPatterns("/loginout");
         registry.addInterceptor(someinterceptor).addPathPatterns("/admin.**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/admin**");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/teacher/**");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/student/**");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/teacher/**");*/
 
-        /*//对所有的进行拦截   放行登录页面和首页
-        registry.addInterceptor(someinterceptor).addPathPatterns("/**").excludePathPatterns("/","/index","/logout");
-        */
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**").excludePathPatterns("/","/getVerifiCode","/index");
+
     }
 }

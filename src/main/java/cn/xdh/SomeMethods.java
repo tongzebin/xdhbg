@@ -1,8 +1,8 @@
 package cn.xdh;
 
-import cn.xdh.entity.Admin;
-import cn.xdh.entity.AdminLog;
-import cn.xdh.service.impl.AdminServiceImpl;
+import cn.xdh.entity.Teacher;
+import cn.xdh.entity.TeacherLog;
+import cn.xdh.service.impl.TeacherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.Cookie;
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.security.MessageDigest;
 import java.util.Enumeration;
@@ -139,6 +138,7 @@ public class SomeMethods {
             session.removeAttribute(em.nextElement().toString());
         }
     }
+
 
 
 }

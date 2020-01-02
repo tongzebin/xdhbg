@@ -1,25 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="237bd48b-7369-4caf-b9a7-4a13016f7b9a" name="Default Changelist" comment="">
+    <list default="true" id="237bd48b-7369-4caf-b9a7-4a13016f7b9a" name="Default Changelist" comment="管理员端和教师端整合v1.0">
+      <change afterPath="$PROJECT_DIR$/out/production/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/mapper/StudentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/exeperience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/works.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/templates/commons/public.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/templates/student/StudentAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/templates/student/StudentEdit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/templates/student/StudentList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/main/templates/student/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/DelNoticeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/ExeperienceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/NoticeContentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/NoticeDataDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentNumberDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/WorksDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Msg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/NoticeContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/NoticeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/TeacherLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Works.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/DelNoticeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/ExeperienceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/NoticeContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/NoticeDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentNumberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/WorksService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/DelNoticeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ExeperienceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/NoticeContentServerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/NoticeDataServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentNumberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/WorksServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/CookieTestUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/ExcelToObjectUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/GetCurrentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/MyPaging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/PageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/util/VerifyPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/TeacherController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/DelNoticeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExeperienceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/NoticeCentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/NoticeDataMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentNumberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/WorksMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/exeperience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/works.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/GraduateStudentList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/StudentAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/StudentEdit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/TeacherLogList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/UndergraduateStudentList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/noticeManage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/works.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/xdh.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/DelNoticeDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/ExeperienceDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/NoticeContentDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/NoticeDataDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentNumberDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/WorksDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/City.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Exeperience.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Msg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Notice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/NoticeContent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/NoticeData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/TeacherLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Works.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/DelNoticeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/ExeperienceService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/NoticeContentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/NoticeDataService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentNumberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/WorksService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/DelNoticeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/ExeperienceServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/NoticeContentServerImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/NoticeDataServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentNumberServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/WorksServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/CookieTestUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/ExcelToObjectUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/GetCurrentPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/MyPaging.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/PageUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/VerifyPhone.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/CityController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/ExeperienceController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/StudentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/TeacherController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/WorkController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/DelNoticeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ExeperienceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/NoticeCentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/NoticeDataMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/StudentNumberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/WorksMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/js/exeperience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/js/works.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/GraduateStudentList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/StudentAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/StudentEdit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/TeacherLogList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/UndergraduateStudentList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/noticeManage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/xdhbg-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xdh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xdh.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logoa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logob.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user04.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/SomeMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/SomeMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/TeacherDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/AdminLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/AdminLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/interceptor/InterceptorConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/interceptor/InterceptorConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/addteacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/addteacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateteacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateteacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logoa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logob.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminlog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updatexdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updatexdhclass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclassform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclassform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/amazeui.datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.datatables.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/app.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/fullcalendar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/css/fullcalendar.print.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.print.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/app-icon72x72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/app-icon72x72@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/admin-chrome.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-chrome.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/admin-firefox.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-firefox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/admin-ie.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-ie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/admin-opera.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-opera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/admin-safari.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-safari.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/adminPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/adminPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/blogPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/blogPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/landing.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/landingPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landingPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/loginPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/loginPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/examples/sidebarPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/sidebarPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/i/startup-640x1096.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/startup-640x1096.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/a5.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/a5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/k.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/logoa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/logob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user01.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user02.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user03.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user04.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/img/user04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user05.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user06.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/img/user07.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/amazeui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/dataTables.responsive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/dataTables.responsive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/echarts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/SomeMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/SomeMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/TeacherDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/TeacherDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/AdminLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/AdminLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Teacher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/interceptor/InterceptorConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/interceptor/InterceptorConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/TeacherServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/TeacherServiceImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/TeacherServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/img/k.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/img/logoa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/img/logob.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/addteacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/addteacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/adminlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/adminlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updateteacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updateteacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updatexdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updatexdhclass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/xdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/xdhclass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/xdhclassform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/xdhclassform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/student/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -32,24 +269,16 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - xdhbg@49.235.143.250" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - xdhbg@49.235.143.250" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - xdhbg@49.235.143.250" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -90,6 +319,13 @@
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="raoweijiapng" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="xdhbg" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\raowe\IdeaProjects\xdhbg\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -107,6 +343,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -115,22 +353,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\resources\static\assets\fonts" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\resources\static\assets\js" />
+      <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\dao" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\service\impl" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\service" />
-      <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\dao" />
+      <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\resources\templates\teacher" />
     </key>
   </component>
   <component name="RunManager">
@@ -180,7 +417,14 @@
       <workItem from="1577760666600" duration="1821000" />
       <workItem from="1577762505397" duration="884000" />
       <workItem from="1577763420314" duration="16047000" />
-      <workItem from="1577924526523" duration="8406000" />
+      <workItem from="1577924526523" duration="5733000" />
+      <workItem from="1577948424876" duration="8573000" />
+      <workItem from="1577957021986" duration="538000" />
+      <workItem from="1577957574524" duration="3234000" />
+      <workItem from="1577963742962" duration="8850000" />
+      <workItem from="1577972617148" duration="229000" />
+      <workItem from="1577972863112" duration="1396000" />
+      <workItem from="1577974274314" duration="1657000" />
     </task>
     <task id="LOCAL-00001" summary="最新">
       <created>1577708158616</created>
@@ -196,14 +440,7 @@
       <option name="project" value="LOCAL" />
       <updated>1577784724210</updated>
     </task>
-    <task id="LOCAL-00003" summary="管理员端整合v1.0">
-      <created>1577930451799</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1577930451799</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,14 +467,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="最新" />
     <MESSAGE value="管理员端整合" />
-    <MESSAGE value="管理员端整合v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理员端整合v1.0" />
+    <MESSAGE value="管理员端和教师端整合v1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员端和教师端整合v1.0" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577949045655">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1577949045655" />
     <state x="412" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577761238899">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="412" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1577761238899" />
+    <state x="530" y="65" key="#com.intellij.ide.util.MemberChooser" timestamp="1577962759554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="530" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1577962759554" />
     <state x="593" y="299" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1577160304379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -250,67 +495,63 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="58" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1577925030089" />
-    <state x="436" y="105" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577930546801">
+    <state x="436" y="105" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577954913723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="436" y="105" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577930546801" />
-    <state x="319" y="0" key="CommitChangelistDialog2" timestamp="1577930450661">
+    <state x="436" y="105" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577954913723" />
+    <state x="252" y="0" key="CommitChangelistDialog2" timestamp="1577975983994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="319" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577930450661" />
-    <state width="1483" height="361" key="GridCell.Tab.0.bottom" timestamp="1577934218662">
+    <state x="252" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577975983994" />
+    <state width="741" height="98" key="GridCell.Tab.0.bottom" timestamp="1577976037477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.0.center" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577976037477" />
+    <state width="741" height="98" key="GridCell.Tab.0.center" timestamp="1577976037477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.0.left" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577976037477" />
+    <state width="741" height="98" key="GridCell.Tab.0.left" timestamp="1577976037476">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.0.right" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577976037476" />
+    <state width="741" height="98" key="GridCell.Tab.0.right" timestamp="1577976037477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.1.bottom" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577976037477" />
+    <state width="741" height="98" key="GridCell.Tab.1.bottom" timestamp="1577976037478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.1.center" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577976037478" />
+    <state width="741" height="98" key="GridCell.Tab.1.center" timestamp="1577976037477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.1.left" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577976037477" />
+    <state width="741" height="98" key="GridCell.Tab.1.left" timestamp="1577976037477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state width="1483" height="361" key="GridCell.Tab.1.right" timestamp="1577934218662">
+    <state width="741" height="98" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577976037477" />
+    <state width="741" height="98" key="GridCell.Tab.1.right" timestamp="1577976037478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="361" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577934218662" />
-    <state x="300" y="5" key="Registry" timestamp="1577931524246">
+    <state width="741" height="98" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577976037478" />
+    <state x="402" y="63" key="MultipleFileMergeDialog" timestamp="1577976125445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="300" y="5" key="Registry/0.0.1536.824@0.0.1536.824" timestamp="1577931524246" />
-    <state x="157" y="0" key="SettingsEditor" timestamp="1577931485953">
+    <state x="402" y="63" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1577976125445" />
+    <state x="451" y="143" key="Vcs.Push.Dialog.v2" timestamp="1577976011341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="157" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577931485953" />
-    <state x="451" y="143" key="Vcs.Push.Dialog.v2" timestamp="1577930454651">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="451" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577930454651" />
+    <state x="451" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577976011341" />
     <state x="451" y="181" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1577160283655" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1577925380138">
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1577949549770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1577925380138" />
-    <state x="406" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1577924562083">
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1577949549770" />
+    <state x="406" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1577974275230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="201" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577924562083" />
+    <state x="406" y="201" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577974275230" />
     <state x="701" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577160283655" />
     <state x="701" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" timestamp="1577160283655" />
     <state x="341" y="183" key="run.anything.popup" timestamp="1577777952138">

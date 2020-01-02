@@ -24,6 +24,8 @@ public class AdminLog implements Serializable {
     public AdminLog() {
     }
 
+
+
     public AdminLog(int admin_id, String admin_name, String content, Long add_time, String add_ip) {
         this.admin_id = admin_id;
         this.admin_name = admin_name;
