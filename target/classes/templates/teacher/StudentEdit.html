@@ -20,11 +20,17 @@
     <script src="/assets/js/jquery.min.js"></script>
     <script th:src="@{/webjars/bootstrap/3.4.1/js/bootstrap.js}"></script>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.css}">
+
+    <style>
+        #box a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body data-type="widgets">
     <script src="/assets/js/theme.js"></script>
-    <div class="am-g tpl-g">
+    <div class="am-g tpl-g" id="box">
         <!-- 头部 -->
         <header>
             <!-- logo -->

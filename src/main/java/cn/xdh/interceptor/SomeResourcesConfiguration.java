@@ -9,8 +9,8 @@ public class SomeResourcesConfiguration implements WebMvcConfigurer{
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/**").addResourceLocations(
-				"classpath:images/","classpath:resources/",
-				"classpath:static/","classpath:public/");
+				"classpath:/images/","classpath:/resources/",
+				"classpath:/static/","classpath:/public/");
 	}
 
 }
