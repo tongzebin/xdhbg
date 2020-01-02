@@ -2,6 +2,7 @@ package cn.xdh.service;
 
 import cn.xdh.entity.Works;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -15,5 +16,5 @@ public interface WorksService {
 
     List<Works> selectById(int id);
     List<Works> selectAll();
-    Integer deleteById(int id);
+    Integer deleteById(int id, HttpServletRequest request);
 }

@@ -4,6 +4,7 @@ import cn.xdh.dao.ExeperienceDao;
 import cn.xdh.entity.Exeperience;
 import cn.xdh.entity.Works;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -16,5 +17,5 @@ public interface ExeperienceService {
 
     List<Exeperience> selectByStudent_id(int id);
 
-    Integer deleteById(int id);
+    Integer deleteById(int id, HttpServletRequest request);
 }

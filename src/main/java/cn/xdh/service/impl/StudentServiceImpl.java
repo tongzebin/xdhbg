@@ -110,7 +110,7 @@ public class StudentServiceImpl implements StudentService {
 
         //获取cookie中的老师信息
         String action = "添加学生"+student.getUsername();
-        SomeMethods.getCookieValue(request,teacherLog,action);
+        teacherLog = SomeMethods.getCookieValue(request,teacherLog,action);
         //将日志实体类添加到日志表中
         teacherDao.addTeacherLog(teacherLog);
         //添加学生的操作

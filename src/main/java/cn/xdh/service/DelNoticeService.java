@@ -1,5 +1,7 @@
 package cn.xdh.service;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author victor
  * @site https://victorfengming.github.io/
@@ -10,5 +12,5 @@ package cn.xdh.service;
  * @function ""
  */
 public interface DelNoticeService {
-    public Integer delNoticeService(Integer id);
+    public Integer delNoticeService(Integer id, HttpServletRequest request);
 }

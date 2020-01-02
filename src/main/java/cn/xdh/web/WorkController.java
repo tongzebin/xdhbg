@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,13 +106,12 @@ public class WorkController {
     /**
      * 根据作品表id进行删除
      * @param id        作品删除
-     * @param model
      * @return
      */
     @DeleteMapping("/teacher/work/{id}")
     @ResponseBody
-    public void deleteWork(@PathVariable("id")int id){
-        worksServiceimpl.deleteById(id);
+    public void deleteWork(@PathVariable("id")int id,HttpServletRequest request){
+        worksServiceimpl.deleteById(id,request);
     }
 
 
@@ -137,10 +137,10 @@ public class WorkController {
 
     @DeleteMapping("/teacher/worksmulti/{id}")
     @ResponseBody
-    public void checkoutDel(@PathVariable("id") String id ){
+    public void checkoutDel(@PathVariable("id") String id ,HttpServletRequest request){
         String[] strs=id.split(",");
         for (String s : strs){
-            deleteWork(Integer.parseInt(s));
+            deleteWork(Integer.parseInt(s),request);
         }
     }
 }

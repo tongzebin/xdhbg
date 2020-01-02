@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,13 +108,12 @@ public class ExeperienceController {
      * 根据作品表id进行删除
      *
      * @param id    作品删除
-     * @param model
      * @return
      */
     @DeleteMapping("/teacher/exeperience/{id}")
     @ResponseBody
-    public void deleteExperienceById(@PathVariable("id") int id) {
-        exeperienceServiceImpl.deleteById(id);
+    public void deleteExperienceById(@PathVariable("id") int id, HttpServletRequest request) {
+        exeperienceServiceImpl.deleteById(id,request);
     }
 
 
@@ -134,10 +134,10 @@ public class ExeperienceController {
      */
     @DeleteMapping("/teacher/exeperiencesmulti/{id}")
     @ResponseBody
-    public void checkoutDel(@PathVariable("id") String id ){
+    public void checkoutDel(@PathVariable("id") String id,HttpServletRequest request ){
         String[] strs=id.split(",");
         for (String s : strs){
-            deleteExperienceById(Integer.parseInt(s));
+            deleteExperienceById(Integer.parseInt(s),request);
         }
     }
 

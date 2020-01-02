@@ -2,6 +2,8 @@ package cn.xdh.service;
 
 import cn.xdh.entity.NoticeContent;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author victor
  * @site https://victorfengming.github.io/
@@ -12,5 +14,5 @@ import cn.xdh.entity.NoticeContent;
  * @function ""
  */
 public interface NoticeContentService {
-    public Integer addNoticeContent(String content, Long time);
+    public Integer addNoticeContent(String content, Long time, HttpServletRequest request);
 }

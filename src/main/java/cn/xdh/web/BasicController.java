@@ -1,26 +1,30 @@
 package cn.xdh.web;
 
 import cn.xdh.entity.NoticeData;
+import cn.xdh.entity.TeacherLog;
+import cn.xdh.service.TeacherService;
 import cn.xdh.service.impl.*;
-import org.apache.ibatis.annotations.Param;
+import cn.xdh.util.CookieTestUtil;
+import cn.xdh.util.SomeMethods;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 public class BasicController {
     @Autowired
-    TeacherService teacherService;
+    private TeacherService teacherService;
     @Autowired
-    TeacherLog teacherLog;
+    private TeacherLog teacherLog;
     @Autowired
     private StudentServiceImpl studentservice;
     @Autowired
@@ -56,6 +60,16 @@ public class BasicController {
         String action = "登录系统";
         long add_time = SomeMethods.getCurrentTime();
         String add_ip = SomeMethods.getIp4();
+
+        mav.getModel().put("totalNumber", studentNumberServiceImpl.selectTotalNumber());
+        mav.getModel().put("graduNumber", studentNumberServiceImpl.selectGraduNumber());
+        mav.getModel().put("notGraduNumber", studentNumberServiceImpl.selectNotGraduNumber());
+
+        mav.getModel().put("stageOne", studentNumberServiceImpl.selectStageOne());
+        mav.getModel().put("stageTwo", studentNumberServiceImpl.selectStageOne());
+        mav.getModel().put("stageThree", studentNumberServiceImpl.selectStageOne());
+        mav.getModel().put("stageFour", studentNumberServiceImpl.selectStageOne());
+        mav.getModel().put("stageFive", studentNumberServiceImpl.selectStageOne());
         //new一个日志实体类作为插入教师日志表时的参数
         TeacherLog teacherLog = new TeacherLog(teacher_id,teacher_name,action,add_time,add_ip);
         teacherService.addTeacherLog(teacherLog);
@@ -90,21 +104,21 @@ public class BasicController {
     }
     //    增加公告
     @PostMapping(value = "noticeManage")
-    public ModelAndView submitNotice(String noticeContent) {
+    public ModelAndView submitNotice(String noticeContent,HttpServletRequest request) {
         System.out.println(noticeContent);
         System.out.println(new Date().getTime());
-        noticeContentServerImpl.addNoticeContent(noticeContent,new Date().getTime()/1000);
+        noticeContentServerImpl.addNoticeContent(noticeContent,new Date().getTime()/1000,request);
         ModelAndView mav = new ModelAndView();
         mav.setViewName("teacher/noticeManage");
         return mav;
     }
     //    删除公告
     @GetMapping(value = "delManage/{id}")
-    public String delManage(@PathVariable Integer id) {
+    public String delManage(@PathVariable Integer id,HttpServletRequest request) {
         System.out.println(id);
 //        ModelAndView mav = new ModelAndView();
 //        mav.setViewName("teacher/noticeManage");
-        delNoticeServiceImpl.delNoticeService(id);
+        delNoticeServiceImpl.delNoticeService(id,request);
         if (id != null){
             return "true";
         }else

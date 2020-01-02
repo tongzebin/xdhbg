@@ -48,7 +48,7 @@ public class SomeMethods {
         return ret.toString();
     }
 
-    public static void getCookieValue(HttpServletRequest request, TeacherLog teacherLog,String action){
+    public static TeacherLog getCookieValue(HttpServletRequest request, TeacherLog teacherLog,String action){
         //将老师操作放到日志中
         Cookie[] cookies = request.getCookies();
         //获得日志中需要的数据
@@ -72,6 +72,7 @@ public class SomeMethods {
                 teacherLog.setAdd_ip(cookie.getValue());
             }
         }
+        return teacherLog;
     }
 
 }
