@@ -27,20 +27,11 @@
 
 <body data-type="widgets">
 <input id="price" type="hidden" th:value="${price}">
-
-
-<script>
-    var str = $("#price").val();
-    console.log(str)
-    if(str==0){
-        alert("请求失败,请刷新")
-    }
-</script>
 <script src="assets/js/theme.js"></script>
 <div class="am-g tpl-g">
 
     <!-- 头部 -->
-    <div th:replace="common/bar::topmoban"></div>
+    <div th:replace="commons/public::ViewTop"></div>
 
 
     <!-- 风格切换 -->
@@ -61,7 +52,7 @@
 
     <!-- 侧边导航栏 -->
     <!--        引入侧边栏-->
-    <div th:replace="common/bar::leftmoban"></div>
+     <div th:replace="commons/public::SideSelect"></div>
 
 
     <!-- 内容区域 -->
@@ -84,20 +75,27 @@
                                             <!--                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>-->
                                             <!--                                                <a href="teacher/works?pageNum=1&username=">显示所有</a>-->
                                             <a style="color: #ffffaa;" href="teacher/works?pageNum=1">显示所有</a>
-                                            <a style="color: #ffffaa;" th:if="${backfill}==null"
+                                            <a id="break" style="color: #ffffaa;" th:if="${backfill}==null"
                                                th:href="@{teacher/works(pageNum=${currentPage})}">刷新</a>
-                                            <a style="color: #ffffaa;" th:if="${backfill}"
+                                            <a id="break" style="color: #ffffaa;" th:if="${backfill}"
                                                th:href="@{teacher/work(pageNum=${currentPage},username=${backfill})}">刷新</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <script>
+
+    if($("#price").val()==0){
+        window.location.href = $("#break").attr("href");
+    }
+</script>
+
 
                             <!--下拉列表-->
                             <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                 <div class="am-form-group tpl-table-list-select">
-                                    <select data-am-selected="{btnSize: 'sm'}">
+                                    <!--<select data-am-selected="{btnSize: 'sm'}">
                                         <option value="1">暂时没用</option>
                                         <option value="1">1</option>
                                         <option value="1">2</option>
@@ -105,7 +103,7 @@
                                         <option value="1">4</option>
                                         <option value="1">5</option>
                                         <option value="1">6</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                             </div>
                             <!--下拉列表-->
@@ -165,63 +163,21 @@
                                     <!-- more data -->
                                     </tbody>
                                 </table>
-                                <button id="all" style="color: #000000">全选</button>
-                                <button onclick="DelSelect()" style="color: #000000">批量删除</button>
+
                             </div>
 
 
 
 
 
-                            <div class="am-u-lg-12 am-cf">
+                            <div class="am-u-lg-12 am-cf" style="position: relative;top:10px;">
 
                                 <!--  全选的jq代码  -->
-                                <script>
-                                    $("#all").click(function () {
-                                        var buttonValue = document.getElementById('all').innerText;
-                                        if (buttonValue == "全选") {
-                                            $(".check").prop("checked", true);
-                                            $("#all").text("取消全选")
-                                        } else {
-                                            $(".check").prop("checked", false);
-                                            $("#all").text('全选')
-                                        }
-                                    });
 
-                                    function DelSelect() {
-                                        var Checkbox = false;
-                                        $("input[name='id[]']").each(function () {
-                                            if (this.checked == true) {
-                                                Checkbox = true;
-                                            }
-                                        });
-                                        if (Checkbox) {
-                                            var t = confirm("您确认要删除选中的内容吗？");
-                                            if (t == false) {
-                                                return false;
-                                            } else {
-                                                var checkedID = "";
-                                                $("input[name='id[]']").each(function () {
-                                                    if (this.checked == true) {
-                                                        checkedID += this.value + ",";
-                                                    }
-                                                });
-                                                //window.location.replace("/teacher/worksmulti?id=" + checkedID);
-                                                $.ajax({
-                                                    url: "/teacher/worksmulti/" + checkedID,
-                                                    type: "DELETE",
-                                                    success: function () {
-                                                        location.reload();
-                                                    }
-                                                });
-                                            }
-                                        } else {
-                                            alert("请选择您要删除的内容!");
-                                            return false;
-                                        }
-                                    }
-                                </script>
-                                <div class="am-fr">
+                                <button id="all" style="color: #000000;margin-top: 20px">全选</button>
+                                <button onclick="DelSelect()" style="color: #000000;margin-top: 20px">批量删除</button>
+                                <div class="am-fr" >
+
                                     <ul class="am-pagination tpl-pagination">
                                         <!-- 首页 -->
                                         <li th:if="${currentPage == 1}">
@@ -316,6 +272,52 @@
 <script src="assets/js/amazeui.datatables.min.js"></script>
 <script src="assets/js/dataTables.responsive.min.js"></script>
 <script src="assets/js/app.js"></script>
+<!--全选删除-->
+<script>
+                                    $("#all").click(function () {
+                                        var buttonValue = document.getElementById('all').innerText;
+                                        if (buttonValue == "全选") {
+                                            $(".check").prop("checked", true);
+                                            $("#all").text("取消全选")
+                                        } else {
+                                            $(".check").prop("checked", false);
+                                            $("#all").text('全选')
+                                        }
+                                    });
+
+                                    function DelSelect() {
+                                        var Checkbox = false;
+                                        $("input[name='id[]']").each(function () {
+                                            if (this.checked == true) {
+                                                Checkbox = true;
+                                            }
+                                        });
+                                        if (Checkbox) {
+                                            var t = confirm("您确认要删除选中的内容吗？");
+                                            if (t == false) {
+                                                return false;
+                                            } else {
+                                                var checkedID = "";
+                                                $("input[name='id[]']").each(function () {
+                                                    if (this.checked == true) {
+                                                        checkedID += this.value + ",";
+                                                    }
+                                                });
+                                                //window.location.replace("/teacher/worksmulti?id=" + checkedID);
+                                                $.ajax({
+                                                    url: "/teacher/worksmulti/" + checkedID,
+                                                    type: "DELETE",
+                                                    success: function () {
+                                                        location.reload();
+                                                    }
+                                                });
+                                            }
+                                        } else {
+                                            alert("请选择您要删除的内容!");
+                                            return false;
+                                        }
+                                    }
+                                </script>
 
 </body>
 

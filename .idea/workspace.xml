@@ -5,139 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f58633-2c97-4f96-a0ac-988a1982c5ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Class.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/js/exeperience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/assets/js/works.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a782768c-975a-4c37-a8c9-4bcbf0baa57e.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.datatables.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/amazeui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/app.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.print.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/css/fullcalendar.print.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/app-icon72x72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/app-icon72x72@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-chrome.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-chrome.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-firefox.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-firefox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-ie.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-ie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-opera.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-opera.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-safari.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/admin-safari.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/adminPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/adminPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/blogPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/blogPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landing.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landing.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landingPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/landingPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/loginPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/loginPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/sidebarPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/examples/sidebarPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/i/startup-640x1096.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/i/startup-640x1096.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/a5.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/a5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/k.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logoa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/logob.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user01.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user02.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user03.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user04.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user05.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user06.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/img/user07.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/img/user07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/amazeui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/dataTables.responsive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/dataTables.responsive.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/echarts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/moment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/main/static/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/static/assets/js/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Notice.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.datatables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.datatables.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.print.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/fullcalendar.print.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/app-icon72x72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/app-icon72x72@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-chrome.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-chrome.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-firefox.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-firefox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-ie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-ie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-opera.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-opera.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-safari.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-safari.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/adminPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/adminPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/blogPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/blogPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landing.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landing.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landingPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landingPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/loginPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/loginPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/sidebarPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/sidebarPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/i/startup-640x1096.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/startup-640x1096.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/a5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/a5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/k.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/k.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logoa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/logob.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/logob.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user01.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user02.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user03.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user04.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user05.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user06.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/user07.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/dataTables.responsive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/dataTables.responsive.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/echarts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/moment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/xdhbg.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/xdhbg.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/public.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teacher/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teacher/works.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/RunBoot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/SomeMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/ExeperienceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/ExeperienceDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Class.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Notice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/dao/WorksDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/dao/WorksDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Exeperience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Exeperience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Page.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Works.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/Works.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/ExeperienceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/ExeperienceService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/WorksService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/WorksService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/ExeperienceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/ExeperienceServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/StudentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/WorksServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/WorksServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/util/GetCurrentPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/GetCurrentPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/util/MyPaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/util/MyPaging.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/BasicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/ExeperienceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/ExeperienceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/WorkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/WorkController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdhbg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xdhbg.iml" afterDir="false" />
-    <list default="true" id="e39992f2-748e-4423-b841-647d35428301" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.datatables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/amazeui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/commons/public.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/commons/public.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdhbg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xdhbg.iml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,186 +70,11 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="xdh_experience: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@127.0.0.1" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="xdh_works: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>assets</find>
-      <find>href</find>
-      <find>ba</find>
-      <find>left</find>
-      <find>total</find>
-      <find>current</find>
-      <find>type</find>
-      <find>am-u-lg-12 am-cf</find>
-      <find>all</find>
-    </findStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/test" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/web/DemoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/StudentAndWorks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/WorksLinkStudent.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/works.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/student/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/util/MyDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/Experience.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Experience.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/Exeperience.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExperienceMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/ExperienceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExperienceController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ExperienceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExeperienceMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/ExeperienceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ExeperienceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/ExeperienceDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teacher/experience.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teacher/chart.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teacher/table-list.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/common/left.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teacher/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/PagingDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/test/Demo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/FenyeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/WorksMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/dao/WorksDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/WorksService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/WorksServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Works.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Page.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/util/GetCurrentPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/util/MyPaging.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/common/bar.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js/works.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teacher/works.html" />
-      </list>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="xdhbg@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xdhbg: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -357,78 +97,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="D:\xdhbg\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Maven\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../Maven/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.5.2\conf\settings.xml" />
-        <option name="workOffline" value="true" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/apache-maven-3.2.5" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.2.5\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
-        <option name="jdkForImporter" value="1.8" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-        <option name="jdkForImporter" value="#JAVA_HOME" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="xdhbg" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="xdhbg" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-13" />
-    <option name="width" value="1346" />
-    <option name="height" value="698" />
-  </component>
-  <component name="ProjectId" id="1VVjYeIFqfUwQmFp65AkIO7gWYn" />
   <component name="ProjectId" id="1VPacRvRRgZLPcIZXULwjCdMRN4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -436,59 +107,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/src/main/resources/static" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/student" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.112676054" />
     <property name="project.structure.side.proportion" value="0.42992625" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xdhbg\src\main\resources\templates\teacher" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xdhbg\src\main\resources\templates\student" />
-      <recent name="D:\xdhbg\src\main\resources\templates\teacher" />
-      <recent name="D:\xdhbg\src\main\resources\mapper" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean" />
-    </option>
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -507,6 +135,22 @@
       <recent name="D:\java项目\xdhbg\src\main\resources\mapper" />
       <recent name="D:\java项目\xdhbg\src\main\resources\META-INF\resources\assets\css" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -540,84 +184,12 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="RunManager" selected="Spring Boot.RunBoot">
-    <configuration name="DemoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xdhbg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.xdh.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.xdh.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.xdh.test.DemoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xdhbg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.xdh.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.xdh.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.xdh.test.DemoTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xdhbg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.xdh.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.xdh.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.xdh.test.Demo" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="xdhbg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.xdh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.xdh.RunBoot" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.RunBoot" />
-        <item itemvalue="JUnit.Demo.test1" />
-        <item itemvalue="JUnit.DemoTest.test" />
-        <item itemvalue="JUnit.DemoTest" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f1f58633-2c97-4f96-a0ac-988a1982c5ab" name="Default Changelist" comment="" />
-      <created>1577345204723</created>
-      <changelist id="e39992f2-748e-4423-b841-647d35428301" name="Default Changelist" comment="第二次测试" />
       <created>1577157262767</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -639,32 +211,7 @@
       <workItem from="1577534336098" duration="781000" />
       <workItem from="1577538636132" duration="64950000" />
       <workItem from="1577696804487" duration="20089000" />
-    </task>
-    <task id="LOCAL-00001" summary="只差分页和批量上传">
-      <created>1577519094477</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1577519094477</updated>
-      <updated>1577157262767</updated>
-      <workItem from="1577157264552" duration="139000" />
-      <workItem from="1577160431819" duration="21871000" />
-      <workItem from="1577190246948" duration="4136000" />
-      <workItem from="1577194517151" duration="6263000" />
-      <workItem from="1577201646445" duration="930000" />
-      <workItem from="1577233733933" duration="11799000" />
-      <workItem from="1577253186687" duration="22101000" />
-      <workItem from="1577280173623" duration="6298000" />
-      <workItem from="1577286905325" duration="4453000" />
-      <workItem from="1577320148460" duration="43832000" />
-      <workItem from="1577409556854" duration="2832000" />
-      <workItem from="1577412597095" duration="37111000" />
-      <workItem from="1577496003937" duration="9721000" />
-      <workItem from="1577513497526" duration="9985000" />
-      <workItem from="1577666556939" duration="14278000" />
-      <workItem from="1577685813197" duration="19860000" />
-      <workItem from="1577710166456" duration="2462000" />
-      <workItem from="1577752278839" duration="3943000" />
+      <workItem from="1577925194430" duration="788000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1577167566140</created>
@@ -672,55 +219,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1577167566140</updated>
-    </task>
-    <task id="LOCAL-00002" summary="教师端学生作品显示与查询1.0">
-      <created>1577277720658</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1577277720658</updated>
-    </task>
-    <task id="LOCAL-00003" summary="教师端学生作品与心得1.0(分页未加)">
-      <created>1577350141809</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1577350141809</updated>
-    </task>
-    <task id="LOCAL-00004" summary="使用前端模板">
-      <created>1577376407659</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1577376407660</updated>
-    </task>
-    <task id="LOCAL-00005" summary="添加数据字段前提交(功能全部生效)">
-      <created>1577504273632</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1577504273632</updated>
-    </task>
-    <task id="LOCAL-00006" summary="添加数据字段前提交(功能全部生效)">
-      <created>1577504605018</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1577504605018</updated>
-    </task>
-    <task id="LOCAL-00007" summary="添加数据字段前提交(功能全部生效)">
-      <created>1577752426161</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1577752426161</updated>
-    </task>
-    <task id="LOCAL-00008" summary="完整版">
-      <created>1577755455863</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1577755455863</updated>
     </task>
     <task id="LOCAL-00002" summary="只差分页">
       <created>1577622809872</created>
@@ -757,7 +255,20 @@
       <option name="project" value="LOCAL" />
       <updated>1577757223855</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加数据字段前提交(功能全部生效)">
+      <created>1577752426161</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577752426161</updated>
+    </task>
+    <task id="LOCAL-00008" summary="完整版">
+      <created>1577755455863</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1577755455863</updated>
+    </task>
     <task id="LOCAL-00009" summary="完整版,解决浏览器兼容问题">
       <created>1577756155218</created>
       <option name="number" value="00009" />
@@ -794,125 +305,22 @@
       <configuration name="Demo.test1" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221875000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <layout>
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.21633889" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.35016835" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.05050505" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.5724907" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.099326596" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.28114477" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.65319866" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.20875421" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="16" sideWeight="0.49924356" visible="true" weight="0.5286195" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.28517398" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="aiXcoder" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.16187595" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="1">
-          <value>
-            <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State>
               <option name="COLUMN_ORDER" />
             </State>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
           </value>
         </entry>
       </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="OPEN_TABS">
-      <set>
-        <option value="1" />
-      </set>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="只差分页和批量上传" />
-    <MESSAGE value="只差分页" />
-    <MESSAGE value="完事" />
-    <MESSAGE value="Merge branches 'tengtiankai' and 'zhengyupeng' of github.com:raoweijiapng/xdhbg into tengtiankai&#10;&#10; Conflicts:&#10;&#9;.idea/.gitignore&#10;&#9;.idea/compiler.xml&#10;&#9;.idea/encodings.xml&#10;&#9;.idea/vcs.xml&#10;&#9;.idea/workspace.xml&#10;&#9;out/production/main/static/assets/css/admin.css&#10;&#9;out/production/main/static/assets/css/amazeui.datatables.min.css&#10;&#9;out/production/main/static/assets/css/amazeui.min.css&#10;&#9;out/production/main/static/assets/css/app.css&#10;&#9;out/production/main/static/assets/css/app.less&#10;&#9;out/production/main/static/assets/css/fullcalendar.min.css&#10;&#9;out/production/main/static/assets/css/fullcalendar.print.css&#10;&#9;out/production/main/static/assets/fonts/FontAwesome.otf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;out/production/main/static/assets/i/app-icon72x72@2x.png&#10;&#9;out/production/main/static/assets/i/examples/admin-chrome.png&#10;&#9;out/production/main/static/assets/i/examples/admin-firefox.png&#10;&#9;out/production/main/static/assets/i/examples/admin-ie.png&#10;&#9;out/production/main/static/assets/i/examples/admin-opera.png&#10;&#9;out/production/main/static/assets/i/examples/admin-safari.png&#10;&#9;out/production/main/static/assets/i/examples/adminPage.png&#10;&#9;out/production/main/static/assets/i/examples/blogPage.png&#10;&#9;out/production/main/static/assets/i/examples/landing.png&#10;&#9;out/production/main/static/assets/i/examples/landingPage.png&#10;&#9;out/production/main/static/assets/i/examples/loginPage.png&#10;&#9;out/production/main/static/assets/i/examples/sidebarPage.png&#10;&#9;out/production/main/static/assets/i/favicon.png&#10;&#9;out/production/main/static/assets/i/startup-640x1096.png&#10;&#9;out/production/main/static/assets/img/a5.png&#10;&#9;out/production/main/static/assets/img/k.jpg&#10;&#9;out/production/main/static/assets/img/logo.png&#10;&#9;out/production/main/static/assets/img/logoa.png&#10;&#9;out/production/main/static/assets/img/logob.png&#10;&#9;out/production/main/static/assets/img/user01.png&#10;&#9;out/production/main/static/assets/img/user02.png&#10;&#9;out/production/main/static/assets/img/user03.png&#10;&#9;out/production/main/static/assets/img/user04.png&#10;&#9;out/production/main/static/assets/img/user05.png&#10;&#9;out/production/main/static/assets/img/user06.png&#10;&#9;out/production/main/static/assets/img/user07.png&#10;&#9;out/production/main/static/assets/js/amazeui.datatables.min.js&#10;&#9;out/production/main/static/assets/js/amazeui.min.js&#10;&#9;out/production/main/static/assets/js/app.js&#10;&#9;out/production/main/static/assets/js/dataTables.responsive.min.js&#10;&#9;out/production/main/static/assets/js/echarts.min.js&#10;&#9;out/production/main/static/assets/js/fullcalendar.min.js&#10;&#9;out/production/main/static/assets/js/jquery.min.js&#10;&#9;out/production/main/static/assets/js/moment.js&#10;&#9;out/production/main/static/assets/js/theme.js&#10;&#9;pom.xml&#10;&#9;src/main/java/cn/xdh/RunBoot.java&#10;&#9;src/main/java/cn/xdh/dao/StudentDao.java&#10;&#9;src/main/java/cn/xdh/entity/Student.java&#10;&#9;src/main/java/cn/xdh/service/StudentService.java&#10;&#9;src/main/java/cn/xdh/service/impl/StudentServiceImpl.java&#10;&#9;src/main/java/cn/xdh/web/BasicController.java&#10;&#9;src/main/resources/application.properties&#10;&#9;src/main/resources/mapper/StudentMapper.xml&#10;&#9;src/main/resources/static/assets/css/admin.css&#10;&#9;src/main/resources/static/assets/css/amazeui.datatables.min.css&#10;&#9;src/main/resources/static/assets/css/amazeui.min.css&#10;&#9;src/main/resources/static/assets/css/app.css&#10;&#9;src/main/resources/static/assets/css/app.less&#10;&#9;src/main/resources/static/assets/css/fullcalendar.min.css&#10;&#9;src/main/resources/static/assets/css/fullcalendar.print.css&#10;&#9;src/main/resources/static/assets/fonts/FontAwesome.otf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;src/main/resources/static/assets/i/app-icon72x72@2x.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-chrome.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-firefox.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-ie.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-opera.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-safari.png&#10;&#9;src/main/resources/static/assets/i/examples/adminPage.png&#10;&#9;src/main/resources/static/assets/i/examples/blogPage.png&#10;&#9;src/main/resources/static/assets/i/examples/landing.png&#10;&#9;src/main/resources/static/assets/i/examples/landingPage.png&#10;&#9;src/main/resources/static/assets/i/examples/loginPage.png&#10;&#9;src/main/resources/static/assets/i/examples/sidebarPage.png&#10;&#9;src/main/resources/static/assets/i/favicon.png&#10;&#9;src/main/resources/static/assets/i/startup-640x1096.png&#10;&#9;src/main/resources/static/assets/img/a5.png&#10;&#9;src/main/resources/static/assets/img/k.jpg&#10;&#9;src/main/resources/static/assets/img/logo.png&#10;&#9;src/main/resources/static/assets/img/logoa.png&#10;&#9;src/main/resources/static/assets/img/logob.png&#10;&#9;src/main/resources/static/assets/img/user01.png&#10;&#9;src/main/resources/static/assets/img/user02.png&#10;&#9;src/main/resources/static/assets/img/user03.png&#10;&#9;src/main/resources/static/assets/img/user04.png&#10;&#9;src/main/resources/static/assets/img/user05.png&#10;&#9;src/main/resources/static/assets/img/user06.png&#10;&#9;src/main/resources/static/assets/img/user07.png&#10;&#9;src/main/resources/static/assets/js/amazeui.datatables.min.js&#10;&#9;src/main/resources/static/assets/js/amazeui.min.js&#10;&#9;src/main/resources/static/assets/js/app.js&#10;&#9;src/main/resources/static/assets/js/dataTables.responsive.min.js&#10;&#9;src/main/resources/static/assets/js/echarts.min.js&#10;&#9;src/main/resources/static/assets/js/fullcalendar.min.js&#10;&#9;src/main/resources/static/assets/js/jquery.min.js&#10;&#9;src/main/resources/static/assets/js/moment.js&#10;&#9;src/main/resources/static/assets/js/theme.js&#10;&#9;src/main/resources/templates/login.html&#10;&#9;target/classes/META-INF/xdhbg.kotlin_module&#10;&#9;target/classes/application.properties&#10;&#9;target/classes/cn/xdh/RunBoot.class&#10;&#9;target/classes/cn/xdh/dao/StudentDao.class&#10;&#9;target/classes/cn/xdh/entity/Student.class&#10;&#9;target/classes/cn/xdh/service/StudentService.class&#10;&#9;target/classes/cn/xdh/service/impl/StudentServiceImpl.class&#10;&#9;target/classes/cn/xdh/web/BasicController.class&#10;&#9;target/classes/mapper/StudentMapper.xml&#10;&#9;target/classes/templates/login.html&#10;&#9;xdhbg.iml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branches 'tengtiankai' and 'zhengyupeng' of github.com:raoweijiapng/xdhbg into tengtiankai&#10;&#10; Conflicts:&#10;&#9;.idea/.gitignore&#10;&#9;.idea/compiler.xml&#10;&#9;.idea/encodings.xml&#10;&#9;.idea/vcs.xml&#10;&#9;.idea/workspace.xml&#10;&#9;out/production/main/static/assets/css/admin.css&#10;&#9;out/production/main/static/assets/css/amazeui.datatables.min.css&#10;&#9;out/production/main/static/assets/css/amazeui.min.css&#10;&#9;out/production/main/static/assets/css/app.css&#10;&#9;out/production/main/static/assets/css/app.less&#10;&#9;out/production/main/static/assets/css/fullcalendar.min.css&#10;&#9;out/production/main/static/assets/css/fullcalendar.print.css&#10;&#9;out/production/main/static/assets/fonts/FontAwesome.otf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;out/production/main/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;out/production/main/static/assets/i/app-icon72x72@2x.png&#10;&#9;out/production/main/static/assets/i/examples/admin-chrome.png&#10;&#9;out/production/main/static/assets/i/examples/admin-firefox.png&#10;&#9;out/production/main/static/assets/i/examples/admin-ie.png&#10;&#9;out/production/main/static/assets/i/examples/admin-opera.png&#10;&#9;out/production/main/static/assets/i/examples/admin-safari.png&#10;&#9;out/production/main/static/assets/i/examples/adminPage.png&#10;&#9;out/production/main/static/assets/i/examples/blogPage.png&#10;&#9;out/production/main/static/assets/i/examples/landing.png&#10;&#9;out/production/main/static/assets/i/examples/landingPage.png&#10;&#9;out/production/main/static/assets/i/examples/loginPage.png&#10;&#9;out/production/main/static/assets/i/examples/sidebarPage.png&#10;&#9;out/production/main/static/assets/i/favicon.png&#10;&#9;out/production/main/static/assets/i/startup-640x1096.png&#10;&#9;out/production/main/static/assets/img/a5.png&#10;&#9;out/production/main/static/assets/img/k.jpg&#10;&#9;out/production/main/static/assets/img/logo.png&#10;&#9;out/production/main/static/assets/img/logoa.png&#10;&#9;out/production/main/static/assets/img/logob.png&#10;&#9;out/production/main/static/assets/img/user01.png&#10;&#9;out/production/main/static/assets/img/user02.png&#10;&#9;out/production/main/static/assets/img/user03.png&#10;&#9;out/production/main/static/assets/img/user04.png&#10;&#9;out/production/main/static/assets/img/user05.png&#10;&#9;out/production/main/static/assets/img/user06.png&#10;&#9;out/production/main/static/assets/img/user07.png&#10;&#9;out/production/main/static/assets/js/amazeui.datatables.min.js&#10;&#9;out/production/main/static/assets/js/amazeui.min.js&#10;&#9;out/production/main/static/assets/js/app.js&#10;&#9;out/production/main/static/assets/js/dataTables.responsive.min.js&#10;&#9;out/production/main/static/assets/js/echarts.min.js&#10;&#9;out/production/main/static/assets/js/fullcalendar.min.js&#10;&#9;out/production/main/static/assets/js/jquery.min.js&#10;&#9;out/production/main/static/assets/js/moment.js&#10;&#9;out/production/main/static/assets/js/theme.js&#10;&#9;pom.xml&#10;&#9;src/main/java/cn/xdh/RunBoot.java&#10;&#9;src/main/java/cn/xdh/dao/StudentDao.java&#10;&#9;src/main/java/cn/xdh/entity/Student.java&#10;&#9;src/main/java/cn/xdh/service/StudentService.java&#10;&#9;src/main/java/cn/xdh/service/impl/StudentServiceImpl.java&#10;&#9;src/main/java/cn/xdh/web/BasicController.java&#10;&#9;src/main/resources/application.properties&#10;&#9;src/main/resources/mapper/StudentMapper.xml&#10;&#9;src/main/resources/static/assets/css/admin.css&#10;&#9;src/main/resources/static/assets/css/amazeui.datatables.min.css&#10;&#9;src/main/resources/static/assets/css/amazeui.min.css&#10;&#9;src/main/resources/static/assets/css/app.css&#10;&#9;src/main/resources/static/assets/css/app.less&#10;&#9;src/main/resources/static/assets/css/fullcalendar.min.css&#10;&#9;src/main/resources/static/assets/css/fullcalendar.print.css&#10;&#9;src/main/resources/static/assets/fonts/FontAwesome.otf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.eot&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.ttf&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff&#10;&#9;src/main/resources/static/assets/fonts/fontawesome-webfont.woff2&#10;&#9;src/main/resources/static/assets/i/app-icon72x72@2x.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-chrome.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-firefox.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-ie.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-opera.png&#10;&#9;src/main/resources/static/assets/i/examples/admin-safari.png&#10;&#9;src/main/resources/static/assets/i/examples/adminPage.png&#10;&#9;src/main/resources/static/assets/i/examples/blogPage.png&#10;&#9;src/main/resources/static/assets/i/examples/landing.png&#10;&#9;src/main/resources/static/assets/i/examples/landingPage.png&#10;&#9;src/main/resources/static/assets/i/examples/loginPage.png&#10;&#9;src/main/resources/static/assets/i/examples/sidebarPage.png&#10;&#9;src/main/resources/static/assets/i/favicon.png&#10;&#9;src/main/resources/static/assets/i/startup-640x1096.png&#10;&#9;src/main/resources/static/assets/img/a5.png&#10;&#9;src/main/resources/static/assets/img/k.jpg&#10;&#9;src/main/resources/static/assets/img/logo.png&#10;&#9;src/main/resources/static/assets/img/logoa.png&#10;&#9;src/main/resources/static/assets/img/logob.png&#10;&#9;src/main/resources/static/assets/img/user01.png&#10;&#9;src/main/resources/static/assets/img/user02.png&#10;&#9;src/main/resources/static/assets/img/user03.png&#10;&#9;src/main/resources/static/assets/img/user04.png&#10;&#9;src/main/resources/static/assets/img/user05.png&#10;&#9;src/main/resources/static/assets/img/user06.png&#10;&#9;src/main/resources/static/assets/img/user07.png&#10;&#9;src/main/resources/static/assets/js/amazeui.datatables.min.js&#10;&#9;src/main/resources/static/assets/js/amazeui.min.js&#10;&#9;src/main/resources/static/assets/js/app.js&#10;&#9;src/main/resources/static/assets/js/dataTables.responsive.min.js&#10;&#9;src/main/resources/static/assets/js/echarts.min.js&#10;&#9;src/main/resources/static/assets/js/fullcalendar.min.js&#10;&#9;src/main/resources/static/assets/js/jquery.min.js&#10;&#9;src/main/resources/static/assets/js/moment.js&#10;&#9;src/main/resources/static/assets/js/theme.js&#10;&#9;src/main/resources/templates/login.html&#10;&#9;target/classes/META-INF/xdhbg.kotlin_module&#10;&#9;target/classes/application.properties&#10;&#9;target/classes/cn/xdh/RunBoot.class&#10;&#9;target/classes/cn/xdh/dao/StudentDao.class&#10;&#9;target/classes/cn/xdh/entity/Student.class&#10;&#9;target/classes/cn/xdh/service/StudentService.class&#10;&#9;target/classes/cn/xdh/service/impl/StudentServiceImpl.class&#10;&#9;target/classes/cn/xdh/web/BasicController.class&#10;&#9;target/classes/mapper/StudentMapper.xml&#10;&#9;target/classes/templates/login.html&#10;&#9;xdhbg.iml" />
-    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="教师端作品显示1.0" />
@@ -929,373 +337,5 @@
     <state x="451" y="181" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" />
     <state x="701" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" />
     <state x="701" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/ExeperienceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/tables.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/chart.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/table-list-img.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="344" column="60" lean-forward="true" selection-start-line="344" selection-start-column="60" selection-end-line="344" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="53" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience11.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js/exeperience.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/works11.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/BasicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xdhbg.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExeperienceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/dao/PagingDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/test/Demo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/RunBoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding>
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/dao/FenyeDao.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/annotation/Documented.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/Entity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.4.RELEASE/spring-data-jpa-2.1.4.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WorksMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.2.RELEASE/spring-boot-2.1.2.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="643" column="16" selection-start-line="643" selection-start-column="16" selection-end-line="643" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ExeperienceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="250" column="44" selection-start-line="250" selection-start-column="44" selection-end-line="250" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/dao/StudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/dao/WorksDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/WorksService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/WorksServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/util/MyDate.java" />
-    <entry file="das://a782768c-975a-4c37-a8c9-4bcbf0baa57e/schema/xdhbg/table/xdh_student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Works.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Exeperience.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/dao/ExeperienceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a782768c-975a-4c37-a8c9-4bcbf0baa57e/schema/xdhbg/table/xdh_works">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/util/MyPaging.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a782768c-975a-4c37-a8c9-4bcbf0baa57e/schema/xdhbg/table/xdh_experience">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/entity/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/util/GetCurrentPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/assets/js/works.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/WorkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/xdh/web/ExeperienceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/exeperience.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="104" column="70" selection-start-line="104" selection-start-column="70" selection-end-line="104" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teacher/works.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

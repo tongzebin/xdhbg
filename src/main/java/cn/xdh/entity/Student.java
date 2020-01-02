@@ -8,7 +8,7 @@ public class Student implements Serializable {
     private String mobile;
     private String password;
 
-    private int birthday;
+    private long birthday;
     //入学时间
     private long join_study_time;
     //毕业时间
@@ -70,11 +70,11 @@ public class Student implements Serializable {
         this.password = password;
     }
 
-    public int getBirthday() {
+    public long getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(int birthday) {
+    public void setBirthday(long birthday) {
         this.birthday = birthday;
     }
 

@@ -79,7 +79,7 @@ public class WorkController {
             worksAll(model,1);
             return "teacher/works";
         }
-        List<Works> worksList=new ArrayList<>();
+        List<Works> worksList=new ArrayList<Works>();
         for(Student student : studentList){
             //根据list集合中装的id拿取数据
             worksList.addAll(worksServiceimpl.selectById(student.getId()));
