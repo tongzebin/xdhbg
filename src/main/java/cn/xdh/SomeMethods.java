@@ -5,6 +5,7 @@ import cn.xdh.entity.TeacherLog;
 import cn.xdh.service.impl.TeacherServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.persistence.Id;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -58,29 +59,35 @@ public class SomeMethods {
     }
 
     //设置cookie和session
-    public static void setCookieAndSession(String name, String password,String mobile, HttpServletResponse response, HttpServletRequest request) {
+    public static void setCookieAndSession(int id, String name, String password,String mobile, HttpServletResponse response, HttpServletRequest request) {
         //1.  创建Cookie
         Cookie cookie = new Cookie("name", name);
         Cookie cookie1 = new Cookie("password", password);
         Cookie cookie2 = new Cookie("mobile", mobile);
+        String cookieid = Integer.toString(id);
+        Cookie cookie3 = new Cookie("id", cookieid);
         //    设置存活时长为1年
         cookie.setMaxAge(365*24*60*60);
         cookie1.setMaxAge(365*24*60*60);
         cookie2.setMaxAge(365*24*60*60);
+        cookie3.setMaxAge(365*24*60*60);
         //    设置cookie存储路径为/
         cookie.setPath("/");
         cookie1.setPath("/");
         cookie2.setPath("/");
+        cookie3.setPath("/");
         //2.  将Cookie 添加到响应头部
         response.addCookie(cookie);
         response.addCookie(cookie1);
         response.addCookie(cookie2);
+        response.addCookie(cookie3);
         //获得session
         HttpSession session =  request.getSession();
         //把用户名存入session
         session.setAttribute("uname", name);
         session.setAttribute("password", password);
         session.setAttribute("mobile", mobile);
+        session.setAttribute("id", id);
     }
 
     //查看cookie和session中是否有用户名

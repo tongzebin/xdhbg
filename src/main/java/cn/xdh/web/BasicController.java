@@ -80,7 +80,7 @@ public class BasicController {
         if (verifycode.equalsIgnoreCase(cookie_vcode)) {
             if (admin != null) {
                 //调用SomeMethods的设置cookie和session的方法
-                SomeMethods.setCookieAndSession(admin.getUsername(), password, mobile, response, request);
+                SomeMethods.setCookieAndSession(admin.getId(),admin.getUsername(), password, mobile, response, request);
                 //添加管理员登录的日志
                 String content = "管理员登录";
                 AdminLog adminlog = new AdminLog(admin.getId(), admin.getUsername(), content, SomeMethods.getCurrentTime(), SomeMethods.getIp4());
@@ -102,7 +102,7 @@ public class BasicController {
                 return mav;
             } else if (teacher != null) {
                 //调用SomeMethods的设置cookie和session的方法
-                SomeMethods.setCookieAndSession(teacher.getName(), password, mobile, response, request);
+                SomeMethods.setCookieAndSession(teacher.getId(),teacher.getName(), password, mobile, response, request);
                 //添加教师登录的日志
                 String content = "教师登录";
                 TeacherLog teacherLog = new TeacherLog(teacher.getId(),teacher.getName(),content,SomeMethods.getCurrentTime(), SomeMethods.getIp4());
@@ -120,7 +120,7 @@ public class BasicController {
                 return mav;
             } else if (student != null) {
                 //调用SomeMethods的设置cookie和session的方法
-                SomeMethods.setCookieAndSession(student.getUsername(), password, mobile, response, request);
+                SomeMethods.setCookieAndSession(student.getId(),student.getUsername(), password, mobile, response, request);
                 mav.setViewName("student/index");
                 return mav;
             }

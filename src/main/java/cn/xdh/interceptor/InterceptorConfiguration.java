@@ -17,14 +17,14 @@ public class InterceptorConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-/*        registry.addInterceptor(someinterceptor).addPathPatterns("/loginout");
+       registry.addInterceptor(someinterceptor).addPathPatterns("/loginout");
         registry.addInterceptor(someinterceptor).addPathPatterns("/admin.**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/admin**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/teacher/**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/student/**");
-        registry.addInterceptor(someinterceptor).addPathPatterns("/teacher/**");*/
+        registry.addInterceptor(someinterceptor).addPathPatterns("/teacher/**");
 
-        registry.addInterceptor(someinterceptor).addPathPatterns("/**").excludePathPatterns("/","/getVerifiCode","/index");
-
+        /*registry.addInterceptor(someinterceptor).addPathPatterns("/**").excludePathPatterns("/","/getVerifiCode","/index");
+*/
     }
 }

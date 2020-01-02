@@ -21,16 +21,19 @@
 <script src="/assets/js/jquery.min.js"></script>
 <script th:src="@{/assets/js/works.js}"></script>
 
-</head>
 <style>
-
+    #box a{
+        text-decoration: none;
+    }
 </style>
+
+</head>
 
 <body data-type="widgets">
 <input id="price" type="hidden" th:value="${price}">
 
 <script src="assets/js/theme.js"></script>
-<div class="am-g tpl-g">
+<div class="am-g tpl-g" id="box">
     <!-- 头部 -->
     <header>
         <!-- logo -->
