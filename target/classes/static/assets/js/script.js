@@ -1,17 +1,6 @@
 var slider;
-var images = [
-"assets/images/ground.png",
-"assets/images/clouds.png",
-"assets/images/ground-bottom.png",
-"assets/images/hole.png",
-"assets/images/mountain.png",
-"assets/images/rocks.png",
-"assets/images/sky-bg.jpg",
-"assets/images/sweat.png",
-"assets/images/texty-sign.png",
-"assets/images/worker.png",
-"assets/images/working-sign.png"
-];
+var url = window.location.href;
+var url_arr = url.split("8888")[0];
 
 var index = 0;
 var transitionSpeed = 500;

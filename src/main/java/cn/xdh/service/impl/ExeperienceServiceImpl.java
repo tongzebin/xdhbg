@@ -23,8 +23,6 @@ public class ExeperienceServiceImpl implements ExeperienceService {
     @Autowired
     ExeperienceDao exeperienceDao;
     @Autowired
-    private TeacherLog teacherLog;
-    @Autowired
     private TeacherDao teacherDao;
 
     @Override

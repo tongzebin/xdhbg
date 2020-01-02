@@ -3,23 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="237bd48b-7369-4caf-b9a7-4a13016f7b9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/interceptor/SomeResourcesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/interceptor/SomeResourcesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/SomeMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/SomeMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/interceptor/SomeResourcesConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/interceptor/SomeResourcesConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/4xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/4xx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/GraduateStudentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/GraduateStudentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/StudentAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/StudentAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/StudentEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/StudentEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/TeacherLogList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/TeacherLogList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/UndergraduateStudentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/UndergraduateStudentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/exeperience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/teacher/works.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/TeacherLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/entity/TeacherLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/DelNoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/DelNoticeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ExeperienceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/ExeperienceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/NoticeContentServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/NoticeContentServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/xdh/web/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/xdh/web/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/addteacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/addteacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updateteacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updateteacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updatexdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updatexdhclass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclassform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/xdhclassform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/entity/TeacherLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/entity/TeacherLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/xdh/web/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/xdh/web/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/updatexdhclass.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/updatexdhclass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +129,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -130,12 +138,15 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.xdh.dao" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\resources\templates\admin" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\resources\static\assets\js" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\dao" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\service\impl" />
       <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\java\cn\xdh\service" />
-      <recent name="C:\Users\raowe\IdeaProjects\xdhbg\src\main\resources\templates\teacher" />
     </key>
   </component>
   <component name="RunManager">
@@ -193,7 +204,7 @@
       <workItem from="1577972617148" duration="229000" />
       <workItem from="1577972863112" duration="1396000" />
       <workItem from="1577974274314" duration="2874000" />
-      <workItem from="1577978435635" duration="5395000" />
+      <workItem from="1577978435635" duration="8370000" />
     </task>
     <task id="LOCAL-00001" summary="最新">
       <created>1577708158616</created>
@@ -223,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577982505581</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="管理员端和教师端整合v3.0">
+      <created>1577983984932</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577983984932</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +270,8 @@
     <MESSAGE value="管理员端整合" />
     <MESSAGE value="管理员端和教师端整合v1.0" />
     <MESSAGE value="管理员端和教师端整合v2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理员端和教师端整合v2.0" />
+    <MESSAGE value="管理员端和教师端整合v3.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="管理员端和教师端整合v3.0" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -284,50 +303,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="105" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577954913723" />
-    <state x="434" y="0" key="CommitChangelistDialog2" timestamp="1577982503976">
+    <state x="434" y="0" key="CommitChangelistDialog2" timestamp="1577983983458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="434" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577982503976" />
-    <state width="1483" height="182" key="GridCell.Tab.0.bottom" timestamp="1577983839034">
+    <state x="434" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577983983458" />
+    <state width="1483" height="182" key="GridCell.Tab.0.bottom" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
-    <state width="1483" height="182" key="GridCell.Tab.0.center" timestamp="1577983839034">
+    <state width="1483" height="182" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.0.center" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
-    <state width="1483" height="182" key="GridCell.Tab.0.left" timestamp="1577983839033">
+    <state width="1483" height="182" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.0.left" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577983839033" />
-    <state width="1483" height="182" key="GridCell.Tab.0.right" timestamp="1577983839034">
+    <state width="1483" height="182" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.0.right" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
-    <state width="1483" height="182" key="GridCell.Tab.1.bottom" timestamp="1577983839034">
+    <state width="1483" height="182" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.1.bottom" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
-    <state width="1483" height="182" key="GridCell.Tab.1.center" timestamp="1577983839034">
+    <state width="1483" height="182" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.1.center" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
-    <state width="1483" height="182" key="GridCell.Tab.1.left" timestamp="1577983839034">
+    <state width="1483" height="182" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.1.left" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
-    <state width="1483" height="182" key="GridCell.Tab.1.right" timestamp="1577983839034">
+    <state width="1483" height="182" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
+    <state width="1483" height="182" key="GridCell.Tab.1.right" timestamp="1577986858495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1483" height="182" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577983839034" />
+    <state width="1483" height="182" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577986858495" />
     <state x="402" y="63" key="MultipleFileMergeDialog" timestamp="1577976125445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="402" y="63" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1577976125445" />
-    <state x="451" y="143" key="Vcs.Push.Dialog.v2" timestamp="1577982507773">
+    <state x="451" y="143" key="Vcs.Push.Dialog.v2" timestamp="1577983987945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="451" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577982507773" />
+    <state x="451" y="143" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577983987945" />
     <state x="451" y="181" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1577160283655" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1577949549770">
       <screen x="0" y="0" width="1536" height="824" />

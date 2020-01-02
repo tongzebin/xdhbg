@@ -66,6 +66,41 @@ public class AdminController {
         return mav;
     }
 
+    //查询日志列表带分页
+    @GetMapping(value = "/admin.teacherlog")
+    public ModelAndView getTeacherlog(
+            HttpServletRequest request,
+            @RequestParam(name="page",required=false,defaultValue="1")int page,
+            @RequestParam(name="size",required=false,defaultValue="10")int size,
+            @RequestParam(name="type",required=false,defaultValue="all")String type) {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("admin/teacherlog");
+        String lookname = request.getParameter("lookname");
+        Page<TeacherLog> teacherlogs = null;
+        //判断查找的方式，然后通过sql获取所有管理员日志
+        if (type.equals("likename")){
+            //根据名字模糊查找所有日志
+            teacherlogs = adminservice.selectAllTeacherLogByName(lookname,page - 1, size);
+        }else if (type.equals("likeip")){
+            //根据ip模糊查找日志
+            teacherlogs = adminservice.selectAllTeacherLogByIp(lookname,page - 1, size);
+        }else if (type.equals("likeall")) {
+            //根据所有字段模糊查询日志
+            teacherlogs = adminservice.selectAllTeacherLogByAll(lookname,page - 1,size);
+        }else {
+            //查找所有的管理员日志
+            teacherlogs = adminservice.selectAllTeacherLog(page - 1, size);
+        }
+        mav.getModel().put("lookname", lookname);
+        mav.getModel().put("current", teacherlogs.getNumber()+1);
+        mav.getModel().put("total", teacherlogs.getTotalPages());
+        mav.getModel().put("type", type);
+        mav.addObject("adminLog",teacherlogs.getContent());
+        return mav;
+    }
+
+
+
     //页面内点击首页
     @GetMapping(value = "/admin.index")
     public ModelAndView loginGet() {

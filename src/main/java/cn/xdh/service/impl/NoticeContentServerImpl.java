@@ -26,8 +26,6 @@ public class NoticeContentServerImpl implements NoticeContentService {
     @Autowired
     private NoticeContentDao noticeContentDao;
     @Autowired
-    private TeacherLog teacherLog;
-    @Autowired
     private TeacherDao teacherDao;
     @Override
     public Integer addNoticeContent(String content, Long time, HttpServletRequest request) {

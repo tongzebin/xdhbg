@@ -2,18 +2,32 @@ package cn.xdh.entity;
 
 import org.springframework.stereotype.Component;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 @Component
+@Entity
+@Table(name="xdh_teacher_log")
 public class TeacherLog {
+    @Id
+    @Column(name="id")
     private int id;
 
+    @Column(name="teacher_id")
     private int teacher_id;
 
+    @Column(name="teacher_name")
     private String teacher_name;
 
+    @Column(name="action")
     private String action;
 
+    @Column(name="add_time")
     private long add_time;
 
+    @Column(name="add_ip")
     private String add_ip;
 
     public TeacherLog() {

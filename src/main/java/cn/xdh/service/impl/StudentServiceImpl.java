@@ -24,8 +24,6 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private TeacherDao teacherDao;
     @Autowired
-    TeacherLog teacherLog;
-    @Autowired
     Msg msg;
 
     //根据手机号和密码获取学生

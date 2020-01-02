@@ -28,8 +28,6 @@ public class DelNoticeServiceImpl implements DelNoticeService {
     @Autowired
     private DelNoticeDao delNoticeDao;
     @Autowired
-    private TeacherLog teacherLog;
-    @Autowired
     private TeacherDao teacherDao;
     @Override
     public Integer delNoticeService(Integer id, HttpServletRequest request) {
