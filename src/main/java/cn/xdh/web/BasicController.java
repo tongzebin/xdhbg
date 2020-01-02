@@ -1,9 +1,8 @@
 package cn.xdh.web;
 
-import cn.xdh.entity.TeacherLog;
-import cn.xdh.service.TeacherService;
-import cn.xdh.util.CookieTestUtil;
-import cn.xdh.util.SomeMethods;
+import cn.xdh.entity.NoticeData;
+import cn.xdh.service.impl.*;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +15,22 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @Controller
 public class BasicController {
     @Autowired
     TeacherService teacherService;
     @Autowired
     TeacherLog teacherLog;
+    @Autowired
+    private StudentServiceImpl studentservice;
+    @Autowired
+    private StudentNumberServiceImpl studentNumberServiceImpl;
+    @Autowired
+    private NoticeDataServiceImpl noticeDataServiceImpl;
+    @Autowired
+    private NoticeContentServerImpl noticeContentServerImpl;
+    @Autowired
+    private DelNoticeServiceImpl delNoticeServiceImpl;
 
     @GetMapping(value = "")
     @ResponseBody
@@ -58,6 +66,56 @@ public class BasicController {
         mav.setViewName("teacher/index");
         return mav;
     }
+    //    初始化
+    @GetMapping(value = "aNoticeManage")
+    public List<NoticeData> aNoticeManage() {
+        List<NoticeData> nd = noticeDataServiceImpl.selectNoticeData();
+//        ModelAndView mav = new ModelAndView();
+//        mav.addObject("noticeData", noticeDataServiceImpl.selectNoticeData());
+//        System.out.println(noticeDataServiceImpl.selectNoticeData());
+//        mav.setViewName("teacher/noticeManage");
+
+        return nd;
+    }
+    @GetMapping(value = "selectNotice/{cont}")
+    public List<NoticeData> selectNotice(@PathVariable String cont) {
+        List<NoticeData> nd = noticeDataServiceImpl.searchNoticeData(cont);
+        return nd;
+    }
+    @GetMapping(value = "noticeManage")
+    public ModelAndView noticeManage() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("teacher/noticeManage");
+        return mav;
+    }
+    //    增加公告
+    @PostMapping(value = "noticeManage")
+    public ModelAndView submitNotice(String noticeContent) {
+        System.out.println(noticeContent);
+        System.out.println(new Date().getTime());
+        noticeContentServerImpl.addNoticeContent(noticeContent,new Date().getTime()/1000);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("teacher/noticeManage");
+        return mav;
+    }
+    //    删除公告
+    @GetMapping(value = "delManage/{id}")
+    public String delManage(@PathVariable Integer id) {
+        System.out.println(id);
+//        ModelAndView mav = new ModelAndView();
+//        mav.setViewName("teacher/noticeManage");
+        delNoticeServiceImpl.delNoticeService(id);
+        if (id != null){
+            return "true";
+        }else
+            return "false";
+//        return mav;
+    }
+//    @RequestMapping(value = "submitNotice")
+//    public String su(String noticeContent) {
+//        System.out.println(noticeContent);
+//        return "teacher/noticeManage";
+//    }
 
     @GetMapping("/exit")
     public String exit(HttpServletResponse response, HttpServletRequest request){

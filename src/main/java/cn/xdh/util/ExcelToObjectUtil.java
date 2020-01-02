@@ -25,7 +25,6 @@ public class ExcelToObjectUtil {
      * @throws IOException 输入/输出(i/o)异常
      */
     public static List<Student> read(MultipartFile excelFile) throws IOException {
-        System.out.println("我是2003");
         InputStream is = excelFile.getInputStream();
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook(is);
         Student student = null;

@@ -53,4 +53,5 @@ public interface StudentDao {
      */
     /*@Select(value = "select * from xdh_student where xdh_student.username = #{username}")*/
     List<Student> selectIdAndNameByName(@Param(value = "username") String username);
+    public Student selectByPhoneAndPassword(@Param("phone")String phone,@Param("password")String password);
 }
