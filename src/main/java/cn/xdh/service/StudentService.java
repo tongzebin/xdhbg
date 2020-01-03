@@ -1,9 +1,6 @@
 package cn.xdh.service;
 
-import cn.xdh.entity.City;
-import cn.xdh.entity.Msg;
-import cn.xdh.entity.Student;
-import cn.xdh.entity.Notice;
+import cn.xdh.entity.*;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -53,6 +50,7 @@ public interface StudentService {
 
     List<Student> selectIdAndNameByName(String username);
 
+    List<XdhClass> selectClassByUndergraduate();
 
     //
     public List<String> selectUsername();

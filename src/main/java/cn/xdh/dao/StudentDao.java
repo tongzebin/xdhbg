@@ -3,6 +3,7 @@ package cn.xdh.dao;
 import cn.xdh.entity.City;
 import cn.xdh.entity.Student;
 import cn.xdh.entity.Notice;
+import cn.xdh.entity.XdhClass;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -101,5 +102,5 @@ public interface StudentDao {
 
     public String getNameByAimAreaid(@Param("aim_area_id") int aim_area_id);
 
-
+    List<XdhClass> selectClassByUndergraduate();
 }

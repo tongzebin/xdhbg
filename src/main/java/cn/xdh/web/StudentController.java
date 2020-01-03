@@ -1,9 +1,7 @@
 package cn.xdh.web;
 
-import cn.xdh.entity.City;
-import cn.xdh.entity.Msg;
-import cn.xdh.entity.Notice;
-import cn.xdh.entity.Student;
+import cn.xdh.entity.*;
+import cn.xdh.service.ClassService;
 import cn.xdh.service.StudentService;
 import cn.xdh.service.impl.StudentServiceImpl;
 import cn.xdh.util.PageUtil;
@@ -26,11 +24,11 @@ public class StudentController {
     @Autowired
     private StudentServiceImpl studentservice;
     @Autowired
-    private StudentServiceImpl studentService;
+    private ClassService classService;
 
     @GetMapping("/student/Undergraduate/{page}")
     public String UndergraduateStudentList(Model model,@PathVariable int page) {
-        List<Map<String, Object>> undergraduateStudentTotal = studentService.getStudentByUndergraduate();
+        List<Map<String, Object>> undergraduateStudentTotal = studentservice.getStudentByUndergraduate();
         //System.out.println(undergraduateStudentTotal);
         //数据量
         int total = undergraduateStudentTotal.size();
@@ -61,7 +59,7 @@ public class StudentController {
 
     @GetMapping("/student/Graduate/{page}")
     public String GraduateStudentList(Model model,@PathVariable int page) {
-        List<Map<String, Object>> graduateStudentTotal = studentService.getStudentByGraduate();
+        List<Map<String, Object>> graduateStudentTotal = studentservice.getStudentByGraduate();
         //数据量
         int total = graduateStudentTotal.size();
         //防止数据库中没有值
@@ -90,7 +88,9 @@ public class StudentController {
 
     //跳转到添加学生页面
     @GetMapping("/student/add/view")
-    public String addStudentView() {
+    public String addStudentView(Model model) {
+        List<XdhClass> classList = studentservice.selectClassByUndergraduate();
+        model.addAttribute("classList",classList);
         return "teacher/StudentAdd";
     }
 
@@ -99,7 +99,7 @@ public class StudentController {
     @PostMapping("/student/add")
     @ResponseBody
     public Msg addStudent(Student student, HttpServletRequest request) {
-        int a = studentService.addStudentService(student, request);
+        int a = studentservice.addStudentService(student, request);
         Msg msg = new Msg();
         if (a == 1) {
             //1是添加失败,手机号不正确
@@ -118,7 +118,7 @@ public class StudentController {
     //毕业学员的模糊查询/student/like/0/1/
     @GetMapping("/student/like/{is_graduate}/{page}/{username}")
     public String undergraduateStudentList(Model model, @PathVariable String username, @PathVariable int is_graduate,@PathVariable int page) {
-        List<Map<String,Object>> StudentTotalByLikeName = studentService.getStudentLikeUsername(is_graduate,username);
+        List<Map<String,Object>> StudentTotalByLikeName = studentservice.getStudentLikeUsername(is_graduate,username);
         //数据量
         int total = StudentTotalByLikeName.size();
         //防止数据库中没有值
@@ -154,8 +154,15 @@ public class StudentController {
     //跳转到修改学生信息页面
     @GetMapping("/student/edit/view/{id}")
     public String editStudentView(@PathVariable int id, Model model) {
-        Student student = studentService.getStudentById(id);
-        List<City> cityList = studentService.getProvince();
+        List<XdhClass> xdhClass = classService.selectByXdhClass();
+
+        Student student = studentservice.getStudentById(id);
+
+        List<City> cityList = studentservice.getProvince();
+
+        XdhClass xdhClass1 = classService.selectClassById(student.getClass_id());
+        model.addAttribute("xdhClassName",xdhClass1);
+        model.addAttribute("xdhClass",xdhClass);
         model.addAttribute("cityList", cityList);
         model.addAttribute("student", student);
         return "teacher/StudentEdit";
@@ -164,7 +171,7 @@ public class StudentController {
     //接收参数修改学生信息
     @PutMapping("/student/edit/{id}")
     public String editStudent(Student student, HttpServletRequest request) {
-        studentService.updateStudent(student, request);
+        studentservice.updateStudent(student, request);
         return "teacher/UndergraduateStudentList";
     }
 
@@ -172,7 +179,7 @@ public class StudentController {
     @DeleteMapping("/student/delete/{id}")
     @ResponseBody
     public Object deleteStudent(@PathVariable int id, HttpServletRequest request) {
-        studentService.deleteStudent(id, request);
+        studentservice.deleteStudent(id, request);
         return id;
     }
 
@@ -180,7 +187,7 @@ public class StudentController {
     @PostMapping("/student/add/batch/{suffixName}")
     @ResponseBody
     public Msg addAllStudent(@RequestParam("ExcelFile") MultipartFile excelFile,HttpServletRequest request,@PathVariable String suffixName) throws Exception {
-        return studentService.batchAddStudent(request,suffixName,excelFile);
+        return studentservice.batchAddStudent(request,suffixName,excelFile);
     }
 
     @GetMapping("/student.index")

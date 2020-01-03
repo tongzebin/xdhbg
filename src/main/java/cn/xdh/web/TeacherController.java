@@ -17,7 +17,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 import java.util.List;
 
@@ -45,32 +49,58 @@ public class TeacherController {
     private StudentNumberServiceImpl studentNumberServiceImpl;
 
     @GetMapping(value = "/teacher/Log/{page}")
-    public String getTeacherLog(Model model, @PathVariable int page) {
-        //查找所有的教师日志
-        List<TeacherLog> teacherLogList = teacherService.selectTeacherLog();
-        //数据量
-        int total = teacherLogList.size();
-        //防止数据库中没有值
-        if (total==0){
-            TeacherLog teacherLog = new TeacherLog();
-            teacherLog.setTeacher_name("暂无日志");
-            teacherLog.setAdd_time(0);
-            teacherLogList.add(teacherLog);
-            total = teacherLogList.size();
-        }
-        //总页数
-        int totalPage = PageUtil.getTotalPage(total,PageUtil.count);
-        //校对页数正确与否
-        page=PageUtil.numberOfPage(page,totalPage);
-        //页数集合
-        List<Integer> totalPageList = PageUtil.pageUtil(page,totalPage);
-        //分好页的未毕业学生集合
-        List<TeacherLog> teacherLogs = PageUtil.teacherLogList(page,totalPage,total,teacherLogList);
+    public ModelAndView getTeacherLog(Model model, @PathVariable int page, HttpServletRequest request, HttpServletResponse response) {
+        Cookie[] cookies = request.getCookies();
+        //获得日志中需要的数据
+        String teacherId = "id";
+        int teacher_id = 0;
+        if (cookies != null){
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals(teacherId)) {
+                    //将字符串形式的id转换成int类型
+                    teacher_id = Integer.parseInt(cookie.getValue());
+                }
+            }
+            //查找所有的教师日志
+            List<TeacherLog> teacherLogList = teacherService.selectTeacherLog(teacher_id);
+            //数据量
+            int total = teacherLogList.size();
+            //防止数据库中没有值
+            if (total == 0) {
+                TeacherLog teacherLog = new TeacherLog();
+                teacherLog.setTeacher_name("暂无日志");
+                teacherLog.setAdd_time(0);
+                teacherLogList.add(teacherLog);
+                total = teacherLogList.size();
+            }
+            //总页数
+            int totalPage = PageUtil.getTotalPage(total, PageUtil.count);
+            //校对页数正确与否
+            page = PageUtil.numberOfPage(page, totalPage);
+            //页数集合
+            List<Integer> totalPageList = PageUtil.pageUtil(page, totalPage);
+            //分好页的未毕业学生集合
+            List<TeacherLog> teacherLogs = PageUtil.teacherLogList(page, totalPage, total, teacherLogList);
 
-        model.addAttribute("totalPage",totalPage);
-        model.addAttribute("totalPageList",totalPageList);
-        model.addAttribute("teacherLogs",teacherLogs);
-        return "teacher/TeacherLogList";
+            model.addAttribute("totalPage", totalPage);
+            model.addAttribute("totalPageList", totalPageList);
+            model.addAttribute("teacherLogs", teacherLogs);
+            return new ModelAndView("teacher/TeacherLogList");
+        }else {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+
+
     }
 
     //    公告列表初始化

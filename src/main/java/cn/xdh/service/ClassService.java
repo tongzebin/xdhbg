@@ -24,4 +24,6 @@ public interface ClassService {
     Page<TeacherClass> getAllTeacherClassBy(int page, int size, String lookname);
 
     XdhClass selectByClassName(String class_name);
+
+    XdhClass selectClassById(int id);
 }

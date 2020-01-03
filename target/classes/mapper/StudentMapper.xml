@@ -116,6 +116,13 @@
 		WHERE id = #{id}
 	</select>
 
+	<select id="selectClassByUndergraduate" resultType="cn.xdh.entity.XdhClass">
+		SELECT *
+		FROM  xdh_class
+		WHERE is_graduate = 0
+	</select>
+
+
 	<insert id="addStudent" parameterType="cn.xdh.entity.Student">
 		insert into xdh_student
 		(username, password, mobile, join_study_time,is_graduate,stage_id,sex,class_id)

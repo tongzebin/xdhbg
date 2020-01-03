@@ -123,8 +123,8 @@ public class TeacherServiceImpl implements TeacherService {
 
     //查看老师操作日志列表
     @Override
-    public List<TeacherLog> selectTeacherLog() {
-        return teacherdao.selectTeacherLog();
+    public List<TeacherLog> selectTeacherLog(int teacher_id) {
+        return teacherdao.selectTeacherLog(teacher_id);
     }
 
     //增加老师操作日志

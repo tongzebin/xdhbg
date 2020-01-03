@@ -43,6 +43,10 @@ public class AdminController {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("admin/adminlog");
         String lookname = request.getParameter("lookname");
+        if (lookname == null) {
+        }else {
+            lookname = lookname.replaceAll(" ", "");
+        }
         Page<AdminLog> adminloglist = null;
         //判断查找的方式，然后通过sql获取所有管理员日志
         if (type.equals("likename")){
@@ -76,6 +80,10 @@ public class AdminController {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("admin/teacherlog");
         String lookname = request.getParameter("lookname");
+        if (lookname == null) {
+        }else {
+            lookname = lookname.replaceAll(" ", "");
+        }
         Page<TeacherLog> teacherlogs = null;
         //判断查找的方式，然后通过sql获取所有管理员日志
         if (type.equals("likename")){
@@ -130,6 +138,10 @@ public class AdminController {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("admin/teacher");
         String lookname = request.getParameter("lookname");
+        if (lookname == null) {
+        }else {
+            lookname = lookname.replaceAll(" ", "");
+        }
         Page<Teacher> selectByTeacher = null;
         //判断查找的方式，然后通过sql获取所有管理员日志
         if (type.equals("likename")){
@@ -281,7 +293,10 @@ public class AdminController {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("admin/xdhclass");
         String lookname = request.getParameter("lookname");
-        //System.out.println(lookname);
+        if (lookname == null) {
+        }else {
+            lookname = lookname.replaceAll(" ", "");
+        }
         Page<TeacherClass> selectAllXdhClass = null;
         //判断查找的方式，然后通过sql获取所有管理员日志
         if (type.equals("likename")){

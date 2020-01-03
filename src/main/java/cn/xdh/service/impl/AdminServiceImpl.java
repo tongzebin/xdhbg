@@ -172,9 +172,8 @@ public class AdminServiceImpl implements AdminService {
                 //查找条件
                 Predicate p1 = cb.like(root.get("add_ip").as(String.class), "%" + allname + "%");
                 Predicate p2 = cb.like(root.get("teacher_name").as(String.class), "%" + allname + "%");
-                Predicate p3 = cb.like(root.get("teache_id").as(String.class), "%" + allname + "%");
                 Predicate p4 = cb.like(root.get("action").as(String.class), "%" + allname + "%");
-                return cb.or(p1,p2,p3,p4);
+                return cb.or(p1,p2,p4);
             }
         };
         Page<TeacherLog> teacherlogs = teacherlogRepository.findAll(queryCondition,pageable);

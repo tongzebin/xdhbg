@@ -159,10 +159,7 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">修改表单</div>
-                                <div class="widget-function am-fr">
-                                    <a href="javascript:;" class="am-icon-cog"></a>
-                                </div>
+                                <div class="widget-title am-fl" th:if="${student.is_graduate}==0">修改表单:毕业状态提交后不可修改,如果只想更换班级,后三条随意填写即可</div>
                             </div>
                             <div class="widget-body am-fr">
 
@@ -180,6 +177,7 @@
                                         </div>
                                     </div>
 
+
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">电话号码<span class="tpl-form-line-small-title">phone</span></label>
                                         <div class="am-u-sm-9" th:text="${student.mobile}">
@@ -190,11 +188,55 @@
                                         <label class="am-u-sm-3 am-form-label">是否毕业<span class="tpl-form-line-small-title">graduate</span></label>
                                         <div class="am-u-sm-9">
                                             <select id="graduate" name="graduate" data-am-selected style="display: none;">
-                                                  <option value="1" selected >已毕业</option>
-                                                  <option value="0" >未毕业</option>
+                                                  <option value="0" selected >未毕业</option>
+                                                  <option value="1" >已毕业</option>
                                             </select>
                                         </div>
                                     </div>
+
+                                    <div class="am-form-group" th:if="${student.is_graduate}==1">
+                                        <label class="am-u-sm-3 am-form-label">是否毕业<span class="tpl-form-line-small-title">graduate</span></label>
+                                        <div class="am-u-sm-9" th:text="已毕业">
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group" th:if="${student.is_graduate}==0">
+                                        <label class="am-u-sm-3 am-form-label">班级 <span class="tpl-form-line-small-title">class</span></label>
+                                        <div class="am-u-sm-9">
+                                            <select id="classId" name="class_id" data-am-selected style="display: none;">
+                                                <option th:selected="${xdhClass.id}==${student.class_id}" th:each="xdhClass:${xdhClass}" th:value="${xdhClass.id}" th:text="${xdhClass.class_name}" selected>男
+                                                </option>
+                                                <option th:if="${xdhClass.id}!=${student.class_id}" th:each="xdhClass:${xdhClass}" th:value="${xdhClass.id}" th:text="${xdhClass.class_name}">男
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group" th:if="${student.is_graduate}==1">
+                                        <label class="am-u-sm-3 am-form-label">班级<span class="tpl-form-line-small-title">class</span></label>
+                                        <div class="am-u-sm-9" th:text="${xdhClassName.class_name}">
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label class="am-u-sm-3 am-form-label">所在城市<span class="tpl-form-line-small-title">graduate</span></label>
+                                        <div class="am-u-sm-9">
+                                            <select id="province" name="province" data-am-selected style="display: none;">
+                                                <!--                                                循环出省级-->
+                                                <option value="-1">点击选择...</option>
+                                                <option th:value="${cityList.id}" th:each="cityList:${cityList}"
+                                                        th:text="${cityList.name}">省级
+                                                </option>
+                                            </select>
+                                            <select id="city" name="city" data-am-selected style="display: none;">
+                                                <!--循环出市级-->
+                                            </select>
+                                            <select id="area" name="area" data-am-selected style="display: none;">
+                                                <!--循环出县级-->
+                                            </select>
+                                        </div>
+                                    </div>
+
 
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">就业单位 <span class="tpl-form-line-small-title">company</span></label>
@@ -211,22 +253,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">所在城市<span class="tpl-form-line-small-title">graduate</span></label>
-                                        <div class="am-u-sm-9">
-                                            <select id="province" name="province" data-am-selected style="display: none;">
-<!--                                                循环出省级-->
-                                                  <option value="-1" >点击选择...</option>
-                                                  <option th:value="${cityList.id}" th:each="cityList:${cityList}" th:text="${cityList.name}">省级</option>
-                                            </select>
-                                            <select id="city" name="city" data-am-selected style="display: none;">
-                                                <!--循环出市级-->
-                                            </select>
-                                            <select id="area" name="area" data-am-selected style="display: none;">
-                                                <!--循环出县级-->
-                                            </select>
-                                        </div>
-                                    </div>
 
                                     <div class="am-form-group">
                                         <div class="am-u-sm-9 am-u-sm-push-3">

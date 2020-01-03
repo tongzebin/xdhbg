@@ -179,6 +179,19 @@
                                 </div>
 
                                 <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">班级 <span class="tpl-form-line-small-title">class</span></label>
+                                    <div class="am-u-sm-9">
+                                        <select id="classId" name="class_id" data-am-selected style="display: none;">
+                                            <option th:value="-1" th:text="点击选择..." selected></option>
+                                            <option th:each="classList:${classList}" th:value="${classList.id}"
+                                                    th:text="${classList.class_name}">男
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">性别 <span class="tpl-form-line-small-title">sex</span></label>
                                     <div class="am-u-sm-9">
                                         <select id="sex" name="sex" data-am-selected style="display: none;">
@@ -206,13 +219,24 @@
                                         </button>
                                     </div>
                                 </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">批量添加模板 <span class="tpl-form-line-small-title">model</span></label>
+                                    <div class="am-u-sm-9">
+                                        <img src="" th:src="@{/assets/img/model.png}" alt="">
+                                    </div>
+                                    <div class="am-u-sm-9">
+                                        <small>添加前请选择班级</small>
+                                    </div>
+                                </div>
+
                             </form>
 
-<!--                            文件上传-->
+                            <!--                            文件上传-->
 
-        <form method="post" style="display: none" th:attr="url=@{/student/add/batch/}" enctype="multipart/form-data" id="ExcelForm" >
-            <input id="filepath" name="ExcelFile" type="file" size="30" value=""  style="font-size:14px" />
-        </form>
+                            <form method="post" style="display: none" th:attr="url=@{/student/add/batch/}" enctype="multipart/form-data" id="ExcelForm" >
+                                <input id="filepath" name="ExcelFile" type="file" size="30" value=""  style="font-size:14px" />
+                            </form>
                         </div>
                     </div>
                 </div>

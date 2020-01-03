@@ -130,7 +130,7 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title  am-cf">管理员日志列表</div>
+                                <div class="widget-title  am-cf">教师日志列表</div>
                             </div>
                             <div class="widget-body  am-fr">
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
@@ -145,7 +145,7 @@
                                     <div class="am-form-group tpl-table-list-select">
                                         <select data-am-selected="{btnSize: 'sm'}" id="findby">
                                             <option value="option1">模糊查询</option>
-                                            <option value="option2">管理员</option>
+                                            <option value="option2">教师</option>
                                             <option value="option3">IP地址</option>
                                         </select>
                                     </div>
@@ -163,9 +163,9 @@
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
                                         <thead>
                                         <tr>
-                                            <th>管理员ID</th>
+                                            <th>教师ID</th>
                                             <th>操作内容</th>
-                                            <th>管理员名</th>
+                                            <th>教师名</th>
                                             <th>时间</th>
                                             <th>IP地址</th>
                                         </tr>
@@ -216,7 +216,7 @@
                                                 <!-- ... -->
                                                 <li th:if="${(current - (2/2)) >= 3}"><a>...</a></li>
 
-                                                <th:block th:if="${((current - (2/2))>=3) && (current < (total - 3))}"
+                                                <th:block th:if="${((current - (2/2))>=3) && (current <= (total - 3))}"
                                                           th:each="i : ${#numbers.sequence(current - 1,current+2)}">
                                                     <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>
                                                     <li th:if="${current != i}"><a th:href="@{/admin.teacherlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>

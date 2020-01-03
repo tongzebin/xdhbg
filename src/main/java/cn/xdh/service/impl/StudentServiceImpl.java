@@ -112,7 +112,7 @@ public class StudentServiceImpl implements StudentService {
         //阶段stage_id 默认是1,1阶段
         student.setStage_id(1);
         //密码password 默认是 123
-        student.setPassword(SomeMethods.md5("123"));
+        student.setPassword(SomeMethods.md5("123456"));
 
         //获取cookie中的老师信息
         String action = "添加学生"+student.getUsername();
@@ -272,6 +272,10 @@ public class StudentServiceImpl implements StudentService {
         return msg;
     }
 
+    @Override
+    public List<XdhClass> selectClassByUndergraduate() {
+        return studentDao.selectClassByUndergraduate();
+    }
 
 
     @Override

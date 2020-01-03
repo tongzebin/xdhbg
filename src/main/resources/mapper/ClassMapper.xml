@@ -8,5 +8,8 @@
 		select count(*) from xdh_class
 	</select>
 
+	<select id="selectClassById" resultType="cn.xdh.entity.XdhClass">
+		select * from xdh_class where id = #{id}
+	</select>
 
 </mapper>

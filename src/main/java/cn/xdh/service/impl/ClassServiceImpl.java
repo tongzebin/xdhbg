@@ -101,5 +101,9 @@ public class ClassServiceImpl implements ClassService {
         return xdhclass;
     }
 
+    @Override
+    public XdhClass selectClassById(int id) {
+        return classdao.selectClassById(id);
+    }
 
 }

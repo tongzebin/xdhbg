@@ -34,7 +34,7 @@ public interface TeacherDao {
     void addTeacherLog(TeacherLog teacherLog);
 
     //查看教师操作日志列表
-    List<TeacherLog> selectTeacherLog();
+    List<TeacherLog> selectTeacherLog(int teacher_id);
 
 
 }
