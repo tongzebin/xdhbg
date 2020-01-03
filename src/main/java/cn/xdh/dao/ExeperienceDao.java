@@ -12,11 +12,11 @@ import java.util.List;
  */
 @Repository
 public interface ExeperienceDao {
-
+    //查询所有数据
     List<Exeperience> selectAll();
-
+    //根据学生id查找
     List<Exeperience> selectByStudent_id(int id);
-
+    //根据id删除
     Integer deleteById(int id);
 
     // 查所有心得

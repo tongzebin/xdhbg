@@ -273,6 +273,9 @@
     <script src="assets/js/dataTables.responsive.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" th:inline="javascript">
+        String.prototype.trim = function () {
+            return this.replace(/(^\s*)|(\s*$)/g, "");
+        }
         var data1 = [[${noticeData}]];
         console.log(data1)
         // data1 = eval(data1);
@@ -405,7 +408,7 @@
                         // 增加
                         submitNotice: function () {
                             var time = Date.parse(new Date());
-                            var newNotice = $("#cont").val();
+                            var newNotice = $("#cont").val().trim();
                             $.ajax({
                                 url:"/noticeManage",
                                 type:"post",
@@ -449,7 +452,8 @@
                            }
                         },
                         selectNotice: function () {
-                            var contN = $(".am-form-field").val();
+                            var contN = $(".am-form-field").val().trim();
+                            $(".am-form-field").val(contN);
                             var vm = this.noticeShow;
                             var that =this;
                             //如果为空则显示全部

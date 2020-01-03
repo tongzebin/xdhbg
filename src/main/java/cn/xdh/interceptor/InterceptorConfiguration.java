@@ -20,8 +20,17 @@ public class InterceptorConfiguration implements WebMvcConfigurer {
         registry.addInterceptor(someinterceptor).addPathPatterns("/loginout");
         registry.addInterceptor(someinterceptor).addPathPatterns("/admin.**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/admin**");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/teacher.**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/teacher/**");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/student.**");
         registry.addInterceptor(someinterceptor).addPathPatterns("/student/**");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**city**/");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**province**/");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**exeperience**/");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**list**/");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**dit**/");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**anage**/");
+        registry.addInterceptor(someinterceptor).addPathPatterns("/**orks**/");
 
         /*registry.addInterceptor(someinterceptor).addPathPatterns("/**").excludePathPatterns("/","/getVerifiCode","/index");
 */

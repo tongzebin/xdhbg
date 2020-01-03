@@ -28,11 +28,19 @@ public class WorksServiceImpl implements WorksService {
     private TeacherDao teacherDao;
 
     @Override
+    //根据学生id查询作品
     public List<Works> selectById(int id) {
         return worksDao.selectById(id);
     }
 
     @Override
+    //根据作品名查找
+    public List<Works> selectByWorkName(String name) {
+        return worksDao.selectByWorkName(name);
+    }
+
+    @Override
+    //查找所有作品
     public List<Works> selectAll() {
         return worksDao.selectAll();
     }

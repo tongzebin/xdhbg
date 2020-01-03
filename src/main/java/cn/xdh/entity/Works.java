@@ -3,7 +3,7 @@ package cn.xdh.entity;
 
 
 import java.io.Serializable;
-import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author TZB
@@ -18,25 +18,8 @@ public class Works implements Serializable {
 
     public Works() {
     }
-    public Works(int id, int student_id, String name, String url, int add_time) {
-        this.id = id;
-        this.student_id = student_id;
-        this.name = name;
-        this.url = url;
-        this.add_time = add_time;
-    }
-    public Works(int id, int student_id, String name, String url, int add_time, String time) {
-        this.id = id;
-        this.student_id = student_id;
-        this.name = name;
-        this.url = url;
-        this.add_time = add_time;
-    }
 
-    public Date getDateTime(){
-        Long l = (long)getAdd_time()*1000;
-        return new Date(l);
-    }
+
 
     public int getId() {
         return id;
@@ -78,7 +61,37 @@ public class Works implements Serializable {
         this.add_time = add_time;
     }
 
+    public Works(int id, int student_id, String name, String url, int add_time) {
+        this.id = id;
+        this.student_id = student_id;
+        this.name = name;
+        this.url = url;
+        this.add_time = add_time;
+    }
+    public Works(int id, int student_id, String name, String url, int add_time, String time) {
+        this.id = id;
+        this.student_id = student_id;
+        this.name = name;
+        this.url = url;
+        this.add_time = add_time;
+    }
 
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {return true;}
+        if (!(o instanceof Works)) {return false;}
+        Works works = (Works) o;
+        return getId() == works.getId() &&
+                getStudent_id() == works.getStudent_id() &&
+                getAdd_time() == works.getAdd_time() &&
+                getName().equals(works.getName()) &&
+                getUrl().equals(works.getUrl());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getStudent_id(), getName(), getUrl(), getAdd_time());
+    }
 }

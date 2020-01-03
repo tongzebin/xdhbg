@@ -21,10 +21,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
+import java.util.*;
 
 /**
  * @author TZB
@@ -58,10 +55,13 @@ public class WorkController {
         //获取总页数
         int page = worksList.size()/pageSize;
         int generalPage = worksList.size()%pageSize==0&&page>0?page:page+1;
+        //设置当前页
         GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
+        //总页数
         model.addAttribute("generalPage",generalPage);
-
+        //学生姓名
         model.addAttribute("names",studentServiceimpl.selectAllNameAndId());
+        //作品列表
         model.addAttribute("works", MyPaging.paging(worksList,pageNum,pageSize));
         //判断当前页是否有值
         model.addAttribute("price",1);
@@ -88,8 +88,8 @@ public class WorkController {
         List<Student> studentList = studentServiceimpl.selectIdAndNameByName(username);
         //如果根据条件没有查找到信息返回所有作品,并进行提示
         if(studentList.isEmpty()){
-            model.addAttribute("pd","不存在该学生");
-            worksAll(model,1);
+
+            model.addAttribute("pd",1);
             return "teacher/works";
         }
         List<Works> worksList=new ArrayList<Works>();
@@ -97,12 +97,29 @@ public class WorkController {
             //根据list集合中装的id拿取数据
             worksList.addAll(worksServiceimpl.selectById(student.getId()));
         }
-        model.addAttribute("works",MyPaging.paging(worksList,pageNum,pageSize));
-        model.addAttribute("names",studentList);
+        //根据作品名查询
+        List<Works> worknameList= worksServiceimpl.selectByWorkName(username);
+        worksList.addAll(worknameList);
+
+        //去除重复值(需要重写equals)
+        List<Works> newworksList=new ArrayList<Works>();
+        Set set = new HashSet();
+        for (Works cd : worksList) {
+            if(set.add(cd)){
+                newworksList.add(cd);
+            }
+        }
+
+        //作品列表
+        model.addAttribute("works",MyPaging.paging(newworksList,pageNum,pageSize));
+        //学生姓名
+        model.addAttribute("names",studentServiceimpl.selectAllNameAndId());
         //获取总页数
         int page = worksList.size()/pageSize;
         int generalPage = worksList.size()%pageSize==0&&page>0?page:page+1;
+        //添加总页数
         model.addAttribute("generalPage",generalPage);
+        //在model中添加当前页
         GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
 
         //判断当前页是否有数据
@@ -115,6 +132,7 @@ public class WorkController {
         return "teacher/works";
     }
 
+
     /**
      * 根据作品表id进行删除
      * @param id        作品删除
@@ -123,6 +141,7 @@ public class WorkController {
     @DeleteMapping("/teacher/work/{id}")
     @ResponseBody
     public void deleteWork(@PathVariable("id")int id,HttpServletRequest request){
+        System.out.println(id);
         worksServiceimpl.deleteById(id,request);
     }
 
@@ -133,7 +152,9 @@ public class WorkController {
 
     @GetMapping("/teacher/workpage")
     public String pagingRequest(Model model, Page page)  {
+        //判断该请求是否存在username参数
         if(page.getUsername().isEmpty()){
+            //调用不带username参数的方法
             worksAll(model,page.getPageNum());
         }else {
             workByName(page.getUsername(),model,page.getPageNum());
@@ -150,11 +171,14 @@ public class WorkController {
     @DeleteMapping("/teacher/worksmulti/{id}")
     @ResponseBody
     public void checkoutDel(@PathVariable("id") String id ,HttpServletRequest request){
+        //拆分字符串
         String[] strs=id.split(",");
         for (String s : strs){
             deleteWork(Integer.parseInt(s),request);
         }
     }
+
+
 
 
     @GetMapping(value = "/worklist/{page}")
@@ -384,8 +408,7 @@ public class WorkController {
             //获取当前学生的作品信息
             List<Works> worksList = worksServiceimpl.selectWorks(id);
             //获取当前学生的id
-            int student_id = worksList.get(0).getStudent_id();
-            model.addAttribute("insertWork", student_id);
+            model.addAttribute("insertWork", id);
             return new ModelAndView("student/insertWorks");
         }else {
             response.setContentType("text/html; charset=utf-8");

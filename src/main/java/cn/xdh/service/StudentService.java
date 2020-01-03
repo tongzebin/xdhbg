@@ -44,7 +44,7 @@ public interface StudentService {
 
     List<City> getAreaByUpId(int upId);
 
-    void updateStudent(Student student,HttpServletRequest request);
+    void updateStudent(Student student, HttpServletRequest request);
 
     Msg batchAddStudent(HttpServletRequest request, String suffixName, MultipartFile excelFile);
 

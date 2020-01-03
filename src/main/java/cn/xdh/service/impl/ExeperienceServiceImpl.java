@@ -27,15 +27,17 @@ public class ExeperienceServiceImpl implements ExeperienceService {
     private TeacherDao teacherDao;
 
     @Override
+    //查询所有
     public List<Exeperience> selectAll() {
         return exeperienceDao.selectAll();
     }
 
+    //根据学生id查询
     @Override
     public List<Exeperience> selectByStudent_id(int id) {
         return exeperienceDao.selectByStudent_id(id);
     }
-
+    //根据id删除
     @Override
     public Integer deleteById(int id, HttpServletRequest request) {
         //获取cookie中的老师信息

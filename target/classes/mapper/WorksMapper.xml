@@ -14,6 +14,11 @@
     <select id="deleteById" resultType="cn.xdh.entity.Works">
         delete from xdh_works where id = #{id}
     </select>
+    <select id="selectByWorkName" resultType="cn.xdh.entity.Works">
+        select * from xdh_works where xdh_works.name like CONCAT('%',#{name},'%')
+    </select>
+
+
 
 
     <select id="selectWorks" resultType="cn.xdh.entity.Works" parameterType="int">

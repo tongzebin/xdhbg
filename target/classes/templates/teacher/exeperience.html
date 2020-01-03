@@ -21,19 +21,15 @@
 <script src="/assets/js/jquery.min.js"></script>
 <script th:src="@{/assets/js/works.js}"></script>
 
+</head>
 <style>
-    #box a{
-        text-decoration: none;
-    }
+
 </style>
 
-</head>
-
 <body data-type="widgets">
-<input id="price" type="hidden" th:value="${price}">
-
+<input id="price" type="hidden" th:value="${price}"l>
 <script src="assets/js/theme.js"></script>
-<div class="am-g tpl-g" id="box">
+<div class="am-g tpl-g">
     <!-- 头部 -->
     <header>
         <!-- logo -->
@@ -55,7 +51,7 @@
                     <li class="am-text-sm tpl-header-navbar-welcome">
                         <a href="#">欢迎你 &nbsp;
                             <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
-                            </span>
+                                </span>
                         </a>
                     </li>
                     <!-- 退出 -->
@@ -88,11 +84,11 @@
         <!-- 用户信息 -->
         <div class="tpl-sidebar-user-panel">
             <div class="tpl-user-panel-slide-toggleable">
-                <span class="user-panel-logged-in-text">
-                    <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-                    <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
+                    <span class="user-panel-logged-in-text">
+                        <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
+                        <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
+                        </span>
                     </span>
-                </span>
             </div>
         </div>
 
@@ -201,7 +197,7 @@
                                 <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
                                     <form method="get" action="/teacher/exeperience" id="form">
                                         <input type="hidden" name="pageNum" value="1">
-                                        <input type="text" name="username" class="am-form-field" id="searchInput" th:value="${backfill}">
+                                        <input type="text" name="username" placeholder="根据学生姓名进行查询" class="am-form-field" id="searchInput" th:value="${backfill}">
                                     </form>
                                     <span class="am-input-group-btn">
                                             <button style="height:38px;" class=" tpl-table-list-field am-btn-success am-btn-default am-btn am-icon-search" onclick="javascript:return inputTest()" ></button>
@@ -224,10 +220,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <tr th:if="${pd}==1">
+                                        <td align="center" colspan="6"><h1>查无此人</h1></td>
+                                    </tr>
                                     <tr th:if="${exeperiences.isEmpty()}">
                                         <td align="center" colspan="5"><h1>暂无数据</h1></td>
                                     </tr>
-                                    <tr th:if="${exeperiences}" th:each="exeper : ${exeperiences}">
+                                    <tr th:if="${exeperiences} and ${pd}!=1" th:each="exeper : ${exeperiences}">
                                         <td style="text-align:left; padding-left:20px;">
                                             <input type="checkbox" class="check" name="id[]" value="" id="id[]" th:value="${exeper.id}"/>
                                         </td>
@@ -362,7 +361,6 @@
                             }
                         })
                     }
-                    alert("删除了"+id.length)
                 } else {
                     alert("请选择您要删除的内容!");
                     return false;

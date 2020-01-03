@@ -118,7 +118,7 @@
                 </a>
             </li>
             <li class="sidebar-nav-link">
-                <a href="#" th:href="@{/list/1}">
+                <a href="#" th:href="@{/list}">
                     <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 学生信息
                 </a>
             </li>
@@ -190,7 +190,7 @@
                                         <td th:text="${work.getName().trim()}"></td>
                                         <td th:text="${work.getUrl().trim()}"></td>
                                         <!-- #dates.format(Date dates, String str) 时间戳转换成日期格式 -->
-                                        <td th:utext="${#dates.format(work.getDateTime(),'yyyy-MM-dd')}"></td>
+                                        <td th:utext="${#dates.format(work.getAdd_time()*1000,'yyyy-MM-dd')}"></td>
                                         <td>
                                             <div class="tpl-table-black-operation">
                                                 <a th:href="@{'/toUpdateWorks/'+${work.getId()}}">

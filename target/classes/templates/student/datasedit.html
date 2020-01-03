@@ -96,7 +96,7 @@
                 </li>
 
                 <li class="sidebar-nav-link">
-                    <a th:href="@{/list/1}" class="active">
+                    <a th:href="@{/list}" class="active">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 学生信息
                     </a>
                 </li>
@@ -123,14 +123,14 @@
                                 <div class="widget-title am-fl"><h2><span class="am-icon-clipboard page-header-heading-icon"></span> 学生信息 <small>修改</small></h2></div>
                             </div>
                             <div class="widget-body am-fr">
-                                <form id="editform" class="am-form tpl-form-border-form tpl-form-border-br" th:attr="editUrl=@{'/list/'+${edit['id']}}"  method="post" th:each="edit:${edits}">
+                                <form id="editform" class="am-form tpl-form-border-form tpl-form-border-br" th:action="@{'/updatestudent/'+${edits['id']}}" method="post">
 <!--                                    <input type="hidden" name="_method" value="put"/>-->
 <!--                                    <input type="hidden" name="id" th:value="${edit['id']}">-->
                                     <!--             用户名          -->
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label" >用户名 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['username']}">显示数据库username</span>
+                                            <span th:text="${edits['username']}">显示数据库username</span>
                                             <small>&nbsp;</small>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label" >登录手机号 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['mobile']}">显示数据库mobile</span>
+                                            <span th:text="${edits['mobile']}">显示数据库mobile</span>
                                             <small>&nbsp;</small>
                                         </div>
                                     </div>
@@ -146,7 +146,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label" >密码 : </label>
                                         <div class="am-u-sm-9">
-                                            <input type="password" class="tpl-form-input" id="password" th:value="${edit['password']}">
+                                            <input type="password" class="tpl-form-input" name="password" id="password" th:value="${edits['password']}">
                                             <small> &nbsp;</small>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">生日 : </label>
                                         <div class="am-u-sm-9">
-                                            <input id="birthday" type="text" class="am-form-field tpl-form-no-bg" th:value="${#dates.format(edit['birthday']*1000,'yyyy-MM-dd ')}" placeholder="生日  (可更改)" data-am-datepicker="" >
+                                            <input id="birthday" name="birth" type="text" class="am-form-field tpl-form-no-bg" th:value="${#dates.format(edits['birthday']*1000,'yyyy-MM-dd ')}" placeholder="生日  (可更改)" data-am-datepicker="" >
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -163,7 +163,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label">入学日期 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${#dates.format(edit['join_study_time'],'yyyy-MM-dd  HH:mm:ss')}">显示数据库日期</span>
+                                            <span th:text="${#dates.format(edits['join_study_time']*1000,'yyyy-MM-dd  HH:mm:ss')}">显示数据库日期</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -172,7 +172,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">毕业日期 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${#dates.format(edit['graduate_time'],'yyyy-MM-dd  HH:mm:ss')}">显示数据库日期</span>
+                                            <span th:text="${#dates.format(edits['graduate_time']*1000,'yyyy-MM-dd  HH:mm:ss')}">显示数据库日期</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -181,7 +181,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label" >毕业院校 : </label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" class="tpl-form-input" id="graduate_school" th:value="${edit['graduate_school']}" placeholder="请输入毕业院校  (可更改)">
+                                            <input type="text" name="graduate_school" class="tpl-form-input" id="graduate_school" th:value="${edits['graduate_school']}" placeholder="请输入毕业院校  (可更改)">
                                             <small> &nbsp;</small>
                                         </div>
                                     </div>
@@ -191,21 +191,21 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">所在城市 : </label>
                                         <div class="am-u-sm-9">
-                                            <select id="province" name="province" data-am-selected style="display: none;">
+                                            <select id="province" name="province_id" data-am-selected style="display: none;">
                                                 <!--循环出省级-->
                                                 <option value="-1" >点击选择...</option>
                                                 <option th:value="${province['id']}" th:each="province:${provinceList}" th:text="${province['name']}">省级</option>
                                             </select>
-                                            <select id="city" name="city" data-am-selected style="display: none;">
+                                            <select id="city" name="city_id" data-am-selected style="display: none;">
                                                 <!--循环出市级-->
                                             </select>
-                                            <select id="area" name="area" data-am-selected style="display: none;">
+                                            <select id="area" name="area_id" data-am-selected style="display: none;">
                                                 <!--循环出县级-->
                                             </select>
                                             <br>
                                             <!--   详细地址  -->
                                             <small> &nbsp;</small>
-                                            <input type="text" placeholder="地址详情" th:value="${edit['address']}">
+                                            <input type="text" placeholder="地址详情" th:value="${edits['address']}">
 
                                         </div>
                                         <small> &nbsp;</small>
@@ -216,7 +216,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label">语种班级 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['class_name']}">显示数据库班级</span>
+                                            <span th:text="${edits['class_name']}">显示数据库班级</span>
                                             </select>
                                         </div>
                                         <small> &nbsp;</small>
@@ -227,7 +227,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label">学习进度 : </label>
                                         <div class="am-u-sm-9">
-                                            <select id="stage_id" data-am-selected="{searchBox: 1}" style="display: none;">
+                                            <select id="stage_id" name="stage_id" data-am-selected="{searchBox: 1}" style="display: none;">
                                                 <option th:value="1">一阶段</option>
                                                 <option th:value="2">二阶段</option>
                                                 <option th:value="3">三阶段</option>
@@ -242,7 +242,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label">是否毕业 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['graduate_time']} !=null ?'已毕业':'未毕业'">显示数据库is_graduate</span>
+                                            <span th:text="${edits['graduate_time']} !=null ?'已毕业':'未毕业'">显示数据库is_graduate</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -252,13 +252,13 @@
 
                                         <label class="am-u-sm-3 am-form-label">工作城市 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['aimProvince']}">显示数据库aim_city.....</span>
-                                            <span th:text="${edit['aimCity']}"></span>
-                                            <span th:text="${edit['aimArea']}"></span>
+                                            <span th:text="${edits['aimProvince']}">显示数据库aim_city.....</span>
+                                            <span th:text="${edits['aimCity']}"></span>
+                                            <span th:text="${edits['aimArea']}"></span>
                                             <br>
                                             <!--   详细地址  -->
                                             <small> &nbsp;</small>
-                                            <span th:text="${edit['aim_address']}">显示数据库aim_address</span>
+                                            <span th:text="${edits['aim_address']}">显示数据库aim_address</span>
 
                                         </div>
                                         <small> &nbsp;</small>
@@ -269,7 +269,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">工作单位 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['company']}">显示数据库company</span>
+                                            <span th:text="${edits['company']}">显示数据库company</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -279,14 +279,14 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">薪资 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${edit['salary']}">显示数据可salary</span>
+                                            <span th:text="${edits['salary']}">显示数据可salary</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
 
                                     <div class="am-form-group">
                                         <div class="am-u-sm-9 am-u-sm-push-3">
-                                            <button type="button" id="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success" >提交</button>
+                                            <button id="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success" >提交</button>
                                         </div>
                                     </div>
                                 </form>
@@ -349,7 +349,7 @@
     </script>
     <script>
 
-        $("#submit").click(function () {
+/*        $("#submit").click(function () {
             var id = $("#id").val();
             var password = $("#password").val();
             var birthday = $("#birthday").val();
@@ -361,22 +361,27 @@
 
             $.ajax({
                 url:$("#editform").attr("editUrl"),
-                type:"put",
+                type:"POST",
                 data:{
-                    id:id,
-                    password:password,
-                    birth:birthday,
-                    stage_id:stage_id,
-                    graduate_school:graduate_school,
-                    province_id:province_id,
-                    city_id:city_id,
-                    area_id:area_id
+                    "id":id,
+                    "password":password,
+                    "birth":birthday,
+                    "stage_id":stage_id,
+                    "graduate_school":graduate_school,
+                    "province_id":province_id,
+                    "city_id":city_id,
+                    "area_id":area_id
+                },
+                success : function(result){
+                    alert("提交数据成功");
+                },
+                error : function(e){
+                    alert("提交数据失败");
                 }
             });
-            // alert("传递参数ajax");
-            window.location.href=$("#editform").attr("editUrl")
 
-        })
+
+        })*/
     </script>
 
 </body>

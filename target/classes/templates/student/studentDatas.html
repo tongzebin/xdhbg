@@ -98,7 +98,7 @@
                 </li>
 
                 <li class="sidebar-nav-link">
-                    <a th:href="@{/list/1}" class="active">
+                    <a th:href="@{/list}" class="active">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 学生信息
                     </a>
                 </li>
@@ -148,7 +148,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label">生日 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${#dates.format(dat['birthday'],'yyyy-MM-dd')}"></span>
+                                            <span th:text="${#dates.format(dat['birthday']*1000,'yyyy-MM-dd')}"></span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -157,7 +157,7 @@
                                     <div class="am-form-group">
                                         <label  class="am-u-sm-3 am-form-label">入学日期 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${#dates.format(dat['join_study_time'],'yyyy-MM-dd')}"></span>
+                                            <span th:text="${#dates.format(dat['join_study_time']*1000,'yyyy-MM-dd')}"></span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>
@@ -166,7 +166,7 @@
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label">毕业日期 : </label>
                                         <div class="am-u-sm-9">
-                                            <span th:text="${#dates.format(dat['graduate_time'],'yyyy-MM-dd')}">显示数据库日期</span>
+                                            <span th:text="${#dates.format(dat['graduate_time']*1000,'yyyy-MM-dd')}">显示数据库日期</span>
                                         </div>
                                         <small> &nbsp;</small>
                                     </div>

@@ -117,6 +117,7 @@ public class BasicController {
                 SomeMethods.setCookieAndSession(student.getId(),student.getUsername(), password, mobile, response, request);
                 List<Notice> notices = studentservice.getNotices();
                 mav.addObject("msgs",notices);
+                mav.getModel().put("username", student.getUsername());
                 mav.setViewName("student/index");
                 return mav;
             }

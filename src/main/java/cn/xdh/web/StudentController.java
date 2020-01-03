@@ -1,5 +1,6 @@
 package cn.xdh.web;
 
+import cn.xdh.SomeMethods;
 import cn.xdh.entity.*;
 import cn.xdh.service.ClassService;
 import cn.xdh.service.StudentService;
@@ -12,7 +13,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -201,39 +206,61 @@ public class StudentController {
 
     /**
      * 学生信息页面根据id显示信息
-     * @param id
      * @return
      */
-    @GetMapping(value = "/list/{id}")
-    public ModelAndView getUsefulData(@PathVariable("id") int id){
-        List<Map<String, Object>> usefulDataList = studentservice.getUsefulData(id);
-        //System.out.println(usefulDataList);
-        ModelAndView mav = new ModelAndView();
-        //所在城市省市县
-        int province_id=(Integer)usefulDataList.get(0).get("province_id");
-        int city_id=(Integer)usefulDataList.get(0).get("city_id");
-        int area_id=(Integer)usefulDataList.get(0).get("area_id");
-        //实际工作省市县
-        int aim_province_id = (Integer)usefulDataList.get(0).get("aim_province_id");
-        int aim_city_id = (Integer)usefulDataList.get(0).get("aim_city_id");
-        int aim_area_id = (Integer) usefulDataList.get(0).get("aim_area_id");
-        //所在城市省市县
-        String province = studentservice.getNameByProvinceid(province_id);
-        String city = studentservice.getNameByCityid(city_id);
-        String area = studentservice.getNameByAreaid(area_id);
-        //实际工作省市县
-        String aimProvince = studentservice.getNameByAimProvinceid(aim_province_id);
-        String aimCity = studentservice.getNameByAimCityid(aim_city_id);
-        String aimArea = studentservice.getNameByAimAreaid(aim_area_id);
-        usefulDataList.get(0).put("province",province);
-        usefulDataList.get(0).put("city",city);
-        usefulDataList.get(0).put("area",area);
-        usefulDataList.get(0).put("aimProvince",aimProvince);
-        usefulDataList.get(0).put("aimCity",aimCity);
-        usefulDataList.get(0).put("aimArea",aimArea);
-        mav.addObject("dats",usefulDataList);
-        mav.setViewName("student/studentDatas");
-        return mav;
+    @GetMapping(value = "/list")
+    public ModelAndView getUsefulData(HttpServletResponse response,HttpServletRequest request){
+        Cookie[] cookies = request.getCookies();
+        int student_id = 0;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("id")) {
+                    //将字符串形式的id转换成int类型
+                    student_id = Integer.parseInt(cookie.getValue());
+//                    System.out.println(student_id);
+                }
+            }
+            List<Map<String, Object>> usefulDataList = studentservice.getUsefulData(student_id);
+            //System.out.println(usefulDataList);
+            ModelAndView mav = new ModelAndView();
+            //所在城市省市县
+            int province_id = (Integer) usefulDataList.get(0).get("province_id");
+            int city_id = (Integer) usefulDataList.get(0).get("city_id");
+            int area_id = (Integer) usefulDataList.get(0).get("area_id");
+            //实际工作省市县
+            int aim_province_id = (Integer) usefulDataList.get(0).get("aim_province_id");
+            int aim_city_id = (Integer) usefulDataList.get(0).get("aim_city_id");
+            int aim_area_id = (Integer) usefulDataList.get(0).get("aim_area_id");
+            //所在城市省市县
+            String province = studentservice.getNameByProvinceid(province_id);
+            String city = studentservice.getNameByCityid(city_id);
+            String area = studentservice.getNameByAreaid(area_id);
+            //实际工作省市县
+            String aimProvince = studentservice.getNameByAimProvinceid(aim_province_id);
+            String aimCity = studentservice.getNameByAimCityid(aim_city_id);
+            String aimArea = studentservice.getNameByAimAreaid(aim_area_id);
+            usefulDataList.get(0).put("province", province);
+            usefulDataList.get(0).put("city", city);
+            usefulDataList.get(0).put("area", area);
+            usefulDataList.get(0).put("aimProvince", aimProvince);
+            usefulDataList.get(0).put("aimCity", aimCity);
+            usefulDataList.get(0).put("aimArea", aimArea);
+            mav.addObject("dats", usefulDataList);
+            mav.setViewName("student/studentDatas");
+            return mav;
+        }else {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
     }
 
     /**
@@ -255,22 +282,30 @@ public class StudentController {
         usefulDataList.get(0).put("aimProvince",aimProvince);
         usefulDataList.get(0).put("aimCity",aimCity);
         usefulDataList.get(0).put("aimArea",aimArea);
-        System.out.println(usefulDataList);
-        mav.addObject("edits",usefulDataList);
+        //System.out.println(usefulDataList);
+        mav.addObject("edits",usefulDataList.get(0));
         List<Map<String, Object>> provinceName = studentservice.getProvinceName();
         mav.addObject("provinceList",provinceName);
         mav.setViewName("student/datasedit");
         return mav;
     }
 
-    @PutMapping("/list/{id}")
-    public ModelAndView updataData(@PathVariable("id") int id,String password,String birth,String graduate_school,String stage_id,int province_id,int city_id,int area_id) throws ParseException {
+    @PostMapping("/updatestudent/{id}")
+    public ModelAndView updataData(@PathVariable("id") int id,
+                                   @RequestParam("password")String password,
+                                   @RequestParam("birth")String birth,
+                                   @RequestParam("graduate_school")String graduate_school,
+                                   @RequestParam("stage_id")String stage_id,
+                                   @RequestParam("province_id")int province_id,
+                                   @RequestParam("city_id")int city_id,
+                                   @RequestParam("area_id")int area_id) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         long birthday =  sdf.parse(birth).getTime()/1000;
-        studentservice.updateData(id,password,birthday,graduate_school,stage_id,province_id,city_id,area_id);
+        String md5password = SomeMethods.md5(password);
+        studentservice.updateData(id,md5password,birthday,graduate_school,stage_id,province_id,city_id,area_id);
         List<Map<String, Object>> usefulData2 = studentservice.getUsefulData(id);
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("redirect:student/studentDatas");
+        mav.setViewName("redirect:/list");
         return mav;
     }
 

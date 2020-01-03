@@ -12,11 +12,13 @@ import java.util.List;
  */
 @Repository
 public interface WorksDao {
-
+    //根据学生id查找
     List<Works> selectById(int id);
-
+    //查找所有数据
     List<Works> selectAll();
-
+    //根据照作品名查找
+    List<Works> selectByWorkName(@Param("name")String name);
+    //根据id删除
     Integer deleteById(int id);
 
     /**
@@ -30,7 +32,7 @@ public interface WorksDao {
      * @param name
      * @return
      */
-    public List<Works> likeSelectWorks(@Param("name") String name, @Param("student_id")int student_id);
+    public List<Works> likeSelectWorks(@Param("name") String name, @Param("student_id") int student_id);
 
     /**
      *  根据id找作品
@@ -50,13 +52,13 @@ public interface WorksDao {
      * @param id 根据作品id删除
      * @return 返回大于0 删除成功 否则失败
      */
-    public int deleteWorks(@Param("id")int id);
+    public int deleteWorks(@Param("id") int id);
 
     /**
      * 修改作品信息
      * @return 返回值大于0 修改成功 否则失败
      */
-    public int updateWorks(@Param("id")int id, @Param("name") String name,@Param("url") String url);
+    public int updateWorks(@Param("id") int id, @Param("name") String name, @Param("url") String url);
 
     /**
      * 增加学生作品

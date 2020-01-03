@@ -49,7 +49,9 @@ public class ExeperienceController {
     public String exeperienceAll(Model model,int pageNum) {
         model.addAttribute("price",1);
         List<Exeperience> exeperienceList = exeperienceServiceImpl.selectAll();
+        //学生姓名
         model.addAttribute("names", studentServiceimpl.selectAllNameAndId());
+        //心得列表
         model.addAttribute("exeperiences", MyPaging.paging(exeperienceList,pageNum,pageSize));
         //获取总页数
 
@@ -57,10 +59,11 @@ public class ExeperienceController {
         int generalPage = exeperienceList.size()%pageSize==0&&page>0?page:page+1;
         //获取当前页
         GetCurrentPage.getcurrentPage(pageNum,generalPage,model);
-
+        //总页数
         model.addAttribute("generalPage",generalPage);
         //判断页数是否符合标准
         if(generalPage<pageNum){
+            //前端判断本页面是否存在数据,若不存跳到最后一页(首页除外)
             model.addAttribute("price",0);
         }
         return "teacher/exeperience";
@@ -82,7 +85,6 @@ public class ExeperienceController {
         //如果根据条件没有查找到信息返回所有作品,并进行提示
         if (studentList.isEmpty()) {
             model.addAttribute("pd", "不存在该学生");
-            exeperienceAll(model,1);
             return "teacher/exeperience";
         }
         List<Exeperience> exeperienceList = new ArrayList<Exeperience>();
@@ -90,7 +92,9 @@ public class ExeperienceController {
             //根据list集合中装的id拿取数据
             exeperienceList.addAll(exeperienceServiceImpl.selectByStudent_id(student.getId()));
         }
+        //心得列表
         model.addAttribute("exeperiences", MyPaging.paging(exeperienceList,pageNum,pageSize));
+        //学生姓名
         model.addAttribute("names", studentList);
         //获取总页数
         int page = exeperienceList.size()/pageSize;
