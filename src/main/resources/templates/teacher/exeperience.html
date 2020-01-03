@@ -55,7 +55,7 @@
                     <li class="am-text-sm tpl-header-navbar-welcome">
                         <a href="#">欢迎你 &nbsp;
                             <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
-                                </span>
+                            </span>
                         </a>
                     </li>
                     <!-- 退出 -->
@@ -88,11 +88,11 @@
         <!-- 用户信息 -->
         <div class="tpl-sidebar-user-panel">
             <div class="tpl-user-panel-slide-toggleable">
-                    <span class="user-panel-logged-in-text">
-                        <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-                        <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
-                        </span>
+                <span class="user-panel-logged-in-text">
+                    <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
+                    <span th:each="cookie :${#httpServletRequest.getCookies()}" th:if="${cookie.getName().equals('name')}" th:text="${cookie.getValue()}">
                     </span>
+                </span>
             </div>
         </div>
 

@@ -2,6 +2,7 @@ package cn.xdh.util;
 
 
 import cn.xdh.entity.TeacherLog;
+import cn.xdh.entity.Works;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -128,6 +129,26 @@ public class PageUtil {
             page = 1;
         }
         return page;
+    }
+
+    //返回分好页的教师日志
+    public static List<Works> WorkList(int page, int totalPage, int total, List<Works> teacherLogs){
+        //数据集合
+        List<Works> worksList = new ArrayList<Works>();
+        //发送数据器
+        int a = total%count;
+        if(page == totalPage && a!=0){
+            for(int i=total-a;i<total;i++){
+                Works works = teacherLogs.get(i);
+                worksList.add(works);
+            }
+        }else{
+            for(int i=(page-1)*count;i<page*count;i++){
+                Works works = teacherLogs.get(i);
+                worksList.add(works);
+            }
+        }
+        return worksList;
     }
 }
 

@@ -4,22 +4,16 @@ import cn.xdh.SomeMethods;
 import cn.xdh.entity.*;
 import cn.xdh.service.impl.*;
 import cn.xdh.util.ImageVerifyCode;
-import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
 import java.util.List;
 
 @RestController
@@ -121,6 +115,8 @@ public class BasicController {
             } else if (student != null) {
                 //调用SomeMethods的设置cookie和session的方法
                 SomeMethods.setCookieAndSession(student.getId(),student.getUsername(), password, mobile, response, request);
+                List<Notice> notices = studentservice.getNotices();
+                mav.addObject("msgs",notices);
                 mav.setViewName("student/index");
                 return mav;
             }

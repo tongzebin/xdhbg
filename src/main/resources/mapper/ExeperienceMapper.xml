@@ -16,4 +16,17 @@
         delete from xdh_experience where id = #{id}
     </select>
 
+    <select id="selectExperience" resultType="cn.xdh.entity.Experience">
+        select * from xdh_experience
+    </select>
+
+    <delete id="deleteExperience" parameterType="int">
+        delete from xdh_experience where id = #{id}
+    </delete>
+
+    <insert id="insertExperience" >
+        insert into xdh_experience (student_id, content, add_time) values (#{student_id},#{content},#{add_time});
+    </insert>
+
+
 </mapper>

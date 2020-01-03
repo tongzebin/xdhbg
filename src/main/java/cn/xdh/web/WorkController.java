@@ -7,13 +7,22 @@ import cn.xdh.service.impl.StudentServiceImpl;
 import cn.xdh.service.impl.WorksServiceImpl;
 import cn.xdh.util.GetCurrentPage;
 import cn.xdh.util.MyPaging;
+import cn.xdh.util.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -32,6 +41,9 @@ public class WorkController {
     private WorksServiceImpl worksServiceimpl;
     @Autowired
     private StudentServiceImpl studentServiceimpl;
+    //获取 httpServletRequest对象
+    @Autowired
+    private HttpServletRequest httpServletRequest;
 
     /**
      * 显示所有学生作品
@@ -143,4 +155,254 @@ public class WorkController {
             deleteWork(Integer.parseInt(s),request);
         }
     }
+
+
+    @GetMapping(value = "/worklist/{page}")
+    public ModelAndView getTeacherLog(Model model, @PathVariable int page, HttpServletRequest request, HttpServletResponse response) {
+        //查找该学生所有的作品
+        Cookie[] cookies = request.getCookies();
+        //3.  循环遍历Cookie 取出用户手机号
+        int id = 0;
+        String name = null;
+        if(cookies!=null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("id")) {
+                    id = Integer.parseInt(cookie.getValue());
+                }
+                if (cookie.getName().equals("name")) {
+                    name = cookie.getValue();
+                }
+            }
+            List<Works> worksList = worksServiceimpl.selectWorks(id);
+            //作品数据量
+            int total = worksList.size();
+            //防止数据库中没有值
+            if (total == 0) {
+                Works works = new Works();
+                works.setId(1);
+                works.setStudent_id(0);
+                works.setName("暂无数据");
+                works.setUrl("暂无数据");
+                works.setAdd_time(0);
+                worksList.add(works);
+                total = worksList.size();
+            }
+            //总页数
+            int totalPage = PageUtil.getTotalPage(total, PageUtil.count);
+            //校对页数正确与否
+            page = PageUtil.numberOfPage(page, totalPage);
+            //页数集合
+            List<Integer> totalPageList = PageUtil.pageUtil(page, totalPage);
+            //分好页的作品集合
+            List<Works> worksList1 = PageUtil.WorkList(page, totalPage, total, worksList);
+            model.addAttribute("totalPage", totalPage);
+            model.addAttribute("totalPageList", totalPageList);
+            //修改页面显示的编号的作品集合
+            model.addAttribute("worksList1", worksList1);
+            model.addAttribute("name", name);
+            return new ModelAndView("student/studentWorks");
+        }else {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+    }
+
+    @PostMapping("/searchWorks/{page}")
+    public ModelAndView  searchWorks(Model model, @PathVariable int page,String workname,HttpServletRequest request,HttpServletResponse response){
+        //获取存在cookie的学生id
+        Cookie[] cookies = request.getCookies();
+        int student_id = 0;
+        String name = null;
+        if(cookies!=null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("id")) {
+                    student_id = Integer.parseInt(cookie.getValue());
+                }
+                if (cookie.getName().equals("name")) {
+                    name = cookie.getValue();
+                }
+            }
+            //获取该学生的作品集合
+            List<Works> worksList = worksServiceimpl.likeSelectWorks(workname, student_id);
+            //作品数据量
+            int total = worksList.size();
+            //防止数据库中没有值
+            if (total == 0) {
+                Works works = new Works();
+                works.setId(1);
+                works.setStudent_id(0);
+                works.setName("暂无数据");
+                works.setUrl("暂无数据");
+                works.setAdd_time(0);
+                worksList.add(works);
+                total = worksList.size();
+            }
+            //总页数
+            int totalPage = PageUtil.getTotalPage(total, PageUtil.count);
+            //校对页数正确与否
+            page = PageUtil.numberOfPage(page, totalPage);
+            //页数集合
+            List<Integer> totalPageList = PageUtil.pageUtil(page, totalPage);
+            //分好页的作品集合
+            List<Works> worksList1 = PageUtil.WorkList(page, totalPage, total, worksList);
+            model.addAttribute("totalPage", totalPage);
+            model.addAttribute("totalPageList", totalPageList);
+            //修改页面显示的编号的作品集合
+            model.addAttribute("worksList1", worksList1);
+            model.addAttribute("name", name);
+            return new ModelAndView("student/studentWorks");
+        }else {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+    }
+
+
+    /**
+     *  作品删除
+     * @param id 作品id
+     * @return 返回视图
+     */
+    @ResponseBody
+    @GetMapping(value ="/selectWorks/{id}")
+    public ModelAndView deleteWorks(@PathVariable("id")int id) {
+
+        //删除数据库对应的id
+        worksServiceimpl.deleteWorks(id);
+        //重定向到主页面
+        return new ModelAndView("redirect:/worklist/1");
+    }
+
+    /**
+     * 修改作品
+     * @return
+     */
+    @PostMapping(value = "/updateWorks")
+    public ModelAndView  updateWorks(Integer id, String name, String url){
+        int i =  worksServiceimpl.updateWorks(id, name, url);
+        ModelAndView modelAndView = new ModelAndView();
+        //设置视图名
+        modelAndView.setViewName("studentWorks");
+        return new ModelAndView("redirect:/worklist/1");
+    }
+
+    /**
+     * 进入修改界面
+     * @return
+     */
+    @GetMapping(value = "/toUpdateWorks/{id}")
+    @ResponseBody
+    public ModelAndView toUpdateWorks(@PathVariable("id") int id){
+        ModelAndView modelAndView = new ModelAndView();
+        Works works = worksServiceimpl.selectWorksById(id);
+        //将自增id传到 修改页面的 input
+        modelAndView.addObject("works",works);
+        //跳转到 修改界面
+        modelAndView.setViewName("student/updateWorks");
+        return modelAndView;
+    }
+
+    /**
+     * 作品增加
+     * @param id
+     * @param name
+     * @param url
+     * @return
+     * @throws ParseException
+     */
+    @PostMapping(value = "/workList")
+    public ModelAndView  insertWorks(int id ,String name,String url,HttpServletRequest request,HttpServletResponse response) throws ParseException {
+        //获取当前时间戳
+        Date add_time = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = sdf.format(add_time);
+        int add_time1 =(int) (sdf.parse(format).getTime()/1000);
+        //获取存在cookie的学生id
+        Cookie[] cookies = request.getCookies();
+        int student_id = 0;
+        if(cookies!=null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("id")) {
+                    student_id = Integer.parseInt(cookie.getValue());
+                }
+            }
+            List<Works> worksList = worksServiceimpl.selectWorks(student_id);
+            //获取学生id 增加该学生的作品
+            Works works1 = new Works(id, student_id, name.trim(), url.trim(), add_time1);
+            int i = worksServiceimpl.insertWorks(works1);
+            return new ModelAndView("redirect:/worklist/1");
+        }else {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+    }
+
+    /**
+     * 进入添加界面
+     * @return
+     */
+    @GetMapping(value = "/toInsertWorks")
+    public ModelAndView insertWorks(Model model,HttpServletRequest request,HttpServletResponse response){
+        model.addAttribute("worksId",worksServiceimpl.selectWorksId());
+        //获取当前学生的信息
+        Cookie[] cookies = request.getCookies();
+        //3.  循环遍历Cookie 取出用户手机号
+        int id = 0;
+        if(cookies!=null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("id")) {
+                    id = Integer.parseInt(cookie.getValue());
+                }
+            }
+            //获取当前学生的作品信息
+            List<Works> worksList = worksServiceimpl.selectWorks(id);
+            //获取当前学生的id
+            int student_id = worksList.get(0).getStudent_id();
+            model.addAttribute("insertWork", student_id);
+            return new ModelAndView("student/insertWorks");
+        }else {
+            response.setContentType("text/html; charset=utf-8");
+            PrintWriter out = null;
+            try {
+                out = response.getWriter();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            out.println("<script>");
+            out.println("alert('请先登录,再进行操作!');");
+            out.println("</script>");
+            return new ModelAndView("redirect:/");
+        }
+    }
+
+
+
+
 }

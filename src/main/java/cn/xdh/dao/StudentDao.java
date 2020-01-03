@@ -2,7 +2,7 @@ package cn.xdh.dao;
 
 import cn.xdh.entity.City;
 import cn.xdh.entity.Student;
-import cn.xdh.entity.Teacher;
+import cn.xdh.entity.Notice;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -57,6 +57,49 @@ public interface StudentDao {
      */
     /*@Select(value = "select * from xdh_student where xdh_student.username = #{username}")*/
     List<Student> selectIdAndNameByName(@Param(value = "username") String username);
+
+
+    // 根据手机号查id
+    public int selectIdByPhone(@Param("mobie") String mobie);
+    //
+    public List<String> selectUsername();
+
+    public int selectIdByUsername(@Param("username")String username);
+
+    //    三级联动 获取省名
+    public List<Map<String,Object>> getProvinceName();
+
+    public List<Map<String,Object>> getCityName(@Param("id") int id);
+
+    public List<Map<String,Object>> getAreaName(@Param("id") int id);
+
+    public List<Notice> getNotices();
+
+
+    public Student getDatas(@Param("id") int id);
+
+    public List<Map<String,Object>> getUsefulData(@Param("id") int id);
+
+    public void updateData(@Param("id") int id,@Param("password")String password,@Param("birthday")long birthday
+            ,@Param("graduate_school")String graduate_school
+            ,@Param("stage_id")String stage_id
+            ,@Param("province_id")int province_id
+            ,@Param("city_id")int city_id
+            ,@Param("area_id")int area_id);
+
+    // 学生信息页面显示省市区
+    public String getNameByProvinceid(@Param("province_id") int province_id);
+
+    public String getNameByCityid(@Param("city_id") int city_id);
+
+    public String getNameByAreaid(@Param("area_id") int area_id);
+
+    // 学生实际工作城市
+    public String getNameByAimProvinceid(@Param("aim_province_id") int aim_province_id);
+
+    public String getNameByAimCityid(@Param("aim_city_id") int aim_city_id);
+
+    public String getNameByAimAreaid(@Param("aim_area_id") int aim_area_id);
 
 
 }

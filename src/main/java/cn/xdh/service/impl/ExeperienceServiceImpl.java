@@ -4,6 +4,7 @@ import cn.xdh.SomeMethods;
 import cn.xdh.dao.ExeperienceDao;
 import cn.xdh.dao.TeacherDao;
 import cn.xdh.entity.Exeperience;
+import cn.xdh.entity.Experience;
 import cn.xdh.entity.Teacher;
 import cn.xdh.entity.TeacherLog;
 import cn.xdh.service.ExeperienceService;
@@ -21,7 +22,7 @@ import java.util.List;
 public class ExeperienceServiceImpl implements ExeperienceService {
 
     @Autowired
-    ExeperienceDao exeperienceDao;
+    private ExeperienceDao exeperienceDao;
     @Autowired
     private TeacherDao teacherDao;
 
@@ -57,4 +58,23 @@ public class ExeperienceServiceImpl implements ExeperienceService {
         teacherDao.addTeacherLog(teacherLog);
         return exeperienceDao.deleteById(id);
     }
+
+    @Override
+    public List<Experience> selectExperience() {
+        List<Experience> experience = exeperienceDao.selectExperience();
+        return experience;
+    }
+
+    @Override
+    public int deleteExperience(int id) {
+        int dd = exeperienceDao.deleteExperience(id);
+        return dd;
+    }
+
+    @Override
+    public int insertExperience(Experience experience) {
+        int dd = exeperienceDao.insertExperience(experience);
+        return dd;
+    }
+
 }

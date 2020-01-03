@@ -93,9 +93,23 @@
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="/admin.adminlog" class="active">
+                    <a href="javascript:;" class="sidebar-nav-sub-title active">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 日志管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico sidebar-nav-sub-ico-rotate"></span>
                     </a>
+                    <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin.adminlog" class="sub-active">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 管理员日志
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin.teacherlog">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 教师日志
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="sidebar-nav-link">
                     <a href="/admin.xdhclass">
@@ -209,8 +223,8 @@
                                                 </th:block>
 
                                                 <!-- ... -->
-                                                <li th:if="${current < (total - 3)}"><a>...</a></li>
-                                                <th:block th:if="${current >= (total - 3)}" th:each="i : ${#numbers.sequence(total - 3,total)}">
+                                                <li th:if="${current <= (total - 3)}"><a>...</a></li>
+                                                <th:block th:if="${current > (total - 3)}" th:each="i : ${#numbers.sequence(total - 3,total)}">
                                                     <li th:if="${current == i}" class="am-active"><span th:text="${i}"></span></li>
                                                     <li th:if="${current != i}"><a th:href="@{/admin.adminlog(page=${i},type=${type},lookname=${lookname})}" th:text="${i}"></a></li>
                                                 </th:block>

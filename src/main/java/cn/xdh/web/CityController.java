@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class CityController {
@@ -28,6 +29,21 @@ public class CityController {
     public List<City> getArea(@PathVariable int upId){
         List<City> cityList = studentService.getAreaByUpId(upId);
         return cityList;
+    }
+
+    @ResponseBody
+    @GetMapping("/stuprovince/{id}")
+    public List<Map<String,Object>> cityName(@PathVariable("id") int id){
+        List<Map<String, Object>> cityName = studentService.getCityName(id);
+        return  cityName;
+    }
+
+    @ResponseBody
+    @GetMapping("/stucity/{id}")
+    public List<Map<String,Object>> areaName(@PathVariable int id){
+        List<Map<String, Object>> areaName = studentService.getAreaName(id);
+        return areaName;
+
     }
 
 }

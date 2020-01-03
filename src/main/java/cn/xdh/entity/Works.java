@@ -3,6 +3,7 @@ package cn.xdh.entity;
 
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author TZB
@@ -17,8 +18,25 @@ public class Works implements Serializable {
 
     public Works() {
     }
+    public Works(int id, int student_id, String name, String url, int add_time) {
+        this.id = id;
+        this.student_id = student_id;
+        this.name = name;
+        this.url = url;
+        this.add_time = add_time;
+    }
+    public Works(int id, int student_id, String name, String url, int add_time, String time) {
+        this.id = id;
+        this.student_id = student_id;
+        this.name = name;
+        this.url = url;
+        this.add_time = add_time;
+    }
 
-
+    public Date getDateTime(){
+        Long l = (long)getAdd_time()*1000;
+        return new Date(l);
+    }
 
     public int getId() {
         return id;
@@ -62,11 +80,5 @@ public class Works implements Serializable {
 
 
 
-    public Works(int id, int student_id, String name, String url, int add_time, String time) {
-        this.id = id;
-        this.student_id = student_id;
-        this.name = name;
-        this.url = url;
-        this.add_time = add_time;
-    }
+
 }

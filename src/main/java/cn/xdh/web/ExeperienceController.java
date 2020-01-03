@@ -1,6 +1,8 @@
 package cn.xdh.web;
 
+
 import cn.xdh.entity.Exeperience;
+import cn.xdh.entity.Experience;
 import cn.xdh.entity.Page;
 import cn.xdh.entity.Student;
 import cn.xdh.service.impl.ExeperienceServiceImpl;
@@ -11,9 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -141,5 +147,50 @@ public class ExeperienceController {
         }
     }
 
+
+    @RequestMapping(value = "/selectExperience", method = RequestMethod.GET)
+    public String toEditor(Model model, Experience experience){
+        //获取心得集合
+        List<Experience> experienceList = exeperienceServiceImpl.selectExperience();
+        int i = 1;
+        //循环 修改显示在列表的 心得编号 可以注释 查看 不修改之前的效果
+        for (Experience e:experienceList){
+            e.setId(i);
+            i++;
+        }
+        model.addAttribute("experience",experienceList);
+        return "student/experienceList";
+    }
+
+    @GetMapping("/selectExperience/{id}")
+    public ModelAndView deleteExperience(@PathVariable("id")int id){
+        //获取当前所有心得
+        List<Experience> experienceList = exeperienceServiceImpl.selectExperience();
+        //因为修改了 id 而且修改的id正好是 experienceList集合下标减一 所以 按照这个删除
+        exeperienceServiceImpl.deleteExperience(experienceList.get(id-1).getId());
+        return new ModelAndView("redirect:");
+    }
+
+    @PostMapping("/insertExperience")
+    public ModelAndView insertExperience(String context) throws ParseException {
+
+        // 获取当前时间 的int
+        Date add_time = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = sdf.format(add_time);
+        int add_time1 =(int) (sdf.parse(format).getTime()/1000);
+        //获取心得集合
+        List<Experience> experienceList = exeperienceServiceImpl.selectExperience();
+        //设置要增加的心得  get(int index) 获取位于index的值 获取的id表示比最大心得编号+1
+        Experience experience = new Experience(experienceList.get(experienceList.size()-1).getId()+1,
+                experienceList.get(0).getStudent_id(),context,add_time1);
+        int i = exeperienceServiceImpl.insertExperience(experience);
+        return new ModelAndView("redirect:/selectExperience");
+    }
+
+    @GetMapping("/toEditor")
+    public String toEditor(){
+        return "student/editor";
+    }
 
 }

@@ -274,6 +274,109 @@ public class StudentServiceImpl implements StudentService {
 
 
 
+    @Override
+    public List<String> selectUsername() {
+        List<String> stringList = studentDao.selectUsername();
+        return stringList;
+    }
+
+    @Override
+    public int selectIdByPhone(String mobie) {
+        int id = studentDao.selectIdByPhone(mobie);
+        return id;
+    }
+
+    @Override
+    public int selectIdByUsername(String username) {
+        int id = studentDao.selectIdByUsername(username);
+        return id;
+    }
+
+    @Override
+    public List<Notice> getNotices() {
+        List<Notice> notices = studentDao.getNotices();
+        return notices;
+    }
+
+    @Override
+    public Student getDatas(int id) {
+        Student studentDatas = studentDao.getDatas(id);
+        return studentDatas;
+    }
+
+    @Override
+    public String getClassName(int id) {
+        return null;
+    }
+
+    @Override
+    public List<Map<String, Object>> getUsefulData(int id) {
+        List<Map<String, Object>> usefulDataList = studentDao.getUsefulData(id);
+
+        return usefulDataList;
+    }
+
+    @Override
+    public void  updateData(int id,String password,long birthday,String graduate_school,String stage_id,int province_id,int city_id,int area_id) {
+        studentDao.updateData(id,password,birthday,graduate_school,stage_id,province_id,city_id,area_id);
+    }
+
+    @Override
+    public List<Map<String, Object>> getProvinceName() {
+        List<Map<String, Object>> provinceName = studentDao.getProvinceName();
+        return provinceName;
+    }
+
+    @Override
+    public List<Map<String, Object>> getCityName(int id) {
+        List<Map<String, Object>> cityName = studentDao.getCityName(id);
+        return cityName;
+    }
+
+    @Override
+    public List<Map<String, Object>> getAreaName(int id) {
+        List<Map<String, Object>> areaName = studentDao.getAreaName(id);
+        return areaName;
+    }
+
+
+    //    得到指定id的省份名称
+    @Override
+    public String getNameByProvinceid(int province_id) {
+        String province = studentDao.getNameByProvinceid(province_id);
+        return province;
+    }
+
+    @Override
+    public String getNameByCityid(int city_id) {
+        String city = studentDao.getNameByCityid(city_id);
+        return city;
+    }
+
+    @Override
+    public String getNameByAreaid(int area_id) {
+        String area = studentDao.getNameByAreaid(area_id);
+        return area;
+    }
+
+    @Override
+    public String getNameByAimProvinceid(int aim_province_id) {
+        String aimProvince = studentDao.getNameByAimProvinceid(aim_province_id);
+        return aimProvince;
+    }
+
+    @Override
+    public String getNameByAimCityid(int aim_city_id) {
+        String aimCity = studentDao.getNameByAimCityid(aim_city_id);
+        return aimCity;
+    }
+
+    @Override
+    public String getNameByAimAreaid(int aim_area_id) {
+        String aimArea = studentDao.getNameByAimAreaid(aim_area_id);
+        return aimArea;
+    }
+
 
 
 }

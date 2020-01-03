@@ -58,4 +58,52 @@ public class WorksServiceImpl implements WorksService {
         teacherDao.addTeacherLog(teacherLog);
         return worksDao.deleteById(id);
     }
+
+    //获取所有作品
+    public List<Works> selectWorks(int student_id) {
+
+        List<Works> list = worksDao.selectWorks(student_id);
+        return list;
+    }
+
+    public Works selectWorksById(int id) {
+        Works works = worksDao.selectWorksById(id);
+        return works;
+    }
+
+    public List<Works> likeSelectWorks(String name,int student_id) {
+        List<Works> worksList = worksDao.likeSelectWorks(name,student_id);
+        return worksList;
+    }
+
+    //获取所有学生id
+    public List<Integer> selectWorksId(){
+
+        List<Integer> list = worksDao.selectWorksId();
+        return list;
+    }
+
+    //删除作品
+    public int deleteWorks(int id){
+
+        int rows = worksDao.deleteWorks(id);
+        return rows;
+    }
+
+    //更新作品名称或者网址
+    public int updateWorks(int id, String name, String url){
+
+        int rows = worksDao.updateWorks(id, name, url);
+        return rows;
+    }
+
+    //增加作品
+    public int insertWorks(Works works){
+
+        int rows = worksDao.insertWorks(works);
+        return rows;
+    }
+
+
+
 }

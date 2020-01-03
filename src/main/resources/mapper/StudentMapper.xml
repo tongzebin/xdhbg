@@ -140,4 +140,86 @@
 	</update>
 
 
+	<select id="selectUsername"  resultType="string">
+		select s.username from xdh_student s, xdh_works w where w.student_id = s.id
+	</select>
+
+	<select id="selectIdByUsername" parameterType="string" resultType="int">
+		select id from xdh_student where username = #{username}
+	</select>
+
+	<select id="selectIdByPhone" parameterType="string" resultType="int">
+		select id from xdh_student where mobile = #{mobile}
+	</select>
+
+	<!-- 查询数据库中公告信息-->
+	<select id="getNotices" resultType="cn.xdh.entity.Notice">
+		select * from xdh_notice ORDER BY add_time DESC LIMIT 8
+	</select>
+
+	<!-- 查询数据库中学生信息-->
+	<select id="getDatas" resultType="cn.xdh.entity.Student">
+		SELECT * FROM xdh_student WHERE id = #{id}
+	</select>
+
+	<!-- 查询班级id查询班级表中的班级名 -->
+	<select id="getUsefulData" resultType="java.util.HashMap">
+			select
+			student.id,student.username,student.mobile,student.password
+			,student.birthday,student.join_study_time,student.graduate_time,
+			student.province_id,student.city_id,student.area_id,student.address
+			,class.class_name,student.progress,student.is_graduate,student.company
+			 ,student.salary,student.aim_province_id,student.aim_city_id,student.aim_area_id
+			 ,student.aim_address,student.stage_id ,student.graduate_school from xdh_student student inner join xdh_class class on student.class_id = class.id where student.id = #{id}
+	</select>
+
+	<update id="updateData" parameterType="java.util.HashMap" >
+		UPDATE xdh_student SET password=#{password},birthday=#{birthday}
+		,graduate_school=#{graduate_school},stage_id=#{stage_id}
+		,province_id=#{province_id},city_id=#{city_id},area_id=#{area_id} WHERE ID=#{id}
+		<!-- 属性字段名区分大小写 -->
+	</update>
+
+	<select id="getProvinceName" resultType="java.util.HashMap">
+		SELECT * FROM citys WHERE level = 1
+	</select>
+
+	<select id="getCityName" resultType="java.util.HashMap">
+		SELECT * FROM citys WHERE UPID = #{id}
+	</select>
+
+	<select id="getAreaName" resultType="java.util.HashMap">
+		SELECT * FROM citys WHERE UPID = #{id}
+	</select>
+
+	<!--  学生信息页面获取到省市县的名字	-->
+
+	<select id="getNameByProvinceid" resultType="java.lang.String">
+		SELECT NAME FROM citys WHERE ID = #{province_id}
+	</select>
+
+
+	<select id="getNameByCityid" resultType="java.lang.String">
+		SELECT NAME FROM citys WHERE ID = #{city_id}
+	</select>
+
+
+	<select id="getNameByAreaid" resultType="java.lang.String">
+		SELECT NAME FROM citys  WHERE ID = #{area_id}
+	</select>
+
+	<!--	教师填写毕业以后实际工作城市-->
+	<select id="getNameByAimProvinceid" resultType="java.lang.String">
+		SELECT NAME FROM citys WHERE ID = #{aim_province_id}
+	</select>
+
+	<select id="getNameByAimCityid" resultType="java.lang.String">
+		SELECT NAME FROM citys WHERE ID = #{aim_city_id}
+	</select>
+
+	<select id="getNameByAimAreaid" resultType="java.lang.String">
+		SELECT NAME FROM citys  WHERE ID = #{aim_area_id}
+	</select>
+
+
 </mapper>

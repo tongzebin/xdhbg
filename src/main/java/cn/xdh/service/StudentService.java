@@ -3,6 +3,8 @@ package cn.xdh.service;
 import cn.xdh.entity.City;
 import cn.xdh.entity.Msg;
 import cn.xdh.entity.Student;
+import cn.xdh.entity.Notice;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,5 +52,49 @@ public interface StudentService {
     Msg batchAddStudent(HttpServletRequest request, String suffixName, MultipartFile excelFile);
 
     List<Student> selectIdAndNameByName(String username);
+
+
+    //
+    public List<String> selectUsername();
+
+    public int selectIdByPhone(String mobie);
+
+    public int  selectIdByUsername(String username);
+
+    // getNotices 查询公告
+    public List<Notice> getNotices();
+
+    public Student getDatas(int id);
+
+    public String getClassName(int id);
+
+    public List<Map<String,Object>> getUsefulData(int id);
+
+    public void updateData(@Param("id") int id, String password, long birthday, String graduate_school, String stage_id, int province_id, int city_id, int area_id);
+
+
+    //    三级联动 获取省名
+
+    public List<Map<String,Object>> getProvinceName();
+
+    public List<Map<String,Object>> getCityName(int id);
+
+    public List<Map<String,Object>> getAreaName(int id);
+
+    //    通过省市县id获取名字
+
+    public String getNameByProvinceid(int province_id);
+
+    public String getNameByCityid(int city_id);
+
+    public String getNameByAreaid(int area_id);
+
+    // 通过实际工作地省市县id获取名字
+
+    public String getNameByAimProvinceid(@Param("aim_province_id") int aim_province_id);
+
+    public String getNameByAimCityid(@Param("aim_city_id") int aim_city_id);
+
+    public String getNameByAimAreaid(@Param("aim_area_id") int aim_area_id);
 
 }

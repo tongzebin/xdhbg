@@ -2,6 +2,7 @@ package cn.xdh.web;
 
 import cn.xdh.entity.City;
 import cn.xdh.entity.Msg;
+import cn.xdh.entity.Notice;
 import cn.xdh.entity.Student;
 import cn.xdh.service.StudentService;
 import cn.xdh.service.impl.StudentServiceImpl;
@@ -11,15 +12,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Controller
 public class StudentController {
-
+    @Autowired
+    private StudentServiceImpl studentservice;
     @Autowired
     private StudentServiceImpl studentService;
 
@@ -176,6 +181,90 @@ public class StudentController {
     @ResponseBody
     public Msg addAllStudent(@RequestParam("ExcelFile") MultipartFile excelFile,HttpServletRequest request,@PathVariable String suffixName) throws Exception {
         return studentService.batchAddStudent(request,suffixName,excelFile);
+    }
+
+    @GetMapping("/student.index")
+    public ModelAndView toIndex(){
+        ModelAndView mav = new ModelAndView();
+        List<Notice> notices = studentservice.getNotices();
+        mav.addObject("msgs",notices);
+        mav.setViewName("student/index");
+        return mav;
+    }
+
+    /**
+     * 学生信息页面根据id显示信息
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/list/{id}")
+    public ModelAndView getUsefulData(@PathVariable("id") int id){
+        List<Map<String, Object>> usefulDataList = studentservice.getUsefulData(id);
+        //System.out.println(usefulDataList);
+        ModelAndView mav = new ModelAndView();
+        //所在城市省市县
+        int province_id=(Integer)usefulDataList.get(0).get("province_id");
+        int city_id=(Integer)usefulDataList.get(0).get("city_id");
+        int area_id=(Integer)usefulDataList.get(0).get("area_id");
+        //实际工作省市县
+        int aim_province_id = (Integer)usefulDataList.get(0).get("aim_province_id");
+        int aim_city_id = (Integer)usefulDataList.get(0).get("aim_city_id");
+        int aim_area_id = (Integer) usefulDataList.get(0).get("aim_area_id");
+        //所在城市省市县
+        String province = studentservice.getNameByProvinceid(province_id);
+        String city = studentservice.getNameByCityid(city_id);
+        String area = studentservice.getNameByAreaid(area_id);
+        //实际工作省市县
+        String aimProvince = studentservice.getNameByAimProvinceid(aim_province_id);
+        String aimCity = studentservice.getNameByAimCityid(aim_city_id);
+        String aimArea = studentservice.getNameByAimAreaid(aim_area_id);
+        usefulDataList.get(0).put("province",province);
+        usefulDataList.get(0).put("city",city);
+        usefulDataList.get(0).put("area",area);
+        usefulDataList.get(0).put("aimProvince",aimProvince);
+        usefulDataList.get(0).put("aimCity",aimCity);
+        usefulDataList.get(0).put("aimArea",aimArea);
+        mav.addObject("dats",usefulDataList);
+        mav.setViewName("student/studentDatas");
+        return mav;
+    }
+
+    /**
+     * 学生信息修改页面显示未修改前的信息,查出当前员工信息,在页面回显
+     * @param id
+     * @return
+     */
+    @GetMapping("/edit/{id}")
+    public ModelAndView datasedit(@PathVariable("id") int id){
+        List<Map<String, Object>> usefulDataList = studentservice.getUsefulData(id);
+        ModelAndView mav = new ModelAndView();
+        //实际工作省市县
+        int aim_province_id = (Integer)usefulDataList.get(0).get("aim_province_id");
+        int aim_city_id = (Integer)usefulDataList.get(0).get("aim_city_id");
+        int aim_area_id = (Integer) usefulDataList.get(0).get("aim_area_id");
+        String aimProvince = studentservice.getNameByAimProvinceid(aim_province_id);
+        String aimCity = studentservice.getNameByAimCityid(aim_city_id);
+        String aimArea = studentservice.getNameByAimAreaid(aim_area_id);
+        usefulDataList.get(0).put("aimProvince",aimProvince);
+        usefulDataList.get(0).put("aimCity",aimCity);
+        usefulDataList.get(0).put("aimArea",aimArea);
+        System.out.println(usefulDataList);
+        mav.addObject("edits",usefulDataList);
+        List<Map<String, Object>> provinceName = studentservice.getProvinceName();
+        mav.addObject("provinceList",provinceName);
+        mav.setViewName("student/datasedit");
+        return mav;
+    }
+
+    @PutMapping("/list/{id}")
+    public ModelAndView updataData(@PathVariable("id") int id,String password,String birth,String graduate_school,String stage_id,int province_id,int city_id,int area_id) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        long birthday =  sdf.parse(birth).getTime()/1000;
+        studentservice.updateData(id,password,birthday,graduate_school,stage_id,province_id,city_id,area_id);
+        List<Map<String, Object>> usefulData2 = studentservice.getUsefulData(id);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:student/studentDatas");
+        return mav;
     }
 
 }
